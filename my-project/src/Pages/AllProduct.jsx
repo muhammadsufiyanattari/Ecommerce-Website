@@ -137,7 +137,7 @@ import useProducts from "../hooks/useProducts";
 // ];
 
 function AllProduct() {
-  const { products, error, isLoading } = useProducts("limit=32&skip=80");
+  const { products, error, isLoading } = useProducts("limit=84&skip=77");
   //   const [products, setProducts] = useState(null);
   //   const [isLoading, setIsLoading] = useState(false)
   // const[error,SetError]=useState(null)
