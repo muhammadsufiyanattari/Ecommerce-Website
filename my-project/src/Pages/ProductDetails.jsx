@@ -55,10 +55,10 @@ function ProductDetails() {
             </div>
           </div>
 
-          <div className="w-[] gap-7  2xl:flex-row xl:flex-row lg:flex-row flex md:flex-col sm:flex-col mobile:flex-col  justify-center items-center 2xl:h-[600px] xl:h-[600px] lg:h-[600px] md:h-auto sm:h-auto mobile:h-auto  bg-fuchsia">
+          <div className="w-[] gap-7   2xl:flex-row xl:flex-row lg:flex-row flex md:flex-col sm:flex-col mobile:flex-col  justify-center items-center 2xl:h-[600px] xl:h-[600px] lg:h-[600px] md:h-auto sm:h-auto mobile:h-auto  bg-fuchsia">
             {/* Product Images Start */}
 
-            <div className="bg- flex  gap-6  md:w-[50%] h-auto">
+            <div className="bg- flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row  gap-6 2xl:w-[50%] xl:w-[50%] lg:w-[50%]  md:w-[100%] md:justify-center md:items-center h-auto">
               {product?.images.length === 1 ? null : (
                 <div  className="bg-red-  w-[170px] h-[600px] flex-col flex gap-3 justify-start items-center ">
                   {product?.images.map((image) => {
@@ -89,7 +89,7 @@ function ProductDetails() {
 
             {/* COMPLETE DETAILS Start */}
 
-            <div className=" flex flex-col  gap-6 pl-3 w-[500px]  h-[600px] ">
+            <div className=" flex flex-col   gap-6 pl-3 w-[500px]  h-[600px] ">
               <div>
                 <h1 className="font-semibold text-2xl text-black ">
                   {product?.title}
@@ -215,10 +215,12 @@ function ProductDetails() {
             Go To Home
           </Link>
         </div> */}
-
           <div className=" flex justify-start flex-col 2xl:ml-10 xl:ml-10 lg:ml-10 md:ml-0 sm:ml-0 mobile:ml-0 my-16  ">
             <MyCountBox name={""} days={"Related Item"} />
+           < div className="">
             <Categary category={product?.category} />
+            
+            </div>
             <div className="flex">
               {/* <AddToCard
                     

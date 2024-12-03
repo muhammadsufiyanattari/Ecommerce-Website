@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+    ,    "deploy": "surge ./dist --domain sufiyan-ecommerce-website.surge.sh"
   },
   "dependencies": {
     "axios": "^1.7.7",

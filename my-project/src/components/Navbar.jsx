@@ -117,7 +117,7 @@ export default function MyNavbar() {
         {/* sm screen */}
 
         {menu ? (
-          <div className="link top-[70px] bg-white w-[100%] z-10  lg:flex xl:flex 2xl:flex absolute">
+          <div className="link top-[70px] bg-white w-[100%] z-10   lg:hidden xl:hidden 2xl:hidden absolute">
             <ul className="flex pl-8 flex-col gap-5">
               {Mylink.map((value, index) => {
                 return (
