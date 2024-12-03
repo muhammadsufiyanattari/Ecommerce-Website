@@ -25,53 +25,21 @@ import {
 import { useParams } from "react-router-dom";
 
 function Categary({ category }) {
+  console.log("category ", category);
 
- // Function 1
-//  const [products2, setProducts2] = useState(null);
-//  const params=useParams()
-//  const [isLoading2, setIsLoading2] = useState(false);
-//  const [error2, SetError2] = useState(null);
-//  const API_KEY2 = `https://dummyjson.com/products/${params.id}`
-
-//  let getProductData2 = async (event) => {
-//    try {
-//      setIsLoading2(true);
-//      SetError2(null);
-//      let response2 = await axios(API_KEY2);
-//      let data2 = response2.data.category;
-//      console.log( 'AS',data2);
-//      console.log(params.id);
-     
-     
-//      // console.log(data);
-//      setIsLoading2(false);
-//      return setProducts2(data2);
-//    } catch (error) {
-//      setIsLoading2(false);
-//      SetError2(error);
-//      setProducts2(null);
-//      console.log(error.response2.statusText);
-//    } finally {
-//      setIsLoading2(false);
-//    }
-//  };
-//  useEffect(() => {
-//    getProductData2();
-//  }, []);
-
-  // Function 2
   const [products, setProducts] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, SetError] = useState(null);
-  const API_KEY = `https://dummyjson.com/products/category/${category}`;
 
-
-  let getProductData = async (event) => {
+  const getProductData = async (event) => {
     try {
+      if (!category) return;
+
+      const API_KEY = `https://dummyjson.com/products/category/${category}`;
       setIsLoading(true);
       SetError(null);
-      let response = await axios(API_KEY);
-      let data = response.data.products;
+      const response = await axios(API_KEY);
+      const data = response.data.products;
       // console.log(data);
       setIsLoading(false);
       return setProducts(data);
@@ -86,8 +54,7 @@ function Categary({ category }) {
   };
   useEffect(() => {
     getProductData();
-  }, []);
- 
+  }, [category]);
 
   return (
     // <div>Categary</div>

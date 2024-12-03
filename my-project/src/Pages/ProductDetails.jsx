@@ -60,10 +60,11 @@ function ProductDetails() {
 
             <div className="bg- flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row  gap-6 2xl:w-[50%] xl:w-[50%] lg:w-[50%]  md:w-[100%] md:justify-center md:items-center h-auto">
               {product?.images.length === 1 ? null : (
-                <div  className="bg-red-  w-[170px] h-[600px] flex-col flex gap-3 justify-start items-center ">
-                  {product?.images.map((image) => {
+                <div className="bg-red-  w-[170px] h-[600px] flex-col flex gap-3 justify-start items-center ">
+                  {product?.images.map((image, i) => {
                     return (
-                      <img 
+                      <img
+                        key={i}
                         className="w-[121px] h-[114px] shadow-2xl cursor-pointer bg-[#F5F5F5]"
                         src={image}
                         alt=""
