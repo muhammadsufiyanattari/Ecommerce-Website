@@ -29,6 +29,7 @@ function ProductDetails() {
     product?.price - product?.discountPercentage * (product?.price / 100)
   ).toFixed(2);
   const [count, setCount] = useState(1);
+console.log(error);
 
   return (
     isLoading ? (
@@ -40,7 +41,7 @@ function ProductDetails() {
       
       {error ? (
         <div className="font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none">
-          Not Found Product Details
+         {error.response.data.message}
         </div>
       ) : (
         <div className="main  my-16 flex flex-col justify-center  ">

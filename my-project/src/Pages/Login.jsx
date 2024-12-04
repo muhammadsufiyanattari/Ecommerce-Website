@@ -2,32 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Login() {
+  const dataInputs=(event)=>{
+    event.preventDefault()
+ const formData =   new FormData(event.target)
+ const password=formData.get('password')
+ const email=formData.get('email')
+console.log("Password :",password,"Email:",email);
+
+  }
   return (
-    // <div className="center">
-    // <div className="font-semibold text-white bg-neutral-800 my-4 rounded text-lg w-[300px] h-[300px]  flex flex-col items- gap-12 justify-center">
-    // <h1 className="text-3xl flex justify-center ">  Login</h1>
-    //   <form action="">
-    //     <ul  className="font-normal text-xs flex flex-col gap-2 justify-center items-center">
-    //       <li>
-    //         {" "}
-    //         <label className="" htmlFor="">
-    //          <span className="text-lg">UserEmail :</span><input className="outline-none w-40 h-6 m-3 rounded" type="email" name="" id="" />
-    //         </label>
-    //       </li>
-    //       <li>
-    //         {" "}
-    //         <label className="" htmlFor="">
-    //          <span className="text-xl">Password :</span> <input className="outline-none w-40 h-6 m-3 rounded" type="password" name="" id="" />
-    //         </label>
-    //       </li>
-    //       <li>
-    //         {" "}
-    //         <button className="bg-myTheme w-24 h-8 rounded">Submit</button>
-    //       </li>
-    //     </ul>
-    //   </form>
-    // </div>
-    // </div>
+    
 
     <section className="bg-gray-50 dark:bg-gray-900">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -43,7 +27,7 @@ function Login() {
             <h1 className="flex justify-center text-xl font-bold leading-tight rounded tracking-tight text-black md:text-2xl dark:text-white">
               Login in to your Account
             </h1>
-            <form className="space-y-4 md:space-y-6" action="#">
+            <form onSubmit={dataInputs} className="space-y-4 md:space-y-6" action="#">
               <div>
                 <label
                   htmlFor="email"
@@ -56,7 +40,7 @@ function Login() {
                   name="email"
                   id="email"
                   className="bg-gray-50 border border-gray-300 text-black rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="name@mail.com"
+                  placeholder="name@gmail.com"
                   required=""
                 />
               </div>

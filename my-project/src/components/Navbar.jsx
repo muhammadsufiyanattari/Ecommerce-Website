@@ -156,6 +156,9 @@ export default function MyNavbar() {
                 </>
               ) : (
                 <>
+                <li className=" hover:cursor-pointer">
+                    <Link className="link-underline link-underline-black link-underline:hover" to={"/SiginUp"}>SignUp</Link>
+                  </li>
                   <li className=" hover:cursor-pointer">
                     <Link className="link-underline link-underline-black link-underline:hover" to={"/Login"}>Login</Link>
                   </li>
