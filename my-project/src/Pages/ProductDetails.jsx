@@ -14,6 +14,7 @@ import { IoShieldCheckmark } from "react-icons/io5";
 import { AddToCard } from "../components/AddToCard";
 import { TbShieldX } from "react-icons/tb";
 import Categary from "../components/Categary";
+import loadingImg from "../assets/loading/loading.gif"
 
 function ProductDetails() {
   const params = useParams();
@@ -30,12 +31,13 @@ function ProductDetails() {
   const [count, setCount] = useState(1);
 
   return (
+    isLoading ? (
+      <div className="font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none">
+       <img src={loadingImg} alt="Loading..." />
+      </div>
+    ) : 
     <>
-      {isLoading ? (
-        <div className="font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none">
-          Loading....
-        </div>
-      ) : null}
+      
       {error ? (
         <div className="font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none">
           Not Found Product Details

@@ -14,6 +14,8 @@ import { SlHeart } from "react-icons/sl";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FiEye } from "react-icons/fi";
 import axios from "axios";
+import loadingImg from "../assets/loading/loading.gif"
+
 
 let AddToCardlist = [
   {
@@ -104,13 +106,29 @@ let AddToCardlist2 = [
 
 function OurProduct() {
   const [products, setProducts] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, SetError] = useState(null);
+
   const API_KEY = "https://dummyjson.com/products?limit=8&skip=100";
   let getProductData = async (event) => {
+  try {
+    setIsLoading(true);
+    SetError(null);
     let response = await axios(API_KEY);
     let data = response.data.products;
     // console.log(data);
-
+    setIsLoading(false);
     return setProducts(data);
+  } catch (error) {
+    setIsLoading(false);
+    SetError(error.response.statusText);
+    setProducts(null);
+    console.log(error.response.statusText);
+    
+  }
+  finally {
+    setIsLoading(false);
+  }
   };
   useEffect(() => {
     getProductData();
@@ -118,7 +136,11 @@ function OurProduct() {
 
   return (
     <>
-      <div className="ml-5">
+     {isLoading ? (
+      <div className="font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none">
+       <img src={loadingImg} alt="Loading..." />
+      </div>
+    ) :   (<> <div className="ml-5">
         <MyCountBox name="Explore Our Products" days="Our Products" />
       </div>
 
@@ -150,29 +172,7 @@ function OurProduct() {
           })}
         </div>
       </div>
-
-      {/* <div className="flex justify-center items-center  my-14  flex-row">
-        <div className="flex sm:flex-col flex-wrap mobile:flex-col lg:justify-center md:justify-center md:flex-row 2xl:flex-row xl:flex-row lg:flex-row lg:gap-4 gap-[30px]">
-          {AddToCardlist2.map((value, index) => {
-            return (
-              <  div key={index}>
-                {" "}
-                <AddToCard
-                 
-                 className={value.className}
-                  discount={value.discount}
-                  productName={value.productName}
-                  delPrice={value.delPrice}
-                  newPrice={value.newPrice}
-                  image={value.image}
-                  hearticon={value.hearticon} 
-                  eyeicon={value.eyeicon}
-                />
-              </ div >
-            );
-          })}
-        </div>
-      </div> */}
+ 
       <div className="flex justify-center items-center my-3">
         <div className="">
           <Link
@@ -183,6 +183,8 @@ function OurProduct() {
           </Link>
         </div>
       </div>
+      </>)
+}
     </>
   );
 }

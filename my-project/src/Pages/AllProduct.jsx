@@ -19,6 +19,8 @@ import axios from "axios";
 import { useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import useProducts from "../hooks/useProducts";
+import loadingImg from "../assets/loading/loading.gif"
+
 
 // let AddToCardlist = [
 //   {
@@ -184,6 +186,11 @@ function AllProduct() {
   return (
     // <div>AllProduct</div>
     <>
+     {isLoading ? (
+        <div className="font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none">
+         <img src={loadingImg} alt="Loading..." />
+        </div>
+      ) : null}
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="relative isolate overflow-hidden bg-white px-6 py-20 text-center sm:px-16 sm:shadow-sm">
           <p className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

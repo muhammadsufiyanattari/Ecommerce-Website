@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import loadingImg from "../assets/loading/loading.gif"
 // import {
 //   Navigation,
 //   Pagination,
@@ -107,7 +108,9 @@ function Categary({ category }) {
         >
           <div className="flex  justify-center items-center ">
             {isLoading ? (
-              <div className="font-extrabold text-4xl">Loading...</div>
+              <div className="font-extrabold text-4xl">
+                 <img src={loadingImg} alt="Loading..." />
+              </div>
             ) : null}
             {error}
             {products?.map((value, index) => {

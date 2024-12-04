@@ -1,14 +1,14 @@
-import game from "../assets/images/game.png";
-import chair from "../assets/images/chair.png";
-import led from "../assets/images/led.png";
-import pars from "../assets/images/pars.png";
-import wood from "../assets/images/wood.png";
-import spikerCard from "../assets/images/spikerCard.png";
-import keyboard from "../assets/images/keyboard.png";
-import apper from "../assets/images/apper.png";
-import { SlHeart } from "react-icons/sl";
-import { RiDeleteBin6Line } from "react-icons/ri";
-import { FiEye } from "react-icons/fi";
+// import game from "../assets/images/game.png";
+// import chair from "../assets/images/chair.png";
+// import led from "../assets/images/led.png";
+// import pars from "../assets/images/pars.png";
+// import wood from "../assets/images/wood.png";
+// import spikerCard from "../assets/images/spikerCard.png";
+// import keyboard from "../assets/images/keyboard.png";
+// import apper from "../assets/images/apper.png";
+// import { SlHeart } from "react-icons/sl";
+// import { RiDeleteBin6Line } from "react-icons/ri";
+// import { FiEye } from "react-icons/fi";
 
 // let AddToCardlist2 = [
 //   {
@@ -160,25 +160,16 @@ import { AddToCard } from "./AddToCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import useProducts from "../hooks/useProducts";
+import loadingImg from "../assets/loading/loading.gif"
+
 
 export function CardListSlider2() {
   const { products, error, isLoading } = useProducts("limit=8&skip=180");
 
-  // const [products, setProducts] = useState(null);
-  // const API_KEY = 'https://dummyjson.com/products?limit=6&skip=50';
-  // let getProductData = async (event) => {
-  //   let response = await axios(API_KEY);
-  //   let data =response.data.products
-  //   // console.log(data);
 
-  //  return setProducts( data)
-  // };
-  // useEffect(()=>{
-  //   getProductData();
-
-  // },[])
   return (
     <>
+    
       <div className="ml-12 mr-12   p-5 rounded ">
         <Swiper
           // install Swiper modules
@@ -225,7 +216,13 @@ export function CardListSlider2() {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          <div className="flex  ">
+          <div className="flex justify-center items-center ">
+          {isLoading?(
+              <div className="font-extrabold h-[300px] text-4xl">
+                <img src={loadingImg} alt="Loading..." />
+              </div>
+            ) : null}
+            {error}
             {products?.map((value, index) => {
               let discountPrice = Math.ceil(
                 value.price - value.discountPercentage * (value.price / 100)
@@ -253,54 +250,3 @@ export function CardListSlider2() {
   );
 }
 
-// import React, { useRef, useState } from 'react';
-// // Import Swiper React components
-// import { Swiper, SwiperSlide } from 'swiper/react';
-
-// // Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-// import 'swiper/css/navigation';
-
-// // import './styles.css';
-
-// // import required modules
-// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-// import { AddToCard } from './AddToCard';
-
-// export default ()=> {
-//   return (
-//     <>
-//       <Swiper
-//         spaceBetween={50}
-//         slidesPerView={4}
-//         centeredSlides={true}
-//         autoplay={{
-//           delay: 2500,
-//           disableOnInteraction: false,
-//         }}
-//         pagination={{
-//           clickable: true,
-//         }}
-//         navigation={true}
-//         modules={[Autoplay, Pagination, Navigation]}
-//         className="mySwiper"
-//       >
-//         {/* <SwiperSlide><AddToCard/></SwiperSlide>
-//         <SwiperSlide><AddToCard/></SwiperSlide>
-//         <SwiperSlide><AddToCard/></SwiperSlide> */}
-
-//         <div className="card flex ">
-//     {
-//       AddToCardlist.map((value ,index)=>{
-//         return(
-//           <SwiperSlide>  <AddToCard id={index}  discount={value.discount} productName={value.productName} delPrice={value.delPrice} newPrice={value.newPrice} starRank={value.starRank}/></SwiperSlide>
-
-//         )
-//       })
-//     }
-//     </div>
-//       </Swiper>
-//     </>
-//   );
-// }

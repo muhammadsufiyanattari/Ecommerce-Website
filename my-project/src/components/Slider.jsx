@@ -9,6 +9,8 @@ import apper from "../assets/images/apper.png";
 import { SlHeart } from "react-icons/sl";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FiEye } from "react-icons/fi";
+import loadingImg from "../assets/loading/loading.gif"
+
 
 let AddToCardlist = [
   {
@@ -235,7 +237,9 @@ export default () => {
         >
           <div className="flex justify-center items-center   ">
             {isLoading ? (
-              <div className="font-extrabold text-4xl">Loading...</div>
+              <div className="font-extrabold h-[300px] text-4xl">
+                <img src={loadingImg} alt="Loading..." />
+              </div>
             ) : null}
             {error}
 

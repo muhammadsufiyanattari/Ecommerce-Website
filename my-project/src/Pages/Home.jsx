@@ -23,9 +23,9 @@ import ProductDetails from "./ProductDetails";
 
 function Home() {
   return (
-    <div id="mainhome" className="  flex flex-col justify-center ">
+    <div id="mainhome"  className="  flex flex-col justify-center ">
       {/* Hero */}
-     <Hero />
+     <Hero  />
       <div className=" flex justify-start flex-col 2xl:ml-10 xl:ml-10 lg:ml-10 md:ml-0 sm:ml-0 mobile:ml-0 my-16  ">
         <FlashTimer />
         <CardListSlider />
@@ -72,7 +72,7 @@ function Home() {
             {" "}
             <div className="bg-black w-10 h-10 m-2 p-2 rounded-full">
               {" "}
-              <img src={Vector} alt="" />
+              <img  src={Vector} alt="" />
             </div>
           </div>
           <div className="center flex-col">
