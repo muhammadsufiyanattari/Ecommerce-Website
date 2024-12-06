@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
      colors:{
-      "myTheme":"#DB4444"
+      "myTheme":"#DB4444",
+      // "darkTheme"
+
      },
      screens:{
       "mobile":"310px",

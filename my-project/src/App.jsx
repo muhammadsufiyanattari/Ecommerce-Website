@@ -22,7 +22,7 @@ function App() {
   let logSing = false;
   return (
     <>
-      <div className="w-[100%]  2xl:center  ">
+      <div className="w-[100%]  2xl:center flex flex-col justify-center overflow-hidden   ">
         <Header />
         <MyNavbar />
 

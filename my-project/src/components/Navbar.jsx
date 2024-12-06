@@ -1,5 +1,8 @@
 import logo from "../assets/logo/logo.svg";
 import logomd from "../assets/logo/logomd.svg";
+import mdDarkLogo from "../assets/logo/mdDarkLogo.svg";
+
+import logoDark from "../assets/logo/logoDrak.svg";
 import { MdOutlineMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
@@ -9,6 +12,10 @@ import { FaLeaf, FaUserCircle } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import mypic from "/src/assets/profilepic/myphoto.jpg";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleDarkMode } from "../store/darkModeSlice";
+import { IoSunny } from "react-icons/io5";
+import { IoMoon } from "react-icons/io5";
 
 // ../assets/logo/'
 let Mylink = [
@@ -20,28 +27,30 @@ let Mylink = [
 let logSing = false;
 export default function MyNavbar() {
   const [menu, setMenu] = useState(false);
+  const dispatch = useDispatch();
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
   return (
     <>
-      <nav className=" flex   items-center  justify-evenly p-6  border-b-2 border-gray-100 relative bg-white">
+      <nav className={` flex   items-center  justify-evenly p-6  border-b-2 border-gray-100  transition-colors duration-1000 relative ${darkMode?"darkTheme":""} bg-white`}>
         {/* logo */}
         <div className="imglogo center ">
         <Link to={'/'}>  <img
             className="w-32 xl:flex 2xl:flex lg:flex md:hidden sm:hidden mobile:hidden"
-            src={logo}
+            src={darkMode?logoDark:logo}
             alt="logo"
           /></Link>
         <Link to={'/'}>  <img
             className="w-10 xl:hidden 2xl:hidden lg:hidden md:flex sm:flex mobile:flex"
-            src={logomd}
+            src={darkMode?mdDarkLogo:logomd}
             alt="logo"
           /></Link>
         </div>
         {/* searchbar */}
         <div className="  mobile:w-[200px] md:w-[250px] center lg:w-[250px]  h-[38px] gap-6">
-          <div className="  sm:w-[400px]  w-[243px] h-[38px] flex gap-2 center bg-[#F5F5F5]">
+          <div className={`  sm:w-[400px]  w-[243px] h-[38px] flex gap-2 center rounded bg-[#F5F5F5] ${darkMode?"bg-black":""}`}>
             <div className="search   h-6 flex justify-center ">
               <input
-                className="outline-none  w-[100%] bg-[#F5F5F5] placeholder:font-normal md:text-base text-xs text-gray-300"
+                className={`outline-none  w-[100%] bg-[#F5F5F5] placeholder:font-normal md:text-base text-xs text-gray-300 ${darkMode?"bg-black":""} ${darkMode?"placeholder:text-white":""}  ${darkMode?"text-white":""}`}
                 placeholder="What are looking for"
                 type="search"
                 name=""
@@ -53,7 +62,7 @@ export default function MyNavbar() {
                     console.log(document.getElementsByClassName("search"));
                   }}
                 >
-                  <CiSearch className="text-2xl cursor-pointer font-semibold" />
+                  <CiSearch className={`${darkMode?"text-white":""} text-2xl cursor-pointer font-semibold`} />
                 </button>
               </div>
             </div>
@@ -66,7 +75,7 @@ export default function MyNavbar() {
             {Mylink.map((value, index) => {
               return (
                 <li
-                  className="  hover:cursor-pointer"
+                  className={` ${darkMode?"text-white link-dark-underline link-dark-underline-black":""}  hover:cursor-pointer`}
                   key={index}
                 >
                   <Link className="link-underline link-underline-black link-underline:hover" to={value.path}> {value.name}</Link>
@@ -77,20 +86,26 @@ export default function MyNavbar() {
             {logSing ? null : (
               <>
                 <li className=" hover:cursor-pointer">
-                  <Link className="link-underline link-underline-black link-underline:hover" to={"/SiginUp"}>SignUp</Link>
+                  <Link className={`link-underline link-underline-black link-underline:hover ${darkMode?"text-white link-dark-underline link-dark-underline-black":""} `} to={"/SiginUp"}>SignUp</Link>
                 </li>
                 <li className=" hover:cursor-pointer ">
-                  <Link className="link-underline link-underline-black link-underline:hover" to={"/Login"}>Login</Link>
+                  <Link className={`link-underline link-underline-black link-underline:hover ${darkMode?"text-white link-dark-underline link-dark-underline-black":""} `} to={"/Login"}>Login</Link>
                 </li>
               </>
             )}
           </ul>
         </div>
-        <div className="flex justify-center items-center list-none gap-1 mobile:text-xs sm:text-xs">
+        <div className="flex justify-center items-center list-none gap-2 mobile:text-xs sm:text-xs">
           {" "}
+          <li className="2xl:text-2xl xl:text-2xl  lg:text-2xl md:text-xl sm:text-sm mobile:text-sm"><button onClick={()=>dispatch(toggleDarkMode())} >
+         { darkMode?   <IoSunny className="text-lg text-white " />:
+          <IoMoon className="text-lg text-black " />}
+          </button>
+          </li>
+
           {logSing === true ? (
             <>
-              <li className="hover:text-myTheme 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-smhover:cursor-pointer">
+              <li className="hover:text-myTheme 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
                 <CiHeart />
               </li>
               <li className="hover:text-myTheme 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
@@ -105,6 +120,7 @@ export default function MyNavbar() {
             </>
           ) : (
             <>
+
               <li className="text-myTheme text-2xl hover:cursor-pointer">
                 <Link to={"/profile"}>
                   <FaUserCircle />

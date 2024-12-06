@@ -2,6 +2,7 @@ import hero from "../assets/images/hero.png";
 import apple from "../assets/images/apple.png";
 import dot from "../assets/images/dot.png";
 import { FaArrowRight } from "react-icons/fa6";
+import { useSelector } from "react-redux";
 
 let heroLink = [
   { name: "Woman's Fashion" },
@@ -16,9 +17,11 @@ let heroLink = [
 ];
 
 export default function Hero() {
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
     <>
-      <div className="flex justify-center items-center">
+      <div className={`flex justify-center items-center `}>
         <div
           id="heroMain"
           className=" w-[100%] h-[500px] 2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col mobile:flex-col flex mb-7 md:h-auto sm:h-auto mobile:h-auto  sm:mb-7 "
@@ -30,7 +33,7 @@ export default function Hero() {
                   <li
                   
                     key={index}
-                    className="    list-none  font-normal text-base text-black 2xl:text-[20px] xl:text-[18px] lg:text-[16px] md:text-[18px] sm:text-[15px] mobile:text-[15px]"
+                    className={`${darkMode?"text-white":""}    list-none  font-normal text-base text-black 2xl:text-[20px] xl:text-[18px] lg:text-[16px] md:text-[18px] sm:text-[15px] mobile:text-[15px]`}
                     id={index}
                   >
                     {value.name}
@@ -40,7 +43,7 @@ export default function Hero() {
             </div>
           </div>
           <div className=" mx-2 2xl:w-[70%] xl:w-[70%] lg:w-[100%] md:w-[100%] sm:w-[100%] 2xl:h-[500px] xl:h-[500px] lg:h-[100px] center">
-            <div className=" bg-black  w-[892px] py-6 rounded  gap-4 2xl:w-[892px] 2xl:h-[344px] xl:w-[892px] xl:h-[344px] lg:w-[892px]  md:w-auto sm:w-auto px-3 mobile:my-4 mobile:w-auto ">
+            <div className={`${darkMode?"text-white":""} bg-black  w-[892px] py-6 rounded  gap-4 2xl:w-[892px] 2xl:h-[344px] xl:w-[892px] xl:h-[344px] lg:w-[892px]  md:w-auto sm:w-auto px-3 mobile:my-4 mobile:w-auto `}>
               {/* inner first div */}
               <div className="flex justify-center it  ">
                 {/* mera textarea  */}
