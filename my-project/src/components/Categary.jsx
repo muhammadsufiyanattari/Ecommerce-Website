@@ -76,11 +76,11 @@ function Categary({ category }) {
               spaceBetween: 40,
             },
             1100: {
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetween: 50,
             },
             800: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 50,
             },
             500: {
