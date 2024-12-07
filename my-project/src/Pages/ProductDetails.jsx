@@ -231,7 +231,7 @@ const darkMode = useSelector((state) => state.darkMode.darkMode);
                     return (
                       <img
                         key={i}
-                        className="w-[80px] h-[80px] shadow-2xl cursor-pointer bg-[#F5F5F5]"
+                        className={ `${darkMode?"darkTheme":""} w-[80px] h-[80px] shadow-2xl cursor-pointer bg-[#F5F5F5]`}
                         src={image}
                         alt=""
                         onMouseOver={() => setSelectImg(image)}
@@ -240,7 +240,7 @@ const darkMode = useSelector((state) => state.darkMode.darkMode);
                   })}
                 </div>
               )}
-              <div className="flex justify-center  shadow-2xl  items-center bg-[#F5F5F5] w-[300px] h-[300px]">
+              <div className={`${darkMode?"darkTheme":""} flex justify-center  shadow-2xl  items-center bg-[#F5F5F5] w-[300px] h-[300px]`}>
                 {selectImg ? (
                   <img src={selectImg} alt="" />
                 ) : (
@@ -261,7 +261,7 @@ const darkMode = useSelector((state) => state.darkMode.darkMode);
 
             <div className=" 2xl:hidden xl:hidden  my-10 flex-wrap lg:hidden md:hidden justify-items-center items-center  sm:flex mobile:flex flex-col    gap-6 pl-3 w-[500px]  h-[600px] ">
               <div>
-                <h1 className="font-semibold text-xl text-black ">
+                <h1 className={`${darkMode?"text-white":""} font-semibold text-xl text-black `}>
                   {product?.title}
                 </h1>
               </div>
@@ -288,13 +288,13 @@ const darkMode = useSelector((state) => state.darkMode.darkMode);
                   Stock: {product?.stock}
                 </span>
               </div>
-              <div className="price font-normal text-xl">
+              <div className={ `${darkMode?"text-white":""} price font-normal text-xl`}>
                 ${discountPrice * count}
                 {}
                 {} PKR {Math.floor(discountPrice * count * 278.9)}{" "}
               </div>
               <div className="border-b-gray-400  border-b-2 pb-6">
-                <p className=" font-normal text-[10px]  w-[300px] p-2 text-center text-black">
+                <p className={`${darkMode?"text-white":""} font-normal text-[10px]  w-[300px] p-2 text-center text-black`}>
                   {product?.description}
                 </p>
               </div>
@@ -306,7 +306,7 @@ const darkMode = useSelector((state) => state.darkMode.darkMode);
                   >
                     -
                   </button>
-                  <div className="w-20 h-11  border-x-2 flex justify-center items-center ">
+                  <div className={ `${darkMode?"text-white":""} w-20 h-11  border-x-2 flex justify-center items-center `}>
                     {" "}
                     {count}
                   </div>{" "}
@@ -335,24 +335,26 @@ const darkMode = useSelector((state) => state.darkMode.darkMode);
               <div className="delvery flex flex-col w-[300px] h-[180px]  justify-around  border-2 rounded">
                 <div className="flex pl-3 gap-4 border-b-2 pb-4">
                   <div className="w-10 h-10">
-                    <TbTruckDelivery className="text-5xl" />
+                    <TbTruckDelivery className={`${darkMode?"text-white":""} text-5xl`} />
                   </div>
                   <div className="">
-                    <h1 className="font-medium text-sm">
+                    <h1 className={`${darkMode?"text-white":""} font-medium text-sm`}>
                       Shipping Information
                     </h1>
-                    <p className="font-normal text-xs">
+                    <p className={`${darkMode?"text-white":""} font-normal text-xs`}>
                       {product?.shippingInformation}
                     </p>
                   </div>
                 </div>
                 <div className="flex pl-3 gap-4">
                   <div>
-                    <img className="w-8 h-8" src={IconReturn} alt="" />
+                    {/* <img className="w-8 h-8" src={IconReturn} alt="" /> */}
+                    <GiReturnArrow  className={`${darkMode?"text-white":""} text-4xl`} />
+
                   </div>
                   <div>
-                    <h1 className="font-medium text-sm">Return Policy</h1>
-                    <p className="font-normal text-xs">
+                    <h1 className={`${darkMode?"text-white":""}  font-medium text-sm`}>Return Policy</h1>
+                    <p className={`${darkMode?"text-white":""}  font-normal text-xs`}>
                       {product?.returnPolicy}
                     </p>
                   </div>
@@ -360,7 +362,7 @@ const darkMode = useSelector((state) => state.darkMode.darkMode);
               </div>
               <div>
               <div className="flex justify-start items-center  pl-3 gap-4 rounded border-2 w-[300px] h-[] mb-2 p-1">
-                <div className="w-10 h-10">
+                <div className={ `${darkMode?"text-white":""}  w-10 h-10`}>
                   {product?.warrantyInformation == "No warranty" ? (
                     <TbShieldX className="text-3xl" />
                   ) : (
@@ -368,7 +370,7 @@ const darkMode = useSelector((state) => state.darkMode.darkMode);
                   )}
                 </div>
                 <div className="">
-                  <p className="font-medium text-sm">
+                  <p className={`${darkMode?"text-white":""}  font-medium text-sm`}>
                     {product?.warrantyInformation}
                   </p>
                 </div>

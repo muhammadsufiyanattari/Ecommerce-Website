@@ -20,6 +20,7 @@ import { useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import useProducts from "../hooks/useProducts";
 import loadingImg from "../assets/loading/loading.gif"
+import { useSelector } from "react-redux";
 
 
 // let AddToCardlist = [
@@ -139,6 +140,8 @@ import loadingImg from "../assets/loading/loading.gif"
 // ];
 
 function AllProduct() {
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   const { products, error, isLoading } = useProducts("limit=84&skip=77");
   //   const [products, setProducts] = useState(null);
   //   const [isLoading, setIsLoading] = useState(false)
@@ -185,15 +188,15 @@ function AllProduct() {
   let searchReasult = searchProducts();
   return (
     // <div>AllProduct</div>
-    <>
+    <div className={`${darkMode?"pageDark":""}`}>
      {isLoading ? (
-        <div className="font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none">
+        <div className={ `${darkMode?"pageDark":""} font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none`}>
          <img src={loadingImg} alt="Loading..." />
         </div>
       ) : null}
-      <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="relative isolate overflow-hidden bg-white px-6 py-20 text-center sm:px-16 sm:shadow-sm">
-          <p className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <div className={`${darkMode?"pageDark":""} mx-auto max-w-7xl sm:px-6 lg:px-8 `}>
+        <div className={`${darkMode?"pageDark":""} relative isolate overflow-hidden bg-white px-6 py-20 text-center sm:px-16 sm:shadow-sm`}>
+          <p className={`${darkMode?"text-white":""} mx-auto max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl`}>
             Search Products
           </p>
           <form onSubmit={() => {}}>
@@ -228,7 +231,7 @@ function AllProduct() {
           </form>
         </div>
       </div>
-      <div className="flex justify-center items-center   my-14  flex-row">
+      <div className={`${darkMode?"":""} flex justify-center items-center   my-14  flex-row`}>
         <div className=" flex sm:flex-col  w-[1170px]  flex-wrap mobile:flex-col lg:justify-center md:justify-center md:flex-row 2xl:flex-row xl:flex-row lg:flex-row lg:gap-4 gap-[30px]">
           {isLoading ? (
             <div className="font-extrabold text-4xl h-[100vh]">Loading...</div>
@@ -315,7 +318,7 @@ function AllProduct() {
           })}
         </div>
       </div> */}
-    </>
+    </div>
   );
 }
 
