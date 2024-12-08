@@ -1,6 +1,7 @@
 import React from "react";
 import location from "../assets/profilepic/location.jpg";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Contact() {
   const dataInputs=(event)=>{
@@ -12,19 +13,21 @@ function Contact() {
 console.log("userName :",userName,"Email:",email,"message",message);
 
   }
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
-    <section className="text-black body-font relative ">
+    <section className={`${darkMode?"pageDark text-white":""} text-black body-font relative `}>
       <div className="container px-5 py-24 mx-auto flex  sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2   overflow-hidden sm:mr-10 p-10 flex flex-col items-center justify-start relative">
         
-          <img className="w-[100%] my-3" src={location} alt="" />
+          <img className="w-[100%] my-3 " src={location} alt="" />
          
         </div>
-        <form onSubmit={dataInputs} className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-black  text-3xl mb-1 2xl:font-extrabold xl:font-extrabold lg:font-extrabold md:font-bold sm:font-bold mobile:font-bold title-font">
+        <form onSubmit={dataInputs} className={`${darkMode?"darkTheme p-2 rounded ":"bg-white"}lg:w-1/3 md:w-1/2  flex flex-col rounded md:ml-auto w-full md:py-8 mt-8 md:mt-0`}>
+          <h2 className={`${darkMode?"text-white":"text-black"}   text-3xl mb-1 2xl:font-extrabold xl:font-extrabold lg:font-extrabold md:font-bold sm:font-bold mobile:font-bold title-font`}>
             Feedback
           </h2>
-          <p className="leading-relaxed mb-5 text-black">
+          <p className={`${darkMode?"text-white":"text-black"}leading-relaxed mb-5 `}>
             We Need For Your Feedback
           </p>
           <div className="relative mb-4">

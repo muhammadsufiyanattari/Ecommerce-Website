@@ -60,7 +60,7 @@ export function AddToCard({
             ) : (
               <div className=" w-[172px] h-[155px]"></div>
             )}
-            <Link className={`${darkMode?"bg-black text-white hover:bg-white hover:text-black":"bg-white hover:bg-black"}  h text-white w-[100%] flex  items-end justify-center p-2 rounded-b`}>
+            <Link to={"/AddNewCard"} className={`${darkMode?"hover:bg-myTheme bg-black text-white  ":"bg-white hover:bg-black"}  h text-white w-[100%] flex  items-end justify-center p-2 rounded-b`}>
               Add To Card
             </Link>
           </div>

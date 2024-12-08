@@ -127,8 +127,11 @@ import ps5 from "../assets/arrivel/ps5.png";
 import guchi from "../assets/arrivel/guchi.png";
 import amazone from "../assets/arrivel/amazone.png";
 import anti from "../assets/arrivel/anti.png";
+import { useSelector } from "react-redux";
 
 function Arrivel() {
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
     <>
       <div className="ml-5">
@@ -137,7 +140,7 @@ function Arrivel() {
       <div className="flex justify-center items-center  my-10">
         <div className="w-full max-w-[1170px] h-auto lg:h-[600px] flex flex-col lg:flex-row  gap-4 lg:gap-[30px] p-4">
           <div
-            className="flex items-end p-7 w-full lg:w-[50%]  bg-black"
+            className={`${darkMode?"darkTheme":"bg-black"} flex items-end p-7 w-full lg:w-[50%]  `}
             style={{
               backgroundImage: `url(${ps5})`,
               backgroundRepeat: "no-repeat",
@@ -164,7 +167,7 @@ function Arrivel() {
             </div>
           </div>
           <div className="w-full lg:w-[50%] flex flex-col gap-8">
-            <div className="bg-[#0D0D0D] w-full lg:w-[570px] h-auto lg:h-[600px] flex rounded">
+            <div className={`${darkMode?"darkTheme":"bg-[#0D0D0D]"}  w-full lg:w-[570px] h-auto lg:h-[600px] flex rounded`}>
               <div className="w-full lg:w-[70%] text-white flex justify-center items-end p-3">
                 <div className="flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1">
                   <div>
@@ -194,7 +197,7 @@ function Arrivel() {
             </div>
             <div className="w-full lg:w-[570px] h-auto lg:h-[600px] flex flex-col lg:flex-row gap-4 lg:gap-7">
               <div
-                className="bg-black w-full lg:w-[270px] h-[284px] flex justify-center items-end p-4 rounded"
+                className={`${darkMode?"darkTheme":"bg-black"}  w-full lg:w-[270px] h-[284px] flex justify-center items-end p-4 rounded`}
                 style={{
                   backgroundImage: `url(${amazone})`,
                   backgroundRepeat: "no-repeat",
@@ -221,7 +224,7 @@ function Arrivel() {
                 </div>
               </div>
               <div
-                className="bg-black w-full lg:w-[270px] h-[284px] flex justify-center items-end p-4 py-8 rounded"
+                className={`${darkMode?"darkTheme":"bg-black"}  w-full lg:w-[270px] h-[284px] flex justify-center items-end p-4 py-8 rounded`}
                 style={{
                   backgroundImage: `url(${guchi})`,
                   backgroundRepeat: "no-repeat",

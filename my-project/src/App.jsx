@@ -16,6 +16,7 @@ import { Navigate } from "react-router-dom";
 import AllProduct from "./Pages/AllProduct";
 import CardTotal from "./Pages/CardTotal";
 import ProductDetails from "./Pages/ProductDetails";
+import AddNewCard from "./Pages/AddNewCard";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,6 +34,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/CardTotal" element={<CardTotal />} />
+          <Route path="/AddNewCard" element={<AddNewCard />} />
 
           <Route path="/SiginUp" element={<SiginUp />} />
           {logSing ? (
