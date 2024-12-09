@@ -57,6 +57,7 @@ background: linear-gradient(0deg, rgba(9,9,9,1) 32%, rgb(107, 14, 2) 100%); */
 background: linear-gradient(90deg, rgba(20,20,20,1) 0%, rgba(17,12,11,1) 33%, rgba(170,28,17,1) 52%, rgba(20,20,20,1) 70%); */
 background: rgb(205,19,29);
 background: linear-gradient(90deg, rgba(205,19,29,1) 0%, rgba(20,20,20,1) 50%);
+
 }
 .pageDark{
   /* background: rgb(11,11,11);

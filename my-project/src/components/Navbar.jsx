@@ -31,7 +31,7 @@ export default function MyNavbar() {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
   return (
     <>
-      <nav className={` flex   items-center  justify-evenly p-6  border-b-2 border-gray-100  transition-colors duration-1000 relative ${darkMode?"darkTheme":""} bg-white`}>
+      <nav className={` flex   items-center  justify-evenly p-6  border-b-2 border-gray-100  transition-colors duration-500 relative ${darkMode?"darkTheme":""} bg-white`}>
         {/* logo */}
         <div className="imglogo center ">
         <Link to={'/'}>  <img
@@ -46,8 +46,8 @@ export default function MyNavbar() {
           /></Link>
         </div>
         {/* searchbar */}
-        <div className="  mobile:w-[200px] md:w-[250px] center lg:w-[250px]  h-[38px] gap-6">
-          <div className={`  sm:w-[400px]  w-[243px] h-[38px] flex gap-2 center rounded bg-[#F5F5F5] ${darkMode?"bg-black":""}`}>
+        <div className="  mobile:w-[200px]  md:w-[250px] center lg:w-[250px]  h-[38px] gap-6">
+          <div className={`  sm:w-[400px]  w-[243px] h-[38px] flex gap-2 center  rounded bg-[#F5F5F5] ${darkMode?"bg-black":""}`}>
             <div className="search   h-6 flex justify-center ">
               <input
                 className={`outline-none  w-[100%] bg-[#F5F5F5] placeholder:font-normal md:text-base text-xs text-gray-300 ${darkMode?"bg-black":""} ${darkMode?"placeholder:text-white":""}  ${darkMode?"text-white":""}`}
