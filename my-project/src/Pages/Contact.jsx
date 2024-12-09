@@ -1,7 +1,9 @@
 import React from "react";
 import location from "../assets/profilepic/location.jpg";
+import lc from "../assets/profilepic/lc.png";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 
 function Contact() {
   const dataInputs=(event)=>{
@@ -18,12 +20,13 @@ console.log("userName :",userName,"Email:",email,"message",message);
   return (
     <section className={`${darkMode?"pageDark text-white":""} text-black body-font relative `}>
       <div className="container px-5 py-24 mx-auto flex  sm:flex-nowrap flex-wrap">
-        <div className="lg:w-2/3 md:w-1/2   overflow-hidden sm:mr-10 p-10 flex flex-col items-center justify-start relative">
+        <div className="lg:w-2/3 md:w-1/2     overflow-hidden sm:mr-10 p-10 flex flex-col items-center justify-start  relative">
         
-          <img className="w-[100%] my-3 " src={location} alt="" />
+          {/* <img className="w-[100%] my-3 " src={location} alt="" /> */}
+          <img className="w-auto my-3 " src={lc} alt="" />
          
         </div>
-        <form onSubmit={dataInputs} className={`${darkMode?"darkTheme p-2 rounded ":"bg-white"}lg:w-1/3 md:w-1/2  flex flex-col rounded md:ml-auto w-full md:py-8 mt-8 md:mt-0`}>
+        <form onSubmit={dataInputs} className={`${darkMode?" p-2 rounded ":"bg-white"}lg:w-1/3 md:w-1/2  flex flex-col justify-center rounded md:ml-auto w-full md:py-8 mt-8 md:mt-0`}>
           <h2 className={`${darkMode?"text-white":"text-black"}   text-3xl mb-1 2xl:font-extrabold xl:font-extrabold lg:font-extrabold md:font-bold sm:font-bold mobile:font-bold title-font`}>
             Feedback
           </h2>
@@ -31,52 +34,52 @@ console.log("userName :",userName,"Email:",email,"message",message);
             We Need For Your Feedback
           </p>
           <div className="relative mb-4">
-            <label htmlFor="name" className="leading-7 text-sm text-black">
+            <label htmlFor="name" className={`${darkMode?"text-white":"text-black"}  leading-7 text-sm `}>
               Name
             </label>
             <input
               type="text"
               id="name"
               name="userName"
-              className="w-full bg-white  border border-gray-300  focus:border-black text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className={ `${darkMode?"text-white bg-black border-myTheme":"text-black bg-white"} w-full   border border-gray-300 rounded focus:border-black text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
             />
           </div>
           <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-black">
+            <label htmlFor="email" className={`${darkMode?"text-white":"text-black"}  leading-7 text-sm `}>
               Email
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              className="w-full bg-white  border border-gray-300 focus:border-black   text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className={`${darkMode?"text-white bg-black border-myTheme":"text-black bg-white"} w-full rounded  border border-gray-300 focus:border-black   text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
             />
           </div>
           <div className="relative mb-4">
-            <label htmlFor="message" className="leading-7 text-sm text-black">
+            <label htmlFor="message" className={`${darkMode?"text-white":"text-black"} leading-7 text-sm `}>
               Message
             </label>
             <textarea
               id="message"
               name="message"
-              className="w-full bg-white  border border-gray-300   h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              className={`${darkMode?"text-white bg-black border-myTheme":"text-black bg-white"} w-full rounded  border border-gray-300   h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out`}
               defaultValue={""}
             />
           </div>
-          <button className="text-white bg-black border-0 py-2 px-6 focus:outline-none active:bg-myTheme  text-lg">
+          <button className="text-white bg-black border-0 rounded py-2 px-6 focus:outline-none active:bg-myTheme  text-lg">
             Button
           </button>
-          <p className="text-xs text-black mt-3">The Knowldge is Light</p>
+          <p className={`text-xs ${darkMode?"text-white":"text-black"}  mt-3`}>The Knowldge is Light</p>
         </form>
       </div>
-      <div className="flex justify-center items-start my-3">
+      {/* <div className="flex justify-center items-start my-3">
         <Link
           className="bg-myTheme active:bg-red-700 py-3 px-8 rounded text-white"
           to={"/"}
         >
           Go To Home
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 }
