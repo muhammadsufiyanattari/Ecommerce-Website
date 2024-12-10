@@ -1,6 +1,34 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import toast from 'react-hot-toast';
 
 function AddNewCard() {
+  const submitHandler= async(event)=>{
+    try {
+      event.preventDefault()
+    const formValues={}
+    const formdata=new FormData(event.target)
+    for( const pairs of formdata.entries()){
+      formValues[pairs[0]]=pairs[1];
+    }
+    console.log(formValues);
+    const response= await axios.post('https://dummyjson.com/products/add')
+    // price:"productname"
+    {
+      title:"productname"
+      prductName:"productname"
+    }
+    console.log('response',response);
+    toast.success("Your product add has been successful")
+    
+    } catch (error) {
+      toast.error(error.message)
+
+      console.log("error :",error.message||"Unknown Error");
+      
+    }
+  }
   return (
     // <div>AddNewCard</div>
     <>
@@ -138,7 +166,7 @@ function AddNewCard() {
     <h1 className="text-xl font-bold text-black capitalize ">
       Add New Product
     </h1>
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
         <div>
           <label className="text-black dark:text-gray-200" htmlFor="productname">
@@ -146,43 +174,47 @@ function AddNewCard() {
           </label>
           <input
             id="productname"
+            name="productname"
             type="text"
             className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
           />
         </div>
-        <div>
+        {/* <div>
           <label
             className="text-black dark:text-gray-200"
-            htmlFor="emailAddress"
+            htmlFor="productCategary"
           >
-            Email Address
+            Product Categary
           </label>
           <input
-            id="emailAddress"
-            type="email"
+            id="productCategary"
+            name="productCategary"
+            type="productCategary"
+            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
+          />
+        </div> */}
+        <div>
+          <label className="text-black dark:text-gray-200" htmlFor="price">
+            Price
+          </label>
+          <input
+          name='price'
+            id="price"
+            type="number"
             className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
           />
         </div>
         <div>
-          <label className="text-black dark:text-gray-200" htmlFor="password">
-            Password
-          </label>
-          <input
-            id="password"
-            type="password"
-            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
-          />
-        </div>
-        <div>
           <label
             className="text-black dark:text-gray-200"
-            htmlFor="passwordConfirmation"
+            htmlFor="stock"
           >
-            Password Confirmation
+            Stock
           </label>
           <input
-            id="passwordConfirmation"
-            type="password"
+            id="stock"
+            name='stock'
+            type="number"
             className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
           />
         </div>
@@ -204,9 +236,9 @@ function AddNewCard() {
             className="text-black dark:text-gray-200"
             htmlFor="passwordConfirmation"
           >
-            Select
+            Product Categary
           </label>
-          <select className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800  focus:border-myTheme dark:focus:border-myTheme focus:outline-none focus:ring-myTheme">
+          <select name='productCategary' className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800  focus:border-myTheme dark:focus:border-myTheme focus:outline-none focus:ring-myTheme">
             <option>Surabaya</option>
             <option>Jakarta</option>
             <option>Tangerang</option>
@@ -254,7 +286,7 @@ function AddNewCard() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-black">Image</label>
+          <label className="block text-sm font-medium text-black">Product Image</label>
           <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-black border-dashed  rounded-md">
             <div className="space-y-1 text-center">
               <svg
@@ -291,10 +323,13 @@ function AddNewCard() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mt-6">
+      <div className="flex justify-center mt-6 gap-2">
         <button className="px-12 py-3 w-auto leading-5 text-white transition-colors duration-200 transform bg-black rounded hover:bg-myTheme focus:outline-none ">
           Submit
         </button>
+        <Link to={"/"} className="px-12 py-3 w-auto leading-5 text-white transition-colors duration-200 transform bg-black rounded hover:bg-myTheme focus:outline-none ">
+          Cancel
+        </Link>
       </div>
     </form>
   </section>

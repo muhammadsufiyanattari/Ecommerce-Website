@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store/store.js";
+import toast, { Toaster } from 'react-hot-toast';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
   v7_relativeSplatPath: true,
 }}f>
     <App />
+    <Toaster/>
 </BrowserRouter>
 </Provider>
   </StrictMode>,
