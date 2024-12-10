@@ -206,13 +206,13 @@ export function CardListSlider2() {
               spaceBetween: 0,
             },
           }}
-          navigation
+          // navigation
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
+          // pagination={{ clickable: true }}
+          // scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >

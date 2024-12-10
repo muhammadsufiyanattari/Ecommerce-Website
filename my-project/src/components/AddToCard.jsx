@@ -25,7 +25,7 @@ export function AddToCard({
   return (
     <>
       <Link id={id} to={`/productDetail/${id}`}>
-        <div className={ `${darkMode?"darkTheme":""} main group bg-white drop-shadow-lg shadow-black   w-[270px] h-[370px] my-4 rounded mobile:m-auto `}>
+        <div className={ `${darkMode?"darkTheme":""} main group bg-white drop-shadow-lg shadow-black   w-[270px] h-[370px] my-4 rounded mobile:m-auto transition-all duration-300 `}>
           <div className={`${darkMode?"darkTheme":""} img w-[270px] h-[250px] bg-[#F5F5F5] flex flex-col relative center `}>
             <button
               className={` w-[55px] h-[26px] ${className} rounded text-white absolute left-3 right-4 bottom-1 top-3 ;`}
@@ -53,19 +53,19 @@ export function AddToCard({
             </div>
             {image ? (
               <img
-                className=" w-[172px] h-[155px] m-auto group-hover:scale-150"
+                className=" w-[172px] h-[155px] m-auto group-hover:scale-150 transition-all duration-500"
                 src={image}
                 alt=""
               />
             ) : (
               <div className=" w-[172px] h-[155px]"></div>
             )}
-            <Link to={"/AddNewCard"} className={`${darkMode?"active:bg-myTheme bg-black text-white  ":"bg-white group-hover:bg-black"}  h text-white w-[100%] flex  items-end justify-center p-2 rounded-b`}>
+            <Link to={"/AddNewCard"} className={`${darkMode?"active:bg-myTheme bg-black transition-all duration-300 text-white  ":"bg-white group-hover:bg-black"}  h text-white w-[100%] flex transition-all duration-500  items-end justify-center p-2 rounded-b`}>
               Add To Card
             </Link>
           </div>
           <div className="myp w-[201px] h-[84px] ml-2 gap-2 ">
-            <h2 className={`${darkMode?"text-white group-hover:text-gray-200 ":"group-hover:text-myTheme"} w-[201]  text-sm font-medium  `}>
+            <h2 className={`${darkMode?"text-white group-hover:text-gray-200 ":"group-hover:text-myTheme"} w-[201]  text-sm font-medium transition-all duration-300  `}>
               {productName}
             </h2>
             <p className="flex gap-4 my-2 w-[100px] h-6  text-base font-medium text-myTheme">

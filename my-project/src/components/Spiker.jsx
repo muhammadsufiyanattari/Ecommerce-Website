@@ -42,7 +42,7 @@ function Spiker() {
           <div className="w-[50%] ">
             <div className=" center">
               <img
-                className=" 2xl:w-[568px] xl:w-[568px] lg:w-[468px] md:w-[368px] 2xl:h-[330px] xl:h-[330px] lg:h-[280px] md:h-[230px] sm:w-[280px] sm:h-[180px] mobile:w-auto mobile:h-auto"
+                className=" 2xl:w-[568px] xl:w-[568px]  lg:w-[468px] md:w-[368px] 2xl:h-[330px] xl:h-[330px] lg:h-[280px] md:h-[230px] sm:w-[280px] sm:h-[180px] mobile:w-auto mobile:h-auto"
                 src={frameSpiker}
                 alt="Frame Spiker"
               />

@@ -186,8 +186,8 @@ function AllProduct() {
     return result;
   };
   let searchReasult = searchProducts();
-  return (
-    // <div>AllProduct</div>
+  return (<>
+    {/* // <div>AllProduct</div> */}
     <div className={`${darkMode?"pageDark":""}`}>
      {isLoading ? (
         <div className={ `${darkMode?"pageDark":""} font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none`}>
@@ -319,6 +319,7 @@ function AllProduct() {
         </div>
       </div> */}
     </div>
+    </>
   );
 }
 

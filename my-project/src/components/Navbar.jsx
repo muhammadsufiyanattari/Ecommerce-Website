@@ -31,7 +31,7 @@ export default function MyNavbar() {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
   return (
     <>
-      <nav className={` flex   items-center  justify-evenly p-6  border-b-2 border-gray-100  transition-colors duration-500 relative ${darkMode?"darkTheme":""} bg-white`}>
+      <nav className={` flex   items-center  justify-evenly p-6  border-b-2 border-gray-100  transition-colors duration-500 relative ${darkMode?"darkTheme":""} bg-white `}>
         {/* logo */}
         <div className="imglogo center ">
         <Link to={'/'}>  <img
