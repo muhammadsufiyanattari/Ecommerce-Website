@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import toast from 'react-hot-toast';
+import { useSelector } from 'react-redux';
+// const darkMode = useSelector((state) => state.darkMode.darkMode);
 
 function AddNewCard() {
   const submitHandler= async(event)=>{
@@ -16,7 +18,7 @@ function AddNewCard() {
     const response= await axios.post('https://dummyjson.com/products/add')
     // price:"productname"
     {
-      title:"productname"
+      
       prductName:"productname"
     }
     console.log('response',response);
