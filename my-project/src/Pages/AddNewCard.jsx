@@ -46,20 +46,24 @@ function AddNewCard() {
             Product Name
           </label>
           <input
-          {...register("product-name")}
+          {...register("product-name",{required:true})}
             type="text"
             className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
           />
+                  { errors["product-name"]&&<span className='text-myTheme text-xs'> This fild is Requrid</span>}
+
         </div>
         <div>
           <label className={` ${darkMode?"text-white":"text-black"} `} htmlFor="price">
             Price
           </label>
           <input
-          {...register("price")}
+          {...register("price",{required:true})}
             type="number"
             className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
           />
+                            {errors.price&&<span className='text-myTheme text-xs'> This fild is Requrid</span>}
+
         </div>
         <div>
           <label
@@ -69,10 +73,12 @@ function AddNewCard() {
             Stock
           </label>
           <input
-          {...register("stock")}
+          {...register("stock",{required:true})}
             type="number"
             className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
           />
+                            {errors.stock&&<span className='text-myTheme text-xs'> This fild is Requrid</span>}
+
         </div>
         {/* <div>
           <label
@@ -132,11 +138,11 @@ function AddNewCard() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-black">Product Image</label>
-          <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-black border-dashed  rounded-md">
+          <label className={`${darkMode?"text-white":"text-black"} block text-sm font-medium `}>Product Image</label>
+          <div className={`${darkMode?"border-gray-50":"border-black"} mt-1 flex justify-center px-6 pt-5 pb-6 border-2  border-dashed  rounded-md`}>
             <div className="space-y-1 text-center">
               <svg
-                className="mx-auto h-12 w-12 text-black"
+                className={`${darkMode?"text-white":"text-black"} mx-auto h-12 w-12 `}
                 stroke="currentColor"
                 fill="none"
                 viewBox="0 0 48 48"
@@ -152,21 +158,24 @@ function AddNewCard() {
               <div className="flex text-sm text-gray-600">
                 <label
                   htmlFor="file-upload"
-                  className="relative cursor-pointer bg-white rounded-md font-medium text-myTheme  focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+                  className="relative cursor-pointer  rounded-md font-medium text-myTheme  focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
                 >
                   <span className="">Upload a file</span>
                   <input
                     id="file-upload"
                     name="file-upload"
+                    {...register("file-upload",{required:true})}
                     type="file"
                     className="sr-only"
                   />
                 </label>
-                <p className="pl-1 text-black">or drag and drop</p>
+                <p className={`${darkMode?"text-white":"text-black"} pl-1 `}>or drag and drop</p>
               </div>
-              <p className="text-xs text-black">PNG, JPG, GIF up to 10MB</p>
+              <p className={`${darkMode?"text-white":"text-black"} text-xs `}>PNG, JPG, GIF up to 10MB</p>
             </div>
           </div>
+          {errors["file-upload"]&&<span className='text-myTheme text-xs'> This fild is Requrid</span>}
+
         </div>
       </div>
       <div className="flex justify-center mt-6 gap-2">
