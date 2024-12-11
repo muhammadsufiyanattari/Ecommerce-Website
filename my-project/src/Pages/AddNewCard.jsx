@@ -50,7 +50,7 @@ function AddNewCard() {
           <input
           {...register("product-name",{required:true})}
             type="text"
-            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
+            className={`${errors["product-name"]?"border-red-500 border-2":""} block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md   focus:border-black  focus:outline-none focus:ring-myTheme`}
           />
                   { errors["product-name"]&&<span className='text-myTheme text-xs'> This fild is Requrid</span>}
 
@@ -62,7 +62,7 @@ function AddNewCard() {
           <input
           {...register("price",{required:true},{min:50})}
             type="number"
-            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
+            className={`${errors.price?"border-red-500 border-2":""} block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-black  focus:outline-none focus:ring-myTheme`}
           />
                             {errors.price&&<span className='text-myTheme text-xs'> This fild is Requrid</span>}
 
@@ -77,7 +77,7 @@ function AddNewCard() {
           <input
           {...register("stock",{required:true})}
             type="number"
-            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
+            className={`${errors.stock?"border-red-500 border-2":""} block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-black  focus:outline-none focus:ring-myTheme`}
           />
                             {errors.stock&&<span className='text-myTheme text-xs'> This fild is Requrid</span>}
 
@@ -92,7 +92,7 @@ function AddNewCard() {
           <input
             id="color"
             type="color"
-            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
+            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-black  focus:outline-none focus:ring-myTheme"
           />
         </div> */}
         <div>
@@ -102,7 +102,7 @@ function AddNewCard() {
           >
             Product Categary
           </label>
-          <select name='productCategary'{...register("productCategary")} className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800  focus:border-myTheme dark:focus:border-myTheme focus:outline-none focus:ring-myTheme">
+          <select name='productCategary'{...register("productCategary")} className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800  focus:border-black dark:focus:border-black focus:outline-none focus:ring-myTheme">
             <option>Surabaya</option>
             <option>Jakarta</option>
             <option>Tangerang</option>
@@ -121,7 +121,7 @@ function AddNewCard() {
             id="date"
             {...register("date")}
             type="date"
-            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme dark:focus:border-myTheme focus:outline-none focus:ring-myTheme"
+            className={` block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-black dark:focus:border-black focus:outline-none focus:ring-myTheme`}
           />
         </div>
         <div>
@@ -135,16 +135,16 @@ function AddNewCard() {
             id="discription"
             {...register("discription",{min:250,max:1000})}
             type="textarea"
-            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md    focus:border-myTheme dark:focus:border-myTheme focus:outline-none focus:ring-myTheme"
+            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md    focus:border-black dark:focus:border-black focus:outline-none focus:ring-myTheme"
             defaultValue={""}
           />
         </div>
         <div>
           <label className={`${darkMode?"text-white":"text-black"} block text-sm font-medium `}>Product Image</label>
-          <div className={`${darkMode?"border-gray-50":"border-black"} mt-1 flex justify-center px-6 pt-5 pb-6 border-2  border-dashed  rounded-md`}>
+          <div className={`${darkMode?"border-gray-50":"border-black"} mt-1 flex justify-center px-6 pt-5 pb-6 border-2  border-dashed ${errors["file-upload"]?"border-red-500 ":""}  rounded-md`}>
             <div className="space-y-1 text-center">
               <svg
-                className={`${darkMode?"text-white":"text-black"} mx-auto h-12 w-12 `}
+                className={`${darkMode?"text-white":"text-black"} ${errors["file-upload"]?"text-red-400 ":""} mx-auto h-12 w-12 `}
                 stroke="currentColor"
                 fill="none"
                 viewBox="0 0 48 48"
@@ -268,7 +268,7 @@ function AddNewCard() {
             id="productCategary"
             name="productCategary"
             type="productCategary"
-            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
+            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-black  focus:outline-none focus:ring-myTheme"
           />
         </div> */}
          {/* <div>
