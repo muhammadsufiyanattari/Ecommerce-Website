@@ -9,7 +9,9 @@ import { useForm } from "react-hook-form";
 function AddNewCard() {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, watch, formState: { errors } } = useForm(
+    {mode:"onBlur"}
+  );
   const submitHandler= async(formValues)=>{
     try {
     //   event.preventDefault()
@@ -58,7 +60,7 @@ function AddNewCard() {
             Price
           </label>
           <input
-          {...register("price",{required:true})}
+          {...register("price",{required:true},{min:50})}
             type="number"
             className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-myTheme  focus:outline-none focus:ring-myTheme"
           />
@@ -131,7 +133,7 @@ function AddNewCard() {
           </label>
           <textarea
             id="discription"
-            {...register("discription")}
+            {...register("discription",{min:250,max:1000})}
             type="textarea"
             className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md    focus:border-myTheme dark:focus:border-myTheme focus:outline-none focus:ring-myTheme"
             defaultValue={""}
