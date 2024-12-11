@@ -7,6 +7,8 @@ import { useForm } from "react-hook-form";
 // const darkMode = useSelector((state) => state.darkMode.darkMode);
 
 function AddNewCard() {
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const submitHandler= async(formValues)=>{
     try {
@@ -30,17 +32,17 @@ function AddNewCard() {
   }
   return (
     // <div>AddNewCard</div>
-    <>
+    <div className={`${darkMode?"pageDark":"bg-white"}`}>
   
-<>
-  <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-2xl my-7 mt-20">
-    <h1 className="text-xl font-bold text-black capitalize ">
+
+  <section className={`${darkMode?"pageDark":"bg-white"} max-w-4xl p-6 mx-auto  rounded-md shadow-2xl my-7 mt-20`}>
+    <h1 className={`${darkMode?"text-white":"text-black"} text-xl font-bold  capitalize `}>
       Add New Product
     </h1>
     <form onSubmit={handleSubmit(submitHandler)}>
       <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
         <div>
-          <label className="text-black dark:text-gray-200" htmlFor="productname">
+          <label className={`${darkMode?"text-white":"text-black"} dark:text-gray-200`} htmlFor="productname">
             Product Name
           </label>
           <input
@@ -50,7 +52,7 @@ function AddNewCard() {
           />
         </div>
         <div>
-          <label className="text-black dark:text-gray-200" htmlFor="price">
+          <label className={` ${darkMode?"text-white":"text-black"} `} htmlFor="price">
             Price
           </label>
           <input
@@ -61,7 +63,7 @@ function AddNewCard() {
         </div>
         <div>
           <label
-            className="text-black dark:text-gray-200"
+            className={`${darkMode?"text-white":"text-black"}`}
             htmlFor="stock"
           >
             Stock
@@ -87,7 +89,7 @@ function AddNewCard() {
         </div> */}
         <div>
           <label
-            className="text-black dark:text-gray-200"
+            className={`${darkMode?"text-white":"text-black"}`}
             htmlFor="passwordConfirmation"
           >
             Product Categary
@@ -102,7 +104,7 @@ function AddNewCard() {
        
         <div>
           <label
-            className="text-black dark:text-gray-200"
+            className={`${darkMode?"text-white":"text-black"}`}
             htmlFor="date"
           >
             Date
@@ -116,7 +118,7 @@ function AddNewCard() {
         </div>
         <div>
           <label
-            className="text-black dark:text-gray-200"
+            className={`${darkMode?"text-white":"text-black"}`}
             htmlFor="passwordConfirmation"
           >
              Discription
@@ -243,7 +245,7 @@ function AddNewCard() {
       </div>
     </form>
   </section> */}
-</>
+
  {/* <div>
           <label
             className="text-black dark:text-gray-200"
@@ -275,7 +277,7 @@ function AddNewCard() {
 
     
     
-    </>
+    </div>
   )
 }
 
