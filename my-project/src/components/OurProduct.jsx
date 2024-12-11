@@ -152,7 +152,7 @@ function OurProduct() {
             ).toFixed(2);
 
             return (
-              <>
+              < div key={value.id}>
                 {" "}
                 <AddToCard
                   // className='bg-myTheme'
@@ -167,7 +167,7 @@ function OurProduct() {
                   image={value.thumbnail}
                   rating={value.rating}
                 />
-              </>
+              </div>
             );
           })}
         </div>
