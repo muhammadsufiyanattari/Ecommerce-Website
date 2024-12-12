@@ -175,7 +175,7 @@ function OurProduct() {
  
       <div className="flex justify-center items-center my-3">
         <div className="">
-          <Link
+          <Link data-aos="zoom-in"
             to={"/AllProduct"}
             className="bg-myTheme rounded cursor-pointer active:bg-red-700 text-white w-[234px] h-[56px] flex justify-center items-center"
           >
