@@ -27,7 +27,7 @@ function Home() {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   return (
-    <div id="mainhome"  className={` ${darkMode?"pageDark":""}   flex flex-col justify-center `}>
+    <div id="mainhome"  className={` ${darkMode?"pageDark":""} transition-colors duration-500  flex flex-col justify-center `}>
       {/* Hero */}
      <Hero  />
       <div className=" flex justify-start flex-col 2xl:ml-10 xl:ml-10 lg:ml-10 md:ml-0 sm:ml-0 mobile:ml-0 my-16  ">
@@ -124,13 +124,27 @@ function Home() {
         </div>
       </div>
       <div className="flex flex-row justify-end m-3 mx-8">
+  <div className="bg-gray-200 p-2 rounded-full">
+    <a 
+      href="#mainhome" 
+      onClick={(e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        document.getElementById("mainhome").scrollIntoView({ behavior: "smooth" });
+      }}
+    >
+      <IoMdArrowUp className="text-2xl" />
+    </a>
+  </div>
+</div>
+
+      {/* <div className="flex flex-row justify-end m-3 mx-8">
         {" "}
         <div className="bg-gray-200 p-2 rounded-full">
           <a href={"#mainhome"}>
             <IoMdArrowUp className="text-2xl" />
           </a>
         </div>
-      </div>
+      </div> */}
 
     </div>
   );
