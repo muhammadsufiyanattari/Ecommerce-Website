@@ -3,6 +3,7 @@ import led from "../assets/images/led.png";
 import game from "../assets/images/game.png";
 import { MdCancel } from "react-icons/md";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function CardTotal() {
   let API_KEY = () => {
@@ -15,7 +16,7 @@ function CardTotal() {
       <div className={` center flex flex-col items-center my-10 px-4`}>
         {/* Breadcrumb */}
         <div className={` w-full max-w-6xl text-gray-400 text-sm mb-5`}>
-          Home / <span className="text-gray-200">Card</span>
+          <Link to={"/"}>Home</Link> / <span className="text-gray-200"><Link to={"/AllProduct"}>Card</Link></span>
         </div>
         {/* large screen table */}
         {/* Table Section */}
