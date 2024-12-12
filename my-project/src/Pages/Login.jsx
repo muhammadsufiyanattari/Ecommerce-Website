@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 function Login() {
@@ -10,10 +11,12 @@ function Login() {
 console.log("Password :",password,"Email:",email);
 
   }
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
     
 
-    <section className="bg-gray-50 dark:bg-gray-900">
+    <section className={`${darkMode?"pageDark":""} bg-gray-50 `}>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <div className="flex items-center mb-6 text-3xl font-semibold text-black  dark:text-white">
           {/* <img
@@ -22,16 +25,16 @@ console.log("Password :",password,"Email:",email);
         alt="logo"
       /> */}
         </div>
-        <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+        <div className={` ${darkMode?"pageDark":""} w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700`}>
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h1 className="flex justify-center text-xl font-bold leading-tight rounded tracking-tight text-black md:text-2xl dark:text-white">
+            <h1 className={  `${darkMode?"text-white":" text-black "} flex justify-center text-xl font-bold leading-tight rounded tracking-tight md:text-2xl dark:text-white`}>
               Login in to your Account
             </h1>
             <form onSubmit={dataInputs} className="space-y-4 md:space-y-6" action="#">
               <div>
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className={`${darkMode?"text-white":" text-black "} block mb-2 text-sm font-medium  dark:text-white`}
                 >
                   Your email
                 </label>
@@ -39,7 +42,7 @@ console.log("Password :",password,"Email:",email);
                   type="email"
                   name="email"
                   id="email"
-                  className="bg-gray-50 border border-gray-300 text-black rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className={` bg-gray-50 border border-gray-300 text-black rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
                   placeholder="name@gmail.com"
                   required=""
                 />
@@ -47,7 +50,7 @@ console.log("Password :",password,"Email:",email);
               <div>
                 <label
                   htmlFor="password"
-                  className="block mb-2 text-sm font-medium text-black dark:text-white"
+                  className={`${darkMode?"text-white":" text-black "} block mb-2 text-sm font-medium text-black dark:text-white`}
                 >
                   Password
                 </label>
@@ -74,7 +77,7 @@ console.log("Password :",password,"Email:",email);
                   <div className="ml-3 text-sm">
                     <label
                       htmlFor="remember"
-                      className="text-black dark:text-gray-300"
+                      className={`${darkMode?"text-white":" text-black "}`}
                     >
                       Remember me
                     </label>
@@ -82,7 +85,7 @@ console.log("Password :",password,"Email:",email);
                 </div>
                 <Link
                   href="#"
-                  className="text-sm hover:text-myTheme font-medium text-primary-600 hover:underline dark:text-primary-500"
+                  className={`${darkMode?"text-white":" text-black "} text-sm hover:text-myTheme font-medium text-primary-600 hover:underline dark:text-primary-500`}
                 >
                   Forgot password?
                 </Link>
@@ -93,11 +96,11 @@ console.log("Password :",password,"Email:",email);
               >
                 Login
               </button>
-              <p className="text-sm font-light text-black dark:text-gray-400">
+              <p className={`${darkMode?"text-white":" text-black "} text-sm font-light text-black dark:text-gray-400`}>
                 Don’t have an account yet?{" "}
                 <Link
                   to="/SiginUp"
-                  className="font-medium text-black hover:text-myTheme text-primary-600 hover:underline "
+                  className={`${darkMode?"text-white":" text-black "} font-medium  hover:text-myTheme text-primary-600 hover:underline `}
                 >
                   Sign up
                 </Link>
