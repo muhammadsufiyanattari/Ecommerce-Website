@@ -38,7 +38,7 @@ function AddNewCard() {
   
 
   <section className={`${darkMode?"pageDark":"bg-white"} max-w-4xl p-6 mx-auto  rounded-md shadow-2xl my-7 mt-20`}>
-    <h1 className={`${darkMode?"text-white":"text-black"} text-xl font-bold  capitalize `}>
+    <h1 className={`${darkMode?"text-white":"text-black"} text-xl font-bold  capitalize  flex justify-center`}>
       Add New Product
     </h1>
     <form onSubmit={handleSubmit(submitHandler)}>
