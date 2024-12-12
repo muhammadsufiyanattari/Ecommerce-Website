@@ -1,6 +1,28 @@
 import React from "react";
 import frameSpiker from "../assets/images/frameSpiker.png";
 import { useSelector } from "react-redux";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init({disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+});
 
 function Spiker() {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
@@ -9,7 +31,7 @@ function Spiker() {
     <>
       <div className="center  ">
         <div className={`${darkMode?"darkTheme":""} 2xl:w-[1170px] 2xl:h-[500px] xl:w-[1170px] xl:h-[500px] lg:w-[1170px] lg:h-[500px]  md:w-auto md:h-auto   sm:w-auto sm:h-auto mobile:w-auto mobile:h-auto bg-black center rounded my-12 gap-7`}>
-          <div className="w-[50%] ">
+          <div data-aos="zoom-in-right" className="w-[50%] ">
             <div className="flex flex-col justify-center w-[100%] ml-14 2xl:gap-14 xl:gap-14 lg:gap-14 md:gap-10 md:py-4 sm:gap-4 sm:py-4 mobile:py-4 mobile:gap-2">
               <div className="font-semibold 2xl:text-base xl:text-base lg:text-base md:text-sm sm:text-xs mobile:text-[6px] ">
                 <h3 className={ `${darkMode?"text-black":""} text-[#00FF66]`}>Categories</h3>
@@ -41,7 +63,7 @@ function Spiker() {
           </div>
           <div className="w-[50%] ">
             <div className=" center">
-              <img
+              <img data-aos="zoom-in-left"
                 className=" 2xl:w-[568px] xl:w-[568px]  lg:w-[468px] md:w-[368px] 2xl:h-[330px] xl:h-[330px] lg:h-[280px] md:h-[230px] sm:w-[280px] sm:h-[180px] mobile:w-auto mobile:h-auto"
                 src={frameSpiker}
                 alt="Frame Spiker"
