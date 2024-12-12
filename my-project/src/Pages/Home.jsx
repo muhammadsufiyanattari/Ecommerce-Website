@@ -21,6 +21,7 @@ import { IoMdArrowUp } from "react-icons/io";
 import { CardListSlider2 } from "../components/Slider2";
 import ProductDetails from "./ProductDetails";
 import { useSelector } from "react-redux";
+import CardTotal from "./CardTotal";
 
 function Home() {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
@@ -130,6 +131,7 @@ function Home() {
           </a>
         </div>
       </div>
+
     </div>
   );
 }

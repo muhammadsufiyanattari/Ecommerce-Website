@@ -5,17 +5,20 @@ import cd from "../assets/about/cd.jpg";
 import fe from "../assets/about/fe.jpg";
 import gh from "../assets/about/gh.jpg";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 function About() {
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
     // <div>About</div>
-    <>
+    <div className={`${darkMode?"pageDark":""}`}>
       <div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
         <div class="flex flex-col lg:flex-row justify-between gap-8">
           <div class="w-full lg:w-5/12 flex flex-col justify-center">
-            <h1 class="text-3xl lg:text-4xl font-bold leading-9 text-black dark:text-white pb-4 ">
+            <h1 class={`${darkMode?"text-white":"text-black"} text-3xl lg:text-4xl font-bold leading-9  pb-4 `}>
               About Us
             </h1>
-            <p class="font-normal text-base leading-6 text-black dark:text-white">
+            <p class={`${darkMode?"text-white":"text-black"} font-normal text-base leading-6 text-black dark:text-white`}>
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum.In the first place we have granted to
@@ -36,10 +39,10 @@ function About() {
 
         <div class="flex lg:flex-row flex-col justify-between gap-8 pt-12">
           <div class="w-full lg:w-5/12 flex flex-col justify-center">
-            <h1 class="text-3xl lg:text-4xl font-bold leading-9 text-black dark:text-white pb-4 ">
+            <h1 class={`${darkMode?"text-white":"text-black"} text-3xl lg:text-4xl font-bold leading-9 text-black dark:text-white pb-4 `}>
               Our Story
             </h1>
-            <p class="font-normal text-base leading-6 text-black dark:text-white">
+            <p class={`${darkMode?"text-white":"text-black"} font-normal text-base leading-6 text-black dark:text-white`}>
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum.In the first place we have granted to
@@ -115,7 +118,7 @@ function About() {
           Go To Home
         </Link>
       </div>
-    </>
+    </div>
   );
 }
 

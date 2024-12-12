@@ -2,17 +2,19 @@ import React from "react";
 import led from "../assets/images/led.png";
 import game from "../assets/images/game.png";
 import { MdCancel } from "react-icons/md";
+import { useSelector } from "react-redux";
 
 function CardTotal() {
   let API_KEY = () => {
     let data = fetch("//dummyjson.com/test");
   };
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   return (
-    <>
-      <div className="center flex flex-col items-center my-10 px-4">
+    <div className={`${darkMode?"pageDark":""}`}>
+      <div className={` center flex flex-col items-center my-10 px-4`}>
         {/* Breadcrumb */}
-        <div className="w-full max-w-6xl text-gray-400 text-sm mb-5">
+        <div className={` w-full max-w-6xl text-gray-400 text-sm mb-5`}>
           Home / <span className="text-gray-200">Card</span>
         </div>
         {/* large screen table */}
@@ -191,7 +193,7 @@ function CardTotal() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
