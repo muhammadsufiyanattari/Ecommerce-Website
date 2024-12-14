@@ -4,14 +4,19 @@ import axios from 'axios'
 import toast from 'react-hot-toast';
 import { useSelector } from 'react-redux';
 import { useForm } from "react-hook-form";
+import { zodResolver } from '@hookform/resolvers/zod';
 // const darkMode = useSelector((state) => state.darkMode.darkMode);
+import  schema  from '../validateSchema/Schema';
 
 function AddNewCard() {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm(
-    {mode:"onBlur"}
+    {mode:"onBlur"},{ resolver: zodResolver(schema)}
   );
+  console.log("errors",errors);
+  
+  
   const submitHandler= async(formValues)=>{
     try {
     //   event.preventDefault()
@@ -48,11 +53,12 @@ function AddNewCard() {
             Product Name
           </label>
           <input
-          {...register("product-name",{required:true})}
+          {...register("productName",{required:true})}
             type="text"
-            className={`${errors["product-name"]?"border-red-500 border-2":""} block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md   focus:border-black  focus:outline-none focus:ring-myTheme`}
+            className={`${errors.productName?"border-red-500 border-2":""} block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md   focus:border-black  focus:outline-none focus:ring-myTheme`}
           />
-                  { errors["product-name"]&&<span className='text-myTheme text-xs'> This fild is Requrid</span>}
+                  { errors.productName &&<span className='text-myTheme text-xs'> This fild is Requrid</span>
+                  }
 
         </div>
         <div>

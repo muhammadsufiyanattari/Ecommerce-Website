@@ -11,6 +11,7 @@
     "deploy": "surge ./dist --domain sufiyan-ecommerce-website.surge.sh"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
     "@reduxjs/toolkit": "^2.4.0",
     "aos": "^2.3.4",
     "axios": "^1.7.7",
@@ -26,7 +27,8 @@
     "react-stars": "^2.2.5",
     "sort-by": "^1.2.0",
     "swiper": "^11.1.14",
-    "swr": "^2.2.5"
+    "swr": "^2.2.5",
+    "zod": "^3.25.0-canary.20241210T225910"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
