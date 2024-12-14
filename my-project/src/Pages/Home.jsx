@@ -148,12 +148,12 @@ function Home() {
   <div className="bg-gray-200 p-2 rounded-full">
     <a 
       href="#mainhome" 
-      onClick={(e) => {
-        e.preventDefault(); // Prevent default anchor behavior
-        document.getElementById("mainhome").scrollIntoView({ behavior: "smooth" });
-      }}
+      // onClick={(e) => {
+      //   e.preventDefault(); // Prevent default anchor behavior
+      //   document.getElementById("mainhome").scrollIntoView({ behavior: "smooth" });
+      // }}
     >
-      <IoMdArrowUp className="text-2xl" />
+      <IoMdArrowUp className="text-2xl" /> 2
     </a>
   </div>
 </div>

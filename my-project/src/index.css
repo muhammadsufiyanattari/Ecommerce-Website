@@ -4,6 +4,7 @@
 }
 * {
   font-family: myfont;
+  scroll-behavior: smooth
 }
 .center {
   @apply flex justify-center items-center;

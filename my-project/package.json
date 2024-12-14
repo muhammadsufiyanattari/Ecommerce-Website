@@ -28,7 +28,7 @@
     "sort-by": "^1.2.0",
     "swiper": "^11.1.14",
     "swr": "^2.2.5",
-    "zod": "^3.25.0-canary.20241210T225910"
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
