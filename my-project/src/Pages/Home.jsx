@@ -153,7 +153,7 @@ function Home() {
       //   document.getElementById("mainhome").scrollIntoView({ behavior: "smooth" });
       // }}
     >
-      <IoMdArrowUp className="text-2xl" /> 2
+      <IoMdArrowUp className="text-2xl" /> 
     </a>
   </div>
 </div>

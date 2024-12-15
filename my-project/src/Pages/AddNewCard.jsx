@@ -146,16 +146,19 @@ function AddNewCard() {
                 name="productCategary"
                 {...register("productCategary")}
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800  focus:border-black dark:focus:border-black focus:outline-none focus:ring-myTheme"
-              >{
+              >
+                <option selected disabled   >Select Category</option>
+                {
                 categary.map((value,index)=>{
                   
                   
-          return       <option key={index}>{value.categaryName}</option>
+          return       <option className="text-gray-900" key={index}>{value.categaryName}</option>
                 })
               }
                 
              
               </select>
+              {errors.productCategary?.message?<div className="text-red-500 text-xs">{errors.productCategary?.message}</div>:""}
             </div>
 
             <div>
@@ -181,11 +184,13 @@ function AddNewCard() {
               </label>
               <textarea
                 id="discription"
-                {...register("discription", { min: 250, max: 1000 })}
+                {...register("discription")}
                 type="textarea"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md    focus:border-black dark:focus:border-black focus:outline-none focus:ring-myTheme"
+                className={`${errors.discription ? "border-red-500 border-2" : ""}block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md    focus:border-black dark:focus:border-black focus:outline-none focus:ring-myTheme`}
                 defaultValue={""}
               />
+                      { errors?.discription?.message?  <div className="text-red-600 text-xs"> {errors.discription?.message}</div>:"" }
+
             </div>
             <div>
               <label

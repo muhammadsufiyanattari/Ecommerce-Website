@@ -17,92 +17,92 @@ import axios from "axios";
 import loadingImg from "../assets/loading/loading.gif"
 
 
-let AddToCardlist = [
-  {
-    discount: "-40%",
-    productName: "HAVIT HV-G92 Gamepad",
-    delPrice: "$160",
-    newPrice: "$120",
-    starRank: "(88)",
-    image: dogfood,
-    hearticon: <SlHeart />,
-    eyeicon: <FiEye />,
-  },
-  {
-    discount: "-35%",
-    productName: "AK-900 Wired Keyboard",
-    delPrice: "$400",
-    newPrice: "$370",
-    starRank: "(99)",
-    image: babycar,
-    hearticon: <SlHeart />,
-    eyeicon: <FiEye />,
-  },
-  {
-    discount: "-30%",
-    productName: "IPS LCD Gaming Monitor",
-    delPrice: "$400",
-    newPrice: "$350",
-    starRank: "(77)",
-    image: apper2,
-    hearticon: <SlHeart />,
-    eyeicon: <FiEye />,
-  },
-  {
-    discount: "-25%",
-    productName: "S-Series Comfort Chair",
-    delPrice: "$400",
-    newPrice: "$375",
-    starRank: "(99)",
-    image: shose,
-    hearticon: <SlHeart />,
-    eyeicon: <FiEye />,
-  },
-];
-let AddToCardlist2 = [
-  {
-    discount: "New",
-    className: "bg-[#00FF66]",
-    productName: "HAVIT HV-G92 Gamepad",
-    delPrice: "$160",
-    newPrice: "$120",
-    starRank: "(88)",
-    image: camera,
-    hearticon: <SlHeart />,
-    eyeicon: <FiEye />,
-  },
-  {
-    // discount: "-35%",
-    productName: "AK-900 Wired Keyboard",
-    delPrice: "$400",
-    newPrice: "$370",
-    starRank: "(99)",
-    image: laptop,
-    hearticon: <SlHeart />,
-    eyeicon: <FiEye />,
-  },
-  {
-    discount: "New",
-    className: "bg-[#00FF66]",
-    productName: "IPS LCD Gaming Monitor",
-    delPrice: "$400",
-    newPrice: "$350",
-    starRank: "(77)",
-    image: game2,
-    hearticon: <SlHeart />,
-    eyeicon: <FiEye />,
-  },
-  {
-    // discount: "-25%",
-    productName: "S-Series Comfort Chair",
-    delPrice: "$400",
-    newPrice: "$375",
-    starRank: "(99)",
-    image: chair,
-    hearticon: <SlHeart />,
-    eyeicon: <FiEye />,
-  },
-];
+// let AddToCardlist = [
+//   {
+//     discount: "-40%",
+//     productName: "HAVIT HV-G92 Gamepad",
+//     delPrice: "$160",
+//     newPrice: "$120",
+//     starRank: "(88)",
+//     image: dogfood,
+//     hearticon: <SlHeart />,
+//     eyeicon: <FiEye />,
+//   },
+//   {
+//     discount: "-35%",
+//     productName: "AK-900 Wired Keyboard",
+//     delPrice: "$400",
+//     newPrice: "$370",
+//     starRank: "(99)",
+//     image: babycar,
+//     hearticon: <SlHeart />,
+//     eyeicon: <FiEye />,
+//   },
+//   {
+//     discount: "-30%",
+//     productName: "IPS LCD Gaming Monitor",
+//     delPrice: "$400",
+//     newPrice: "$350",
+//     starRank: "(77)",
+//     image: apper2,
+//     hearticon: <SlHeart />,
+//     eyeicon: <FiEye />,
+//   },
+//   {
+//     discount: "-25%",
+//     productName: "S-Series Comfort Chair",
+//     delPrice: "$400",
+//     newPrice: "$375",
+//     starRank: "(99)",
+//     image: shose,
+//     hearticon: <SlHeart />,
+//     eyeicon: <FiEye />,
+//   },
+// ];
+// let AddToCardlist2 = [
+//   {
+//     discount: "New",
+//     className: "bg-[#00FF66]",
+//     productName: "HAVIT HV-G92 Gamepad",
+//     delPrice: "$160",
+//     newPrice: "$120",
+//     starRank: "(88)",
+//     image: camera,
+//     hearticon: <SlHeart />,
+//     eyeicon: <FiEye />,
+//   },
+//   {
+//     // discount: "-35%",
+//     productName: "AK-900 Wired Keyboard",
+//     delPrice: "$400",
+//     newPrice: "$370",
+//     starRank: "(99)",
+//     image: laptop,
+//     hearticon: <SlHeart />,
+//     eyeicon: <FiEye />,
+//   },
+//   {
+//     discount: "New",
+//     className: "bg-[#00FF66]",
+//     productName: "IPS LCD Gaming Monitor",
+//     delPrice: "$400",
+//     newPrice: "$350",
+//     starRank: "(77)",
+//     image: game2,
+//     hearticon: <SlHeart />,
+//     eyeicon: <FiEye />,
+//   },
+//   {
+//     // discount: "-25%",
+//     productName: "S-Series Comfort Chair",
+//     delPrice: "$400",
+//     newPrice: "$375",
+//     starRank: "(99)",
+//     image: chair,
+//     hearticon: <SlHeart />,
+//     eyeicon: <FiEye />,
+//   },
+// ];
 
 function OurProduct() {
   const [products, setProducts] = useState(null);
@@ -121,7 +121,7 @@ function OurProduct() {
     return setProducts(data);
   } catch (error) {
     setIsLoading(false);
-    SetError(error.response.statusText);
+    SetError(error.response?.statusText);
     setProducts(null);
     console.log(error.response.statusText);
     
