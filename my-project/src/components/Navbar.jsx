@@ -60,6 +60,7 @@ let submitHandler = (e) => {
   console.log(e.target.children[0].value);
   
   navigate("/search");
+  searchTerm=e.target.children[0].value=""
 };
 
   return (
