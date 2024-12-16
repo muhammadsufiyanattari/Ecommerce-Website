@@ -46,7 +46,7 @@ let Mylink = [
   { name: "About", path: "/About" },
   // { name: "Login" },
 ];
-let logSing = false;
+let logSing = true;
 
 export default function MyNavbar() {
   const [menu, setMenu] = useState(false);

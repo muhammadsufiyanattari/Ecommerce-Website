@@ -81,7 +81,7 @@ export function AddToCard({
             ) : (
               <div className=" w-[172px] h-[155px]"></div>
             )}
-            <Link to={"/AddNewCard"} className={`${darkMode?"active:bg-myTheme bg-black transition-all duration-300 text-white  ":"2xl:bg-white xl:bg-white lg:bg-white md:bg-white group-hover:bg-black"} sm:bg-black mobile:bg-black  h text-white w-[100%] flex transition-all duration-500  items-end justify-center p-2 rounded-b`}>
+            <Link to={"/addCard"} className={`${darkMode?"active:bg-myTheme bg-black transition-all duration-300 text-white  ":"2xl:bg-white xl:bg-white lg:bg-white md:bg-white group-hover:bg-black"} sm:bg-black mobile:bg-black  h text-white w-[100%] flex transition-all duration-500  items-end justify-center p-2 rounded-b`}>
               Add To Card
             </Link>
           </div>

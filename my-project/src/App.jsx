@@ -21,7 +21,7 @@ import Search from "./Pages/Search";
 
 function App() {
   const [count, setCount] = useState(0);
-  let logSing = false;
+  let logSing = true;
   return (
     <>
       <div className="w-[100%]  2xl:center flex flex-col justify-center overflow-hidden   ">
@@ -34,13 +34,13 @@ function App() {
           <Route path="/AllProduct" element={<AllProduct />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/CardTotal" element={<CardTotal />} />
-          <Route path="/AddNewCard" element={<AddNewCard />} />
+          <Route path="/addProduct" element={<AddNewCard />} />
           <Route path="/search" element={<Search />} />
 
           <Route path="/SiginUp" element={<SiginUp />} />
           {logSing ? (
             <>
+             <Route path="/addCard" element={<CardTotal />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/Login" element={<Navigate to="/" />} />
             </>
