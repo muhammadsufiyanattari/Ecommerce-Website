@@ -31,7 +31,7 @@ function FlashTimer() {
       <div  className=" 2xl:block xl:block lg:block md:flex md:justify-center sm:flex sm:justify-center mobile:flex mobile:justify-center">
         <div className="flex flex-col  2xl:ml-[60px] xl:ml-[60px] lg:m-0 items-start 2xl:w-[600px] xl:w-[600px] 2xl:h-[103px] xl:h-[103px] lg:w-[100%] md:w-auto sm:w-auto mobile:w-auto  gap-3 ">
           <div data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom" className="flex font-semibold gap-2 items-center text-base text-myTheme">
+     data-aos-anchor-placement="bottom-bottom" className="flex font-semibold gap-2 items-center  text-myTheme 2xl:text-3xl xl:text-base lg:text-base md:text-base sm:text-[12px] mobile:text-[12px]">
            <div className=" w-[25px] h-[35px] bg-myTheme rounded-md"></div>
             Todays
           </div>

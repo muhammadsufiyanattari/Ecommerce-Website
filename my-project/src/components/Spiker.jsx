@@ -39,7 +39,7 @@ function Spiker() {
               <div className="font-semibold 2xl:text-5xl xl:text-5xl lg:text-5xl md:text-4xl sm:text-xl mobile:text-[8px]">
                 <h1 className={`${darkMode?"text-black":"text-white"} `}>Enhance Your Music Experience</h1>
               </div>
-              <div className="flex 2xl:gap-6 xl:gap-6 lg:gap-6 md:gap-4 sm:gap-4 mobile:gap-1 " >
+              <div className="flex  items-center text-center 2xl:gap-6 xl:gap-6 lg:gap-6 md:gap-4 sm:gap-4 mobile:gap-1 " >
                 <div className={ `${darkMode?"bg-black text-white":" bg-slate-100 text-black"}  rounded-full text-center 2xl:w-[62px] xl:w-[62px] lg:w-[62px] md:w-[52px] sm:w-[48px] mobile:w-[18px] 2xl:h-[62px] xl:h-[62px] lg:h-[62px] md:h-[52px] sm:h-[48px] mobile:h-[20px] 2xl:font-normal xl:font-normal lg:font-normal 2xl:text-xs  xl:text-xs lg:text-xs md:font-light sm:font-extralight sm:text-xs mobile:text-[3px] 2xl:p-2 xl:p-2 lg:p1-2 md:p-1  sm:p-[2x] mobile:p-1`}>
                   <span className=" "> 23 Hours</span>
                 </div>
@@ -72,6 +72,8 @@ function Spiker() {
           </div>
         </div>
       </div>
+     
+    
     </>
   );
 }

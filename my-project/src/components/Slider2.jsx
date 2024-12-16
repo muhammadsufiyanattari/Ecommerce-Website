@@ -170,7 +170,7 @@ export function CardListSlider2() {
   return (
     <>
     
-      <div className="ml-12 mr-12   p-5 rounded ">
+      <div className="    ">
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
