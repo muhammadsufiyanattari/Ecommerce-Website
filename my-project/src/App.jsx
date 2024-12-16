@@ -17,6 +17,7 @@ import AllProduct from "./Pages/AllProduct";
 import CardTotal from "./Pages/CardTotal";
 import ProductDetails from "./Pages/ProductDetails";
 import AddNewCard from "./Pages/AddNewCard";
+import Search from "./Pages/Search";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -35,6 +36,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/CardTotal" element={<CardTotal />} />
           <Route path="/AddNewCard" element={<AddNewCard />} />
+          <Route path="/search" element={<Search />} />
 
           <Route path="/SiginUp" element={<SiginUp />} />
           {logSing ? (

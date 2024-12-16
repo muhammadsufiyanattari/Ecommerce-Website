@@ -34,20 +34,20 @@ function ProductDetails() {
 console.log(error);
 const darkMode = useSelector((state) => state.darkMode.darkMode);
 
-  return (
-    isLoading ? (
+  return (<div className="h-[200vh]">
+    {isLoading ? (
       <div className={`${darkMode?"text-white":""} ${darkMode?"pageDark":""} font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none`}>
        <img src={loadingImg} alt="Loading..." />
       </div>
     ) : 
-    <>
+    <div >
       
       {error ? (
         <div className={`${darkMode?"text-white":""} ${darkMode?"pageDark":""} font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none`}>
          {error.response?.data?.message}
         </div>
       ) : (
-        <div className={`${darkMode?"pageDark":""} main   flex flex-col justify-center  `}>
+        <div className={`${darkMode?"pageDark":""} main    flex flex-col justify-center  `}>
           <div className="flex justify-center my-5 items-start">
             <div className="w-full max-w-6xl  text-gray-400 text-sm mb-5">
               <Link to={"/"}>Home</Link> /{" "}
@@ -397,7 +397,8 @@ const darkMode = useSelector((state) => state.darkMode.darkMode);
         </div>
       )}
 
-    </>
+    </div>}
+    </div>
   );
 }
 
