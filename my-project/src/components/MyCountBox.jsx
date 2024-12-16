@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import redbox from "../assets/flashTimer/redbox.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
@@ -32,7 +31,9 @@ export default function MyCountBox({ name, days }) {
         <div className="flex flex-col  2xl:ml-[60px] xl:ml-[60px] lg:m-0 items-start 2xl:w-[600px] xl:w-[600px] 2xl:h-[103px] xl:h-[103px] lg:w[100%] gap-3 ">
           <div  data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom"  className="flex font-semibold gap-2 items-center text-base text-myTheme">
-            <img className={ `${darkMode?"text-white":""} w-[25px] h-[35px]`} src={redbox} alt="redbox" />{" "}
+                    <div className={`${darkMode?"text-white":""}  w-[25px] h-[35px] bg-myTheme rounded-md`}></div>
+
+         
             {days}
           </div>
           <div className="flex gap-6">

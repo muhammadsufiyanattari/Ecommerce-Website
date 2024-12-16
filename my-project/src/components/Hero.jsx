@@ -70,7 +70,7 @@ export default function Hero() {
               <div className="flex justify-center it  ">
                 {/* mera textarea  */}
                 <div data-aos="fade-right" className="flex flex-col justify-center gap-1   ">
-                  <div id="firstline" className="flex  items-center gap-[24px]">
+                  <div id="firstline" className="flex  items-center gap-[24px] sm:gap-2 mobile:gap-2">
                     <div>
                       <img
 
@@ -84,16 +84,16 @@ export default function Hero() {
                     </h5>
                   </div>
                   <div>
-                    <h1 className=" 2xl:font-semibold  xl:font-semibold  lg:font-semibold  md:font-normal sm:font-normal mobile:font-normal   text-white leading-[60px] 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-4xl sm:text-4xl mobile:text-xs">
+                    <h1 className=" 2xl:font-semibold  xl:font-semibold  lg:font-semibold  md:font-normal sm:font-normal mobile:font-normal   text-white leading-[60px] 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-2xl sm:text-2xl mobile:text-xs">
                       <span className="flex flex-col 2xl:gap-3 xl:gap-3 lg:gap-3 md:gap-3 sm:gap-3 mobile:gap-0">
                         <span>Up to 10% </span> <span>off Voucher</span>{" "}
                       </span>{" "}
                     </h1>
                   </div>
-                  <div className="flex font-semibold   gap-2  text-white   2xl:text-base xl:text-base lg:text-base md:text-base sm:text-base mobile:text-[5px]">
+                  <div className="flex font-semibold   gap-2  text-white   2xl:text-base xl:text-base lg:text-base md:text-[10px] sm:text-[10px] mobile:text-[5px]">
                     {" "}
                     Shop Now{" "}
-                    <span className=" 2xl:pt-2 xl:pt-2 lg:pt-2 md:pt-2 sm:pt-2 mobile:pt-0 2xl:text-xs xl:text-xs lg:text-xs md:text-xs sm:text-xs mobile:text-[5px]">
+                    <span className=" 2xl:pt-2 xl:pt-2 lg:pt-2 md:pt-1 sm:pt-1 mobile:pt-0 2xl:text-xs xl:text-xs lg:text-xs md:text-[10px] sm:text-[10px] mobile:text-[5px]">
                       <FaArrowRight />
                     </span>
                   </div>
@@ -113,5 +113,8 @@ export default function Hero() {
         </div>
       </div>
     </>
+
+
+  
   );
 }
