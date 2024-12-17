@@ -195,7 +195,7 @@ let submitHandler = (e) => {
                 <CiHeart />
               </li>
               <li className="hover:text-myTheme 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
-                <MdOutlineShoppingCart />
+             <Link to={"/addCard"}> <MdOutlineShoppingCart /></Link>   
               </li>
 
               <li className="w-[30px] h-[30px] rounded-full overflow-hidden">
