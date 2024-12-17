@@ -19,9 +19,8 @@ import axios from "axios";
 import { useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import useProducts from "../hooks/useProducts";
-import loadingImg from "../assets/loading/loading.gif"
+import loadingImg from "../assets/loading/loading.gif";
 import { useSelector } from "react-redux";
-
 
 // let AddToCardlist = [
 //   {
@@ -186,36 +185,53 @@ function AllProduct() {
     return result;
   };
   let searchReasult = searchProducts();
-  return (<>
-    {/* // <div>AllProduct</div> */}
-    <div className={`${darkMode?"pageDark":""}`}>
-     {isLoading ? (
-        <div className={ `${darkMode?"pageDark":""} font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none`}>
-         <img src={loadingImg} alt="Loading..." />
-        </div>
-      ) : null}
-      <div className={`${darkMode?"pageDark":""} mx-auto max-w-7xl sm:px-6 lg:px-8 `}>
-        <div className={`${darkMode?"pageDark":""} relative isolate overflow-hidden bg-white px-6 py-20 text-center sm:px-16 sm:shadow-sm`}>
-          <p className={`${darkMode?"text-white":""} mx-auto max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl`}>
-            Search Products
-          </p>
-          <form onSubmit={() => {}}>
-            <label
-              className="mx-auto mt-8 relative bg-white min-w-sm max-w-2xl flex flex-col md:flex-row items-center justify-center border py-2 px-2 rounded gap-2 shadow-2xl focus-within:border-gray-300"
-              htmlFor="search-bar"
+  return (
+    <>
+      {/* // <div>AllProduct</div> */}
+      <div className={`${darkMode ? "pageDark" : ""}`}>
+        {isLoading ? (
+          <div
+            className={`${
+              darkMode ? "pageDark" : ""
+            } font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none`}
+          >
+            <img src={loadingImg} alt="Loading..." />
+          </div>
+        ) : null}
+        <div
+          className={`${
+            darkMode ? "pageDark" : ""
+          } mx-auto max-w-7xl sm:px-6 lg:px-8 `}
+        >
+          <div
+            className={`${
+              darkMode ? "pageDark" : ""
+            } relative isolate overflow-hidden bg-white px-6 py-20 text-center sm:px-16 sm:shadow-sm`}
+          >
+            <p
+              className={`${
+                darkMode ? "text-white" : ""
+              } mx-auto max-w-2xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl`}
             >
-              <input
-                id="search-bar"
-                placeholder="Search your Products"
-                name="q"
-                onChange={(event) => {
-                  // console.log(event.target.value);
-                  setSearchValue(event.target.value);
-                }}
-                className="px-6 py-2 w-full rounded flex-1 outline-none bg-white"
-                required=""
-              />
-              {/* <button onClick={()=>{
+              Search Products
+            </p>
+            <form onSubmit={() => {}}>
+              <label
+                className="mx-auto mt-8 relative bg-white min-w-sm max-w-2xl flex flex-col md:flex-row items-center justify-center border py-2 px-2 rounded gap-2 shadow-2xl focus-within:border-gray-300"
+                htmlFor="search-bar"
+              >
+                <input
+                  id="search-bar"
+                  placeholder="Search your Products"
+                  name="q"
+                  onChange={(event) => {
+                    // console.log(event.target.value);
+                    setSearchValue(event.target.value);
+                  }}
+                  className="px-6 py-2 w-full rounded flex-1 outline-none bg-white"
+                  required=""
+                />
+                {/* <button onClick={()=>{
           searchProducts()
         }}
           type="submit"
@@ -227,55 +243,61 @@ function AllProduct() {
             </span>
           </div>
         </button> */}
-            </label>
-          </form>
+              </label>
+            </form>
+          </div>
         </div>
-      </div>
-      <div className={`${darkMode?"":""} flex justify-center items-center   my-14  flex-row`}>
-        <div className=" flex sm:flex-col  w-[1170px]  flex-wrap mobile:flex-col lg:justify-center md:justify-center md:flex-row 2xl:flex-row xl:flex-row lg:flex-row lg:gap-4 gap-[30px]">
-          {isLoading ? (
-            <div className="font-extrabold text-4xl h-[100vh]">Loading...</div>
-          ) : null}
-
-          {error}
-          {/* sir se question karna he */}
-          {/* {searchProducts.length=== 0?'Product Is Not Found':null} */}
-          {searchReasult?.map((value, index) => {
-            let discountPrice = Math.ceil(
-              value.price - value.discountPercentage * (value.price / 100)
-            ).toFixed(2);
-            // console.log(discountPrice);
-
-            return (
-              <div key={value.id}>
-                {" "}
-                <AddToCard
-                  key={value.id}
-                  id={value.id}
-                  className="bg-myTheme"
-                  discount={`${Math.round(value.discountPercentage)}%`}
-                  productName={value.title}
-                  delPrice={`$${value.price.toFixed(2)}`}
-                  newPrice={`$${discountPrice}`}
-                  image={value.thumbnail}
-                  rating={value.rating}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <div className="flex justify-center items-start my-3">
-        {" "}
-        <Link
-          className="bg-myTheme active:bg-red-700 py-3 px-8 rounded text-white"
-          to={"/"}
+        <div
+          className={`${
+            darkMode ? "" : ""
+          } flex justify-center items-center   my-14  flex-row`}
         >
-          Go To Home
-        </Link>
-      </div>
+          <div className=" flex sm:flex-col  w-[1170px]  flex-wrap mobile:flex-col lg:justify-center md:justify-center md:flex-row 2xl:flex-row xl:flex-row lg:flex-row lg:gap-4 gap-[30px]">
+            {isLoading ? (
+              <div className="font-extrabold text-4xl h-[100vh]">
+                Loading...
+              </div>
+            ) : null}
 
-      {/* <div className="flex justify-center items-center  my-14  flex-row">
+            {error}
+            {/* sir se question karna he */}
+            {/* {searchProducts.length=== 0?'Product Is Not Found':null} */}
+            {searchReasult?.map((value, index) => {
+              let discountPrice = Math.ceil(
+                value.price - value.discountPercentage * (value.price / 100)
+              ).toFixed(2);
+              // console.log(discountPrice);
+
+              return (
+                <div key={value.id}>
+                  {" "}
+                  <AddToCard
+                    key={value.id}
+                    id={value.id}
+                    className="bg-myTheme"
+                    discount={`${Math.round(value.discountPercentage)}%`}
+                    productName={value.title}
+                    delPrice={`$${value.price.toFixed(2)}`}
+                    newPrice={`$${discountPrice}`}
+                    image={value.thumbnail}
+                    rating={value.rating}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="flex justify-center items-start my-3">
+          {" "}
+          <Link
+            className="bg-myTheme active:bg-red-700 py-3 px-8 rounded text-white"
+            to={"/"}
+          >
+            Go To Home
+          </Link>
+        </div>
+
+        {/* <div className="flex justify-center items-center  my-14  flex-row">
         <div className="flex sm:flex-col flex-wrap mobile:flex-col lg:justify-center md:justify-center md:flex-row 2xl:flex-row xl:flex-row lg:flex-row lg:gap-4 gap-[30px]">
           {AddToCardlist2.map((value, index) => {
             return (
@@ -294,12 +316,12 @@ function AllProduct() {
           })}
         </div>
       </div> */}
-      {/* <div className="flex justify-center items-center my-3">
+        {/* <div className="flex justify-center items-center my-3">
         <div className="">
           <Link  to={"/AllCards"} className="bg-myTheme rounded cursor-pointer active:bg-red-700 text-white w-[234px] h-[56px] flex justify-center items-center">Show More</Link>
         </div>
       </div> */}
-      {/* <div className="flex justify-center items-center  my-14  flex-row">
+        {/* <div className="flex justify-center items-center  my-14  flex-row">
         <div className="flex sm:flex-col flex-wrap mobile:flex-col lg:justify-center md:justify-center md:flex-row 2xl:flex-row xl:flex-row lg:flex-row lg:gap-4 gap-[30px]">
           {AddToCardlist3.map((value, index) => {
             return (
@@ -318,7 +340,7 @@ function AllProduct() {
           })}
         </div>
       </div> */}
-    </div>
+      </div>
     </>
   );
 }
