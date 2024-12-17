@@ -43,7 +43,7 @@ function CardTotal() {
                 $650
               </div>
               <div className="text-center flex items-center">
-              <input type="number" name="" id="" className="border border-gray-300 rounded w-20 p-2" />
+              <input type="number" name="" id="" className="border border-gray-300 text-black rounded w-20 p-2" />
 
                 {/* <select className="border border-gray-300 rounded w-20 p-2 text-black" >
                   {[...Array(10)].map((_, i) => (
@@ -68,7 +68,7 @@ function CardTotal() {
               </div>
               <div className={`${darkMode?"text-white":""} text-gray-700 text-center md:text-left`}>$650</div>
               <div className="text-center flex items-center ">
-                <input type="number" name="" id="" className="border border-gray-300 rounded w-20 p-2" />
+                <input type="number" name="" id="" className="border text-black border-gray-300 rounded w-20 p-2" />
                 {/* <select className="border border-gray-300 rounded w-20 p-2">
                   {[...Array(10)].map((_, i) => (
                     <option key={i} value={i + 1}>
@@ -100,7 +100,7 @@ function CardTotal() {
             <div className="flex gap-10 justify-between items-center bg-slate-200 p-2 rounded my-2">
               <div className="font-semibold text-gray-700">Quantity : </div>
               <div className="text-center flex items-center">
-              <input type="number" name="" id="" className="border border-gray-300 rounded w-20 p-2" />
+              <input type="number" name="" id="" className="border text-black border-gray-300 rounded w-20 p-2" />
 
                 {/* <select className="border border-gray-300 rounded w-20 p-2">
                   {[...Array(10)].map((_, i) => (
@@ -133,7 +133,7 @@ function CardTotal() {
             <div className="flex gap-10 justify-between items-center bg-slate-200 p-2 rounded my-2">
               <div className="font-semibold text-gray-700">Quantity : </div>
               <div className="text-center flex items-center">
-              <input type="number" name="" id="" className="border border-gray-300 rounded w-20 p-2" />
+              <input type="number" name="" id="" className="border text-black border-gray-300 rounded w-20 p-2" />
 
                 {/* <select className="border border-gray-300 rounded w-20 p-2">
                   {[...Array(10)].map((_, i) => (
