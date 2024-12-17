@@ -157,19 +157,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { AddToCard } from "./AddToCard";
-import { useEffect, useState } from "react";
 import axios from "axios";
 import useProducts from "../hooks/useProducts";
-import loadingImg from "../assets/loading/loading.gif"
-
+import loadingImg from "../assets/loading/loading.gif";
 
 export function CardListSlider2() {
   const { products, error, isLoading } = useProducts("limit=8&skip=180");
 
-
   return (
     <>
-    
       <div className="    ">
         <Swiper
           // install Swiper modules
@@ -217,7 +213,7 @@ export function CardListSlider2() {
           onSlideChange={() => console.log("slide change")}
         >
           <div className="flex justify-center items-center ">
-          {isLoading?(
+            {isLoading ? (
               <div className="font-extrabold h-[300px] text-4xl">
                 <img src={loadingImg} alt="Loading..." />
               </div>
@@ -249,4 +245,3 @@ export function CardListSlider2() {
     </>
   );
 }
-

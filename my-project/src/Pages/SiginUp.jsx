@@ -3,33 +3,50 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 function SiginUp() {
-  const dataInputs=(event)=>{
-    event.preventDefault()
- const formData =   new FormData(event.target)
- const password=formData.get('password')
- const email=formData.get('email')
- const userName=formData.get('userName')
-console.log("Password :",password,"Email:",email,' User Name',userName);
-
-  }
+  const dataInputs = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const password = formData.get("password");
+    const email = formData.get("email");
+    const userName = formData.get("userName");
+    console.log(
+      "Password :",
+      password,
+      "Email:",
+      email,
+      " User Name",
+      userName
+    );
+  };
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   return (
-   
-
-    <section className={`${darkMode?"pageDark":""} bg-gray-50 `}>
+    <section className={`${darkMode ? "pageDark" : ""} bg-gray-50 `}>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-      
-        <div className={`${darkMode?"pageDark":""} w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700`}>
+        <div
+          className={`${
+            darkMode ? "pageDark" : ""
+          } w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700`}
+        >
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h1 className={`${darkMode?"text-white":" text-black "} text-xl flex justify-center font-bold leading-tight tracking-tight text-black md:text-2xl dark:text-white`}>
+            <h1
+              className={`${
+                darkMode ? "text-white" : " text-black "
+              } text-xl flex justify-center font-bold leading-tight tracking-tight text-black md:text-2xl dark:text-white`}
+            >
               Create an account
             </h1>
-            <form onSubmit={dataInputs} className="space-y-4 md:space-y-6" action="#">
+            <form
+              onSubmit={dataInputs}
+              className="space-y-4 md:space-y-6"
+              action="#"
+            >
               <div>
                 <label
                   htmlFor="User Name"
-                  className={`${darkMode?"text-white":" text-black "} block mb-2 text-sm font-medium text-black dark:text-white`}
+                  className={`${
+                    darkMode ? "text-white" : " text-black "
+                  } block mb-2 text-sm font-medium text-black dark:text-white`}
                 >
                   User name
                 </label>
@@ -45,7 +62,9 @@ console.log("Password :",password,"Email:",email,' User Name',userName);
               <div>
                 <label
                   htmlFor="email"
-                  className={`${darkMode?"text-white":" text-black "} block mb-2 text-sm font-medium text-black dark:text-white`}
+                  className={`${
+                    darkMode ? "text-white" : " text-black "
+                  } block mb-2 text-sm font-medium text-black dark:text-white`}
                 >
                   Your email
                 </label>
@@ -61,7 +80,9 @@ console.log("Password :",password,"Email:",email,' User Name',userName);
               <div>
                 <label
                   htmlFor="password"
-                  className={`${darkMode?"text-white":" text-black "} block mb-2 text-sm font-medium text-black dark:text-white`}
+                  className={`${
+                    darkMode ? "text-white" : " text-black "
+                  } block mb-2 text-sm font-medium text-black dark:text-white`}
                 >
                   Password
                 </label>
@@ -77,7 +98,9 @@ console.log("Password :",password,"Email:",email,' User Name',userName);
               <div>
                 <label
                   htmlFor="confirm-password"
-                  className={ `${darkMode?"text-white":" text-black "} block mb-2 text-sm font-medium text-black dark:text-white`}
+                  className={`${
+                    darkMode ? "text-white" : " text-black "
+                  } block mb-2 text-sm font-medium text-black dark:text-white`}
                 >
                   Confirm password
                 </label>
@@ -90,17 +113,21 @@ console.log("Password :",password,"Email:",email,' User Name',userName);
                   required=""
                 />
               </div>
-             
+
               <button
                 type="submit"
                 className="w-full text-white bg-black active:bg-myTheme  font-medium rounded text-sm px-5 py-2.5 text-center "
               >
                 Create an account
               </button>
-              <p className={`${darkMode?"text-white":" text-black "} text-sm font-light flex justify-center text-black dark:text-gray-400`}>
+              <p
+                className={`${
+                  darkMode ? "text-white" : " text-black "
+                } text-sm font-light flex justify-center text-black dark:text-gray-400`}
+              >
                 Already have an account?{" "}
                 <Link
-                  to={'/Login'}
+                  to={"/Login"}
                   className="font-medium hover:text-myTheme text-primary-600 hover:underline dark:text-primary-500"
                 >
                   Login here

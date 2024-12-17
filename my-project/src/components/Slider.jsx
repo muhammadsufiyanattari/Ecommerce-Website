@@ -9,8 +9,7 @@ import apper from "../assets/images/apper.png";
 import { SlHeart } from "react-icons/sl";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FiEye } from "react-icons/fi";
-import loadingImg from "../assets/loading/loading.gif"
-
+import loadingImg from "../assets/loading/loading.gif";
 
 let AddToCardlist = [
   {

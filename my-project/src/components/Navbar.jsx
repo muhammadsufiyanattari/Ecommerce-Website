@@ -54,14 +54,14 @@ export default function MyNavbar() {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
   const navigate = useNavigate();
 
-let submitHandler = (e) => {
-  e.preventDefault();
-  let searchTerm=e.target.children[0].value
-  console.log(e.target.children[0].value);
-  if(!searchTerm) return
-  navigate(`/search?qurey=${searchTerm}`);
-  searchTerm=e.target.children[0].value=""
-};
+  let submitHandler = (e) => {
+    e.preventDefault();
+    let searchTerm = e.target.children[0].value;
+    console.log(e.target.children[0].value);
+    if (!searchTerm) return;
+    navigate(`/search?qurey=${searchTerm}`);
+    searchTerm = e.target.children[0].value = "";
+  };
 
   return (
     <>
@@ -195,7 +195,10 @@ let submitHandler = (e) => {
                 <CiHeart />
               </li>
               <li className="hover:text-myTheme 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
-             <Link to={"/addCard"}> <MdOutlineShoppingCart /></Link>   
+                <Link to={"/addCard"}>
+                  {" "}
+                  <MdOutlineShoppingCart />
+                </Link>
               </li>
 
               <li className="w-[30px] h-[30px] rounded-full overflow-hidden">

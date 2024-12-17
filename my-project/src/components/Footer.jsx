@@ -9,8 +9,16 @@ export default function MyFooter(second) {
 
   return (
     <>
-      <footer className={`${darkMode?"pageDark":""} body-font bg-black text-white  m-0`}>
-        <div className={` ${darkMode?"pageDark":""} container px-5 py-24 mx-auto bg-black  mb-0`}>
+      <footer
+        className={`${
+          darkMode ? "pageDark" : ""
+        } body-font bg-black text-white  m-0`}
+      >
+        <div
+          className={` ${
+            darkMode ? "pageDark" : ""
+          } container px-5 py-24 mx-auto bg-black  mb-0`}
+        >
           <div className="flex flex-wrap md:text-center xl:text-left 2xl:text-left lg:text-left text-center -mb-10 -mx-4 justify-center  gap-5 ">
             <div className="lg:w-1/6 md:w-1/2 w-full px-4">
               <h2 className="title-font  font-bold text-white tracking-widest text-2xl mb-4">

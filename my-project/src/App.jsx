@@ -40,7 +40,7 @@ function App() {
           <Route path="/SiginUp" element={<SiginUp />} />
           {logSing ? (
             <>
-             <Route path="/addCard" element={<CardTotal />} />
+              <Route path="/addCard" element={<CardTotal />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/Login" element={<Navigate to="/" />} />
             </>

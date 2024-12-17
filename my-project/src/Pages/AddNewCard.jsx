@@ -8,31 +8,28 @@ import { zodResolver } from "@hookform/resolvers/zod";
 // const darkMode = useSelector((state) => state.darkMode.darkMode);
 import schema from "../validateSchema/Schema";
 
-
 function AddNewCard() {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
-  const categary=[
-    { categaryName:"beauty"},
-    { categaryName:"fragrances"},
-    { categaryName:"furniture"},
-    { categaryName:"groceries"},
-    { categaryName:"home-decoration"},
-    { categaryName:"kitchen-accessories"},
-    { categaryName:"laptops"},
-    { categaryName:"mens-shirts"},
-    { categaryName:"mens-watches"},
-    { categaryName:"smartphones"},
-    { categaryName:"sunglasses"}
-
-  ]
-
+  const categary = [
+    { categaryName: "beauty" },
+    { categaryName: "fragrances" },
+    { categaryName: "furniture" },
+    { categaryName: "groceries" },
+    { categaryName: "home-decoration" },
+    { categaryName: "kitchen-accessories" },
+    { categaryName: "laptops" },
+    { categaryName: "mens-shirts" },
+    { categaryName: "mens-watches" },
+    { categaryName: "smartphones" },
+    { categaryName: "sunglasses" },
+  ];
 
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm({ mode: "onBlur",resolver: zodResolver(schema) }  );
+  } = useForm({ mode: "onBlur", resolver: zodResolver(schema) });
   console.log("errors", errors);
 
   const submitHandler = async (formValues) => {
@@ -86,7 +83,14 @@ function AddNewCard() {
                   errors.productName?.message ? "border-red-500 border-2" : ""
                 } block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md   focus:border-black  focus:outline-none focus:ring-myTheme`}
               />
-            {errors.productName?.message?<div className="text-red-600 text-xs" > {errors.productName?.message}</div>:""} 
+              {errors.productName?.message ? (
+                <div className="text-red-600 text-xs">
+                  {" "}
+                  {errors.productName?.message}
+                </div>
+              ) : (
+                ""
+              )}
             </div>
             <div>
               <label
@@ -96,14 +100,20 @@ function AddNewCard() {
                 Price
               </label>
               <input
-              {...register("price")}
+                {...register("price")}
                 type="number"
                 className={`${
                   errors.price ? "border-red-500 border-2" : ""
                 } block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-black  focus:outline-none focus:ring-myTheme`}
               />
-                          {errors.price?.message?<div className="text-red-600 text-xs" > {errors.price?.message}</div>:""} 
-
+              {errors.price?.message ? (
+                <div className="text-red-600 text-xs">
+                  {" "}
+                  {errors.price?.message}
+                </div>
+              ) : (
+                ""
+              )}
             </div>
             <div>
               <label
@@ -113,14 +123,20 @@ function AddNewCard() {
                 Stock
               </label>
               <input
-              {...register("stock")}
+                {...register("stock")}
                 type="number"
                 className={`${
                   errors.stock ? "border-red-500 border-2" : ""
                 } block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-myTheme focus:border-black  focus:outline-none focus:ring-myTheme`}
               />
-                         {errors.stock?.message?<div className="text-red-600 text-xs" > {errors.stock?.message}</div>:""} 
-
+              {errors.stock?.message ? (
+                <div className="text-red-600 text-xs">
+                  {" "}
+                  {errors.stock?.message}
+                </div>
+              ) : (
+                ""
+              )}
             </div>
             {/* <div>
           <label
@@ -147,18 +163,24 @@ function AddNewCard() {
                 {...register("productCategary")}
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800  focus:border-black dark:focus:border-black focus:outline-none focus:ring-myTheme"
               >
-                <option selected disabled   >Select Category</option>
-                {
-                categary.map((value,index)=>{
-                  
-                  
-          return       <option className="text-gray-900" key={index}>{value.categaryName}</option>
-                })
-              }
-                
-             
+                <option selected disabled>
+                  Select Category
+                </option>
+                {categary.map((value, index) => {
+                  return (
+                    <option className="text-gray-900" key={index}>
+                      {value.categaryName}
+                    </option>
+                  );
+                })}
               </select>
-              {errors.productCategary?.message?<div className="text-red-500 text-xs">{errors.productCategary?.message}</div>:""}
+              {errors.productCategary?.message ? (
+                <div className="text-red-500 text-xs">
+                  {errors.productCategary?.message}
+                </div>
+              ) : (
+                ""
+              )}
             </div>
 
             <div>
@@ -186,11 +208,19 @@ function AddNewCard() {
                 id="discription"
                 {...register("discription")}
                 type="textarea"
-                className={`${errors.discription ? "border-red-500 border-2" : ""}block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md    focus:border-black dark:focus:border-black focus:outline-none focus:ring-myTheme`}
+                className={`${
+                  errors.discription ? "border-red-500 border-2" : ""
+                }block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md    focus:border-black dark:focus:border-black focus:outline-none focus:ring-myTheme`}
                 defaultValue={""}
               />
-                      { errors?.discription?.message?  <div className="text-red-600 text-xs"> {errors.discription?.message}</div>:"" }
-
+              {errors?.discription?.message ? (
+                <div className="text-red-600 text-xs">
+                  {" "}
+                  {errors.discription?.message}
+                </div>
+              ) : (
+                ""
+              )}
             </div>
             <div>
               <label
