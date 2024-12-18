@@ -9,14 +9,14 @@ function SiginUp() {
     const password = formData.get("password");
     const email = formData.get("email");
     const userName = formData.get("userName");
-    console.log(
-      "Password :",
-      password,
-      "Email:",
-      email,
-      " User Name",
-      userName
-    );
+    // console.log(
+    //   "Password :",
+    //   password,
+    //   "Email:",
+    //   email,
+    //   " User Name",
+    //   userName
+    // );
   };
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 

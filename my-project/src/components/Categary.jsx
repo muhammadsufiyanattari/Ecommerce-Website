@@ -26,7 +26,7 @@ import {
 import { useParams } from "react-router-dom";
 
 function Categary({ category }) {
-  console.log("category ", category);
+  // console.log("category ", category);
 
   const [products, setProducts] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -48,7 +48,7 @@ function Categary({ category }) {
       setIsLoading(false);
       SetError(error.response.statusText);
       setProducts(null);
-      console.log(error.response.statusText);
+      // console.log(error.response.statusText);
     } finally {
       setIsLoading(false);
     }
@@ -103,8 +103,8 @@ function Categary({ category }) {
           }}
           // pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
         >
           <div className="flex  justify-center items-center ">
             {isLoading ? (

@@ -11,7 +11,7 @@ function Contact() {
     const userName = formData.get("userName");
     const email = formData.get("email");
     const message = formData.get("message");
-    console.log("userName :", userName, "Email:", email, "message", message);
+    // console.log("userName :", userName, "Email:", email, "message", message);
   };
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 

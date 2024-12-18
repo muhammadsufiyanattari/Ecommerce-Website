@@ -23,14 +23,14 @@ function ProductDetails() {
     `https://dummyjson.com/products/${params.id}`,
     axios
   );
-  console.log("products data", data?.data);
+  // console.log("products data", data?.data);
   let product = data?.data;
   const [selectImg, setSelectImg] = useState(product?.image);
   let discountPrice = Math.ceil(
     product?.price - product?.discountPercentage * (product?.price / 100)
   ).toFixed(2);
   const [count, setCount] = useState(1);
-  console.log(error);
+  // console.log(error);
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   return (

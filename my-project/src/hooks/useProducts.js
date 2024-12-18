@@ -20,7 +20,7 @@ function useProducts(skipLimit) {
       setIsLoading(false);
       SetError(error.response.statusText);
       setProducts(null);
-      console.log(error.response.statusText);
+      // console.log(error.response.statusText);
     } finally {
       setIsLoading(false);
     }

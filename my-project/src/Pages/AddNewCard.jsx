@@ -30,7 +30,7 @@ function AddNewCard() {
     watch,
     formState: { errors },
   } = useForm({ mode: "onBlur", resolver: zodResolver(schema) });
-  console.log("errors", errors);
+  // console.log("errors", errors);
 
   const submitHandler = async (formValues) => {
     try {
@@ -40,7 +40,7 @@ function AddNewCard() {
       // for( const pairs of formdata.entries()){
       //   formValues[pairs[0]]=pairs[1];
       // }
-      console.log(formValues);
+      // console.log(formValues);
       const response = await axios.post("https://dummyjson.com/products/add");
       formValues;
       toast.success("Your product add has been successful");

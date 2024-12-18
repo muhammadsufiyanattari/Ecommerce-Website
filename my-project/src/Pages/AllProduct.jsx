@@ -173,7 +173,7 @@ function AllProduct() {
   //   },[])
   // search value useState
   const [searchValue, setSearchValue] = useState("");
-  console.log("searchValue", searchValue);
+  // console.log("searchValue", searchValue);
   //  filter Function
   const searchProducts = () => {
     let result = products?.filter((value) => {

@@ -13,7 +13,7 @@ function Search() {
     `https://dummyjson.com/products/search?q=${searchValue}`,
     axios
   );
-  console.log(data?.data?.products);
+  // console.log(data?.data?.products);
   const searchData = data?.data?.products;
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 

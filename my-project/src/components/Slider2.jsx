@@ -209,8 +209,8 @@ export function CardListSlider2() {
           }}
           // pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
         >
           <div className="flex justify-center items-center ">
             {isLoading ? (

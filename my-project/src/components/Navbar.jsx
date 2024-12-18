@@ -57,7 +57,7 @@ export default function MyNavbar() {
   let submitHandler = (e) => {
     e.preventDefault();
     let searchTerm = e.target.children[0].value;
-    console.log(e.target.children[0].value);
+    // console.log(e.target.children[0].value);
     if (!searchTerm) return;
     navigate(`/search?qurey=${searchTerm}`);
     searchTerm = e.target.children[0].value = "";
