@@ -67,6 +67,7 @@ function CardTotal() {
               </div>
               <div className="text-center flex items-center">
                 <input
+                value={1}
                   type="number"
                   name=""
                   id=""
@@ -115,7 +116,9 @@ function CardTotal() {
               </div>
               <div className="text-center flex items-center ">
                 <input
+                value={1}
                   type="number"
+
                   name=""
                   id=""
                   className="border text-black border-gray-300 rounded w-20 p-2"
@@ -224,14 +227,14 @@ function CardTotal() {
           <button
             className={`${
               darkMode ? "bg-black text-white" : "bg-white text-black"
-            } px-6  2xl:w-[218px] 2xl:h-[56px] xl:w-[218px] xl:h-[56px] lg:w-[218px] lg:h-[56px] md:w-[218px] md:h-[56px]  py-3 text-base sm:my-2 mobile:my-2  active:bg-red-700 active:text-white  font-medium border border-black rounded  `}
+            } px-6  2xl:w-[218px] 2xl:h-[56px] xl:w-[218px] xl:h-[56px] lg:w-[218px] lg:h-[56px] md:w-[218px] md:h-[56px]  py-3 text-base sm:my-2 mobile:my-2 hover:bg-red-700  active:bg-red-900 active:text-white  font-medium border border-black rounded  `}
           >
             Return To Shop
           </button>
           <button
             className={`${
               darkMode ? "bg-black text-white" : "bg-white text-black"
-            } px-6  2xl:w-[218px] 2xl:h-[56px] xl:w-[218px] xl:h-[56px] lg:w-[218px] lg:h-[56px] md:w-[218px] md:h-[56px]  py-3 text-base sm:my-2 mobile:my-2  active:bg-red-700 active:text-white  font-medium border border-black rounded `}
+            } px-6  2xl:w-[218px] 2xl:h-[56px] xl:w-[218px] xl:h-[56px] lg:w-[218px] lg:h-[56px] md:w-[218px] md:h-[56px]  py-3 text-base sm:my-2 mobile:my-2  hover:bg-red-700 active:bg-red-900 active:text-white  font-medium border border-black rounded `}
           >
             Update Cart
           </button>
@@ -247,7 +250,7 @@ function CardTotal() {
                 placeholder="Coupon Code"
                 type="text"
               />
-              <button className=" md:px-6 md:py-3 2xl:w-[211px] 2xl:h-[56px] xl:w-[211px] xl:h-[56px] lg:w-[211px] lg:h-[56px] mobile:w-auto mobile:h-auto sm:w-auto sm:h-auto md:text-sm  mobile:px-4 mobile:py-2 mobile:text-[12px] bg-myTheme text-white rounded active:bg-red-700">
+              <button className=" md:px-6 md:py-3 2xl:w-[211px] 2xl:h-[56px] xl:w-[211px] xl:h-[56px] lg:w-[211px] lg:h-[56px] mobile:w-auto mobile:h-auto sm:w-auto sm:h-auto md:text-sm  mobile:px-4 mobile:py-2 mobile:text-[12px] bg-myTheme text-white hover:bg-red-700 rounded active:bg-red-900">
                 Apply Coupon
               </button>
             </div>
@@ -278,7 +281,7 @@ function CardTotal() {
                 <span className="font-bold">$1750</span>
               </div>
             </div>
-            <button className="mt-6 w-full py-3 bg-myTheme text-white rounded active:bg-red-700">
+            <button className="mt-6 w-full py-3 bg-myTheme text-white rounded hover:bg-red-700 active:bg-red-900">
               Proceed to Checkout
             </button>
           </div>

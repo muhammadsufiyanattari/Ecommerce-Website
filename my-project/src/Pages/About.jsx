@@ -27,13 +27,11 @@ function About() {
                 darkMode ? "text-white" : "text-black"
               } font-normal text-base leading-6 text-black dark:text-white`}
             >
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum.In the first place we have granted to
-              God, and by this our present charter confirmed for us and our
-              heirs forever that the English Church shall be free, and shall
-              have her rights entire, and her liberties inviolate; and we will
-              that it be thus observed; which is apparent from
+              Welcome to Shop Me Store, your one-stop destination for mention
+              products or services you offer, e.g., fashion, electronics, home
+              essentials, etc.. Founded with the vision to make specific goal,
+              e.g., quality products accessible to everyone, we are passionate
+              about delivering an exceptional shopping experience.
             </p>
           </div>
           <div class="w-full lg:w-8/12">
@@ -52,20 +50,17 @@ function About() {
                 darkMode ? "text-white" : "text-black"
               } text-3xl lg:text-4xl font-bold leading-9 text-black dark:text-white pb-4 `}
             >
-              Our Story
+           Our Journey
             </h1>
             <p
               class={`${
                 darkMode ? "text-white" : "text-black"
               } font-normal text-base leading-6 text-black dark:text-white`}
             >
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum.In the first place we have granted to
-              God, and by this our present charter confirmed for us and our
-              heirs forever that the English Church shall be free, and shall
-              have her rights entire, and her liberties inviolate; and we will
-              that it be thus observed; which is apparent from
+               Since our inception in Year of 2024, we
+              have served thousands of happy customers, building a reputation
+              for quality and trust. As we continue to grow, our commitment to
+              excellence remains unwavering.
             </p>
           </div>
           <div class="w-full lg:w-8/12 lg:pt-8">
