@@ -128,6 +128,12 @@ import guchi from "../assets/arrivel/guchi.png";
 import amazone from "../assets/arrivel/amazone.png";
 import anti from "../assets/arrivel/anti.png";
 import { useSelector } from "react-redux";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init({
+  duration: 1000,
+});
 
 function Arrivel() {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
@@ -150,8 +156,8 @@ function Arrivel() {
               backgroundSize: "cover",
             }}
           >
-            <div className="text-white flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1 p-4">
-              <div>
+            <div data-aos="fade-right" className="text-white flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1 p-4">
+              <div >
                 <h2 className="font-semibold 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-xs">
                   PlayStation 5
                 </h2>
@@ -175,7 +181,7 @@ function Arrivel() {
               }  w-full lg:w-[570px] h-auto lg:h-[600px] flex rounded`}
             >
               <div className="w-full lg:w-[70%] text-white flex justify-center items-end p-3">
-                <div className="flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1">
+                <div data-aos="fade-left" className="flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1">
                   <div>
                     <h2 className="font-semibold 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-xs ">
                       Women’s Collections
@@ -194,7 +200,7 @@ function Arrivel() {
                 </div>
               </div>
               <div className="w-full lg:w-[70%] flex items-end">
-                <img
+                <img data-aos="fade-right"
                   className="w-full lg:w-[570px] h-auto lg:h-[250px]"
                   src={anti}
                   alt=""
@@ -213,7 +219,7 @@ function Arrivel() {
                   backgroundSize: "cover",
                 }}
               >
-                <div className="text-white flex flex-col  ">
+                <div data-aos="fade-left" className="text-white flex flex-col  ">
                   <div>
                     <h2 className="font-semibold text-[20px] leading-6">
                       Speakers
@@ -242,7 +248,7 @@ function Arrivel() {
                   backgroundSize: "cover",
                 }}
               >
-                <div className="text-white flex flex-col ">
+                <div data-aos="fade-left" className="text-white flex flex-col ">
                   <div>
                     <h2 className="font-semibold text-[20px] leading-6">
                       Perfume

@@ -1,0 +1,9 @@
+{
+  "name": "Shop Me Store",
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#db4444",
+  "background_color": "#000000",
+  "short_name": "Shop Me",
+  "description": "This is my E-comerce web-site ."
+}

@@ -5,23 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 AOS.init({
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: "aos-init", // class applied after initialization
-  animatedClassName: "aos-animate", // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 400, // values from 0 to 3000, with step 50ms
-  easing: "ease", // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+  duration: 1000,
 });
 
 function Spiker() {
@@ -110,9 +94,9 @@ function Spiker() {
             </div>
           </div>
         </div> */}
-        <section className={`${ darkMode ? "darkTheme" : "" }  text-gray-600  bg-black rounded-3xl  body-font flex justify-center items-center`}>
+        <section className={`${ darkMode ? "darkTheme" : "darkTheme" }  text-gray-600   rounded-3xl  body-font flex justify-center items-center`}>
           <div className="container  mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-            <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <div data-aos="zoom-in-right" className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <div  className={`${darkMode ? "text-black" : ""} font-semibold m-2 text-[#00FF66]`}
             >Categories</div>
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-white">
@@ -123,34 +107,34 @@ function Spiker() {
                 Music Experience
               </h1>
              <div className="flex gap-4 ">
-              <div className=" w-14 h-14  p-2 bg-white text-black rounded-full">
-                <div className="flex-col justify-center items-center text-xs text-center">
+              <div className={`${ darkMode ? "bg-black text-white" : "bg-white text-black" } w-14 h-14  p-2  rounded-full`}>
+                <div className="flex-col justify-center items-center text-[10px]  text-center">
                   23{" "}
                   <div>Hours</div>
                 </div>
               </div>
-              <div className=" w-14 h-14 bg-white p-2 text-black rounded-full">
-                <div className="flex-col justify-center items-center text-xs text-center">
-                  23{" "}
-                  <div>Hours</div>
+              <div className={`${ darkMode ? "bg-black text-white" : "bg-white text-black" } w-14 h-14  p-2  rounded-full`}>
+                <div className="flex-col justify-center items-center text-[10px]  text-center">
+                  05{" "}
+                  <div>Days</div>
                 </div>
               </div>
-              <div className=" w-14 h-14 bg-white p-2 text-black rounded-full">
-                <div className="flex-col justify-center items-center text-xs text-center">
-                  23{" "}
-                  <div>Hours</div>
+              <div className={`${ darkMode ? "bg-black text-white" : "bg-white text-black" } w-14 h-14  p-2  rounded-full`}>
+                <div className="flex-col justify-center items-center text-[10px]  text-center">
+                  59{" "}
+                  <div>Minutes</div>
                 </div>
               </div>
-              <div className=" w-14 h-14 bg-white p-2 text-black rounded-full">
-                <div className="flex-col justify-center items-center text-xs text-center">
-                  23{" "}
-                  <div>Hours</div>
+              <div className={`${ darkMode ? "bg-black text-white" : "bg-white text-black" } w-14 h-14  p-2  rounded-full`}>
+                <div className="flex-col justify-center items-center text-[10px] text-center">
+                  35{" "}
+                  <div>Secands</div>
                 </div>
               </div>
               </div>
               
               <div className="flex justify-center my-5">
-                <button className="inline-flex text-white bg-[#00FF66] border-0 py-4 px-10 focus:outline-none hover:bg-indigo-600 rounded text-sm">
+                <button className="inline-flex text-white bg-[#00FF66] border-0 py-4 px-10 focus:outline-none hover:bg-[#299253] rounded text-sm">
                   Button
                 </button>
                 {/* <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
@@ -158,7 +142,7 @@ function Spiker() {
         </button> */}
               </div>
             </div>
-            <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <div data-aos="zoom-in-left" className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
               <img
                 className="object-cover object-center rounded animate-pulse"
                 alt="hero"

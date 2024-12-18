@@ -43,7 +43,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className={`flex justify-center items-center `}>
+      <div className={` flex justify-center items-center `}>
         <div
           id="heroMain"
           className=" w-[100%] h-[500px] 2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col mobile:flex-col flex mb-7 md:h-auto sm:h-auto mobile:h-auto  sm:mb-7 "
@@ -70,9 +70,9 @@ export default function Hero() {
           </div>
           <div className=" mx-2 2xl:w-[70%]  xl:w-[70%] lg:w-[100%] md:w-[100%] sm:w-[100%] 2xl:h-[500px] xl:h-[500px] lg:h-[100px] center">
             <div
-              className={`${
+              className={` ${darkMode?"darkTheme":"darkTheme"}${
                 darkMode ? "text-white" : ""
-              } bg-black  w-[892px] py-6 rounded  gap-4 2xl:w-[892px] 2xl:h-[344px] xl:w-[892px] xl:h-[344px] lg:w-[892px]  md:w-auto sm:w-auto px-3 mobile:my-4 mobile:w-auto `}
+              }   w-[892px] py-6 rounded  gap-4 2xl:w-[892px] 2xl:h-[344px] xl:w-[892px] xl:h-[344px] lg:w-[892px]  md:w-auto sm:w-auto px-3 mobile:my-4 mobile:w-auto `}
             >
               <div className="flex justify-center it  ">
                 <div
