@@ -192,12 +192,12 @@ export default function MyNavbar() {
           {logSing === true ? (
             <>
               <li className="hover:text-myTheme 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
-                <CiHeart />
+                <CiHeart className={`${ darkMode?"bg-myTheme text-white rounded-full font-bold p-1":"text-black bg-transparent "} `} />
               </li>
               <li className="hover:text-myTheme 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
                 <Link to={"/addCard"}>
                   {" "}
-                  <MdOutlineShoppingCart />
+                  <MdOutlineShoppingCart  className={`${ darkMode?"bg-myTheme text-white rounded-full font-bold p-1":"text-black bg-transparent "} `} />
                 </Link>
               </li>
 
