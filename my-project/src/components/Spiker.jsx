@@ -134,7 +134,7 @@ function Spiker() {
               </div>
               
               <div className="flex justify-center my-5">
-                <button className="inline-flex text-white bg-[#00FF66] border-0 py-4 px-10 focus:outline-none hover:bg-[#299253] rounded text-sm">
+                <button className="inline-flex text-white bg-[#00FF66] border-0 py-4 px-10 focus:outline-none hover:bg-[#299253] active:bg-[#144a29] rounded text-sm">
                   Button
                 </button>
                 {/* <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">

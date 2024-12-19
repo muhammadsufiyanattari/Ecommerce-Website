@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "sh.surge.sufiyan_ecommerce_website.twa",
+        "sha256_cert_fingerprints": ["4F:57:DC:15:F9:F4:DE:D1:60:18:C6:3C:B6:EF:F5:07:96:6B:7F:64:35:85:6F:17:2D:66:9C:72:8C:76:61:F4"]
+      }
+    }]
