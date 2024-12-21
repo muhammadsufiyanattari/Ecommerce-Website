@@ -191,10 +191,10 @@ export default function MyNavbar() {
           </li>
           {logSing === true ? (
             <>
-              <li className="hover:text-myTheme 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
+              <li className="hover:text-myTheme  hidden sm:flex  2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
                 <CiHeart className={`${ darkMode?"bg-black text-white rounded-full font-extrabold text-2xl p-1":"text-black bg-transparent "} `} />
               </li>
-              <li className="hover:text-myTheme 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
+              <li className="hover:text-myTheme hidden  sm:flex 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
                 <Link to={"/addCard"}>
                   {" "}
                   <MdOutlineShoppingCart  className={`${ darkMode?"bg-black text-white text-2xl rounded-full font-bold p-1":"text-black bg-transparent "} `} />
@@ -223,7 +223,7 @@ export default function MyNavbar() {
         {menu ? (
           <div
             data-aos="fade-right"
-            className="link top-[70px] bg-white w-[100%] z-10   lg:hidden xl:hidden 2xl:hidden absolute"
+            className={`${darkMode?"bg-black text-white":" bg-white text-black"} link top-[70px]  w-[100%] z-10   lg:hidden xl:hidden 2xl:hidden absolute`}
           >
             <ul className="flex pl-8 flex-col gap-5">
               {Mylink.map((value, index) => {
@@ -242,6 +242,7 @@ export default function MyNavbar() {
                   </li>
                 );
               })}
+            
 
               {logSing === true ? (
                 <>
@@ -253,6 +254,18 @@ export default function MyNavbar() {
                       SignUp
                     </Link>
                   </li>
+                  <div className="flex gap-2">
+                  <li className="hover:text-myTheme  flex sm:hidden    hover:cursor-pointer">
+                <CiHeart className={`${ darkMode?"bg-black text-white rounded-full font-extrabold text-3xl p-1":"text-black bg-transparent "} `} />
+              </li>
+              <li className="hover:text-myTheme flex  sm:hidden   hover:cursor-pointer">
+                <Link to={"/addCard"}>
+                  {" "}
+                  <MdOutlineShoppingCart  className={`${ darkMode?"bg-black text-white text-3xl rounded-full font-bold p-1":"text-black bg-transparent "} `} />
+                </Link>
+              </li>
+                  </div>
+                  
                   {/* <li className="hover:text-myTheme text-2xl hover:cursor-pointer">
                   <CiHeart />
                 </li>
@@ -285,8 +298,10 @@ export default function MyNavbar() {
                   {/* <li className="hover:text-myTheme text-2xl hover:cursor-pointer">
                   <FaUserCircle />
                 </li> */}
+                
                 </>
               )}
+              
             </ul>
           </div>
         ) : null}

@@ -128,7 +128,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto my-2 ">
+      <div className="container mx-auto my-2   2xl:flex xl:hidden lg:flex md:flex sm:flex mobile:flex ">
         <img className="container mx-auto rounded-xl cursor-none darkTheme" src={heros} alt="" />
       </div>
     </>
