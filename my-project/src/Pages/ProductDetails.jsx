@@ -34,7 +34,7 @@ function ProductDetails() {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   return (
-    <div className="h-[200vh]">
+    <div className="">
       {isLoading ? (
         <div
           className={`${darkMode ? "text-white" : ""} ${
