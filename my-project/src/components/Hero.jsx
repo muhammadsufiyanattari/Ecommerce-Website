@@ -4,6 +4,7 @@ import dot from "../assets/images/dot.png";
 import { FaArrowRight } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import AOS from "aos";
+import heros from "../assets/images/heros.png"
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 AOS.init({
@@ -43,7 +44,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className={` flex justify-center items-center `}>
+      <div className={` flex justify-center items-center  2xl:hidden xl:flex lg:hidden md:hidden sm:hidden mobile:hidden`}>
         <div
           id="heroMain"
           className=" w-[100%] h-[500px] 2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col mobile:flex-col flex mb-7 md:h-auto sm:h-auto mobile:h-auto  sm:mb-7 "
@@ -126,6 +127,9 @@ export default function Hero() {
        
           </div>
         </div>
+      </div>
+      <div className="container mx-auto my-2 ">
+        <img className="container mx-auto rounded-xl cursor-none darkTheme" src={heros} alt="" />
       </div>
     </>
   );

@@ -101,7 +101,7 @@ export default function MyNavbar() {
               className="search   h-6 flex justify-center "
             >
               <input
-                className={`outline-none  w-[100%] bg-[#F5F5F5] placeholder:font-normal md:text-base text-xs text-gray-300 ${
+                className={`outline-none    bg-[#F5F5F5] placeholder:font-normal md:text-base text-xs text-gray-300 ${
                   darkMode ? "bg-black" : ""
                 } ${darkMode ? "placeholder:text-white" : ""}  ${
                   darkMode ? "text-white" : ""
@@ -180,12 +180,12 @@ export default function MyNavbar() {
         </div>
         <div className="flex justify-center items-center list-none gap-2 mobile:text-xs sm:text-xs">
           {" "}
-          <li className="2xl:text-2xl xl:text-2xl  lg:text-2xl md:text-xl sm:text-sm mobile:text-sm">
+          <li className="text-center">
             <button onClick={() => dispatch(toggleDarkMode())}>
               {darkMode ? (
-                <IoSunny className="text-lg text-white " />
+                <IoSunny className=" sm:text-lg text-xs text-white " />
               ) : (
-                <IoMoon className="text-lg text-black " />
+                <IoMoon className="sm:text-lg text-xs text-black " />
               )}
             </button>
           </li>
@@ -197,7 +197,7 @@ export default function MyNavbar() {
               <li className="hover:text-myTheme 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
                 <Link to={"/addCard"}>
                   {" "}
-                  <MdOutlineShoppingCart  className={`${ darkMode?"bg-black text-white rounded-full font-bold p-1":"text-black bg-transparent "} `} />
+                  <MdOutlineShoppingCart  className={`${ darkMode?"bg-black text-white text-2xl rounded-full font-bold p-1":"text-black bg-transparent "} `} />
                 </Link>
               </li>
 
@@ -297,7 +297,7 @@ export default function MyNavbar() {
               setMenu(!menu);
             }}
           >
-            {menu ? <IoMdClose /> : <MdOutlineMenu />}
+            {menu ? <IoMdClose  className={`${darkMode?" text-white":"text-black"}`}/> : <MdOutlineMenu  className={`${darkMode?" text-white":"text-black"}`}/>}
           </button>
         </div>
       </nav>

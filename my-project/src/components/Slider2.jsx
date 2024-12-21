@@ -166,7 +166,7 @@ export function CardListSlider2() {
 
   return (
     <>
-      <div className="    ">
+      <div className=" my-3  ">
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
