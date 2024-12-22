@@ -185,20 +185,36 @@ export function CardListSlider2() {
               slidesPerView: 3,
               spaceBetween: 50,
             },
+            900: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
             800: {
               slidesPerView: 2,
               spaceBetween: 50,
             },
+            700: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            600: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
             500: {
-              slidesPerView: 1,
+              slidesPerView: 3,
               spaceBetween: 40,
             },
             350: {
-              slidesPerView: 1,
+              slidesPerView: 2,
               spaceBetween: 0,
             },
             320: {
               slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            300: {
+              slidesPerView: 2,
               spaceBetween: 0,
             },
           }}

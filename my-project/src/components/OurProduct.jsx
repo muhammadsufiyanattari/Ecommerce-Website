@@ -143,15 +143,15 @@ function OurProduct() {
           <div className="ml-5">
             <MyCountBox name="Explore Our Products" days="Our Products" />
           </div>
-          <div className=" flex justify-center items-center  my-14  flex-row">
-            <div className="flex 2xl:w-[1170px] xl:w-[1170px] lg:w-auto 2xl:h-[732px] xl:h-[732px] lg:h-auto md:w-auto md:h-auto sm:w-auto sm:h-auto mobile:w-auto mobile:h-auto sm:flex-col flex-wrap mobile:flex-col lg:justify-center md:justify-center md:flex-row 2xl:flex-row xl:flex-row my-3 lg:flex-row lg:gap-4 gap-[30px]">
+          <div className=" flex justify-center items-center   my-14  ">
+            <div className="flex 2xl:w-[1170px] xl:w-[1170px] lg:w-auto 2xl:h-[732px] xl:h-[732px] lg:h-auto md:w-auto md:h-auto sm:w-auto sm:h-auto mobile:w-auto mobile:h-auto sm:flex-row flex-wrap mobile:flex-row mobile:justify-center lg:justify-center md:justify-center md:flex-row 2xl:flex-row xl:flex-row my-3 lg:flex-row lg:gap-4 gap-[30px]">
               {products?.map((value, index) => {
                 let discountPrice = Math.ceil(
                   value.price - value.discountPercentage * (value.price / 100)
                 ).toFixed(2);
 
                 return (
-                  <div key={value.id}>
+                  <div className="" key={value.id}>
                     {" "}
                     <AddToCard
                       // className='bg-myTheme'

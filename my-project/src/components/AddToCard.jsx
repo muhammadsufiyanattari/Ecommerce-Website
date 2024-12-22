@@ -34,15 +34,15 @@ export function AddToCard({
           data-aos="flip-left"
           className={`${
             darkMode ? "darkTheme" : ""
-          } main group bg-white drop-shadow-lg shadow-black   w-[270px] h-[370px] my-4 rounded mobile:m-auto transition-all duration-300 `}
+          } main group bg-red- drop-shadow-lg shadow-black  w-[120px] h-[ sm:w-[270px] sm:h-[370px] my-4 rounded mobile:m-auto transition-all duration-300 `}
         >
           <div
             className={`${
               darkMode ? "darkTheme" : ""
-            } img w-[270px] h-[250px] bg-[#F5F5F5] flex flex-col relative center `}
+            } img sm:w-[270px]  sm:h-[250px]  w-[120px] h-auto bg-[#F5F5F5] flex flex-col relative center `}
           >
             <button
-              className={` w-[55px] h-[26px] ${className} rounded text-white absolute left-3 right-4 bottom-1 top-3 ;`}
+              className={` sm:w-[55px] sm:h-[26px] sm:text-base w-[35px] h-[16px]  text-xs ${className} rounded text-white absolute  sm:left-3 sm:right-4 sm:bottom-1 sm:top-3 left-1 right-4 bottom-1 top-2 ;`}
             >
               {discount}
             </button>
@@ -67,7 +67,7 @@ export function AddToCard({
             </div>
             {image ? (
               <img
-                className=" w-[172px] h-[155px] m-auto group-hover:scale-150 transition-all duration-500"
+                className=" sm:w-[172px] w-auto h-auto    sm:h-[155px] m-auto  sm:group-hover:scale-150 group-hover:scale-110 transition-all duration-500"
                 src={image}
                 alt=""
               />
@@ -80,27 +80,27 @@ export function AddToCard({
                 darkMode
                   ? "active:bg-myTheme bg-black transition-all duration-300 text-white  "
                   : "2xl:bg-white xl:bg-white lg:bg-white md:bg-white group-hover:bg-black"
-              } sm:bg-black mobile:bg-black  h text-white w-[100%] flex transition-all duration-500  items-end justify-center p-2 rounded-b`}
+              } sm:bg-black mobile:bg-black  h text-white text-xs sm:text-lg w-[100%] flex transition-all duration-500  items-end justify-center p-2 rounded-b`}
             >
               Add To Card
             </Link>
           </div>
-          <div className="myp w-[201px] h-[84px] ml-2 gap-2 ">
+          <div className="myp bg-lime- sm:w-[201px] sm:h-[84px] w-[120px]  h-auto pl-1 gap- ">
             <h2
               className={`${
                 darkMode
-                  ? "text-white group-hover:text-gray-200 "
+                  ? "text-white group-hover:text-gray-200  "
                   : "group-hover:text-myTheme"
-              } w-[201]  text-sm font-medium transition-all duration-300  `}
+              } w-[201] sm:text-sm font-medium transition-all duration-300  text-[10px] bg-yellow`}
             >
               {productName}
             </h2>
-            <p className="flex gap-4 my-2 w-[100px] h-6  text-base font-medium text-myTheme">
+            <p className="flex gap-4 my-2 w-[100px] h sm:text-base text-[12px]  font-medium text-myTheme">
               <ins className="no-underline"> {newPrice}</ins> {"  "}
               <s className="text-slate-400 "> {delPrice}</s>
             </p>
-            <div className="star-img flex gap-2">
-              <span>
+            <div className="star-img   bg-amber- ">
+              <span className="">
                 {
                   <ReactStars
                     count={5}

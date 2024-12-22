@@ -252,7 +252,7 @@ function AllProduct() {
             darkMode ? "" : ""
           } flex justify-center items-center   my-14  flex-row`}
         >
-          <div className=" flex sm:flex-col  w-[1170px]  flex-wrap mobile:flex-col lg:justify-center md:justify-center md:flex-row 2xl:flex-row xl:flex-row lg:flex-row lg:gap-4 gap-[30px]">
+          <div className=" flex sm:flex-col  w-[1170px]  flex-wrap mobile:justify-center mobile:items-center sm:justify-center sm:items-center flex-row mobile:flex-row lg:justify-center md:justify-center md:flex-row 2xl:flex-row xl:flex-row lg:flex-row lg:gap-4 gap-[30px]">
             {isLoading ? (
               <div className="font-extrabold text-4xl h-[100vh]">
                 Loading...
