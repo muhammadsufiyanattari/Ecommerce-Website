@@ -59,7 +59,7 @@ function ProductDetails() {
                 darkMode ? "pageDark" : ""
               } main    flex flex-col justify-center  `}
             >
-              <div className="flex justify-center my-5 items-start">
+              <div className="flex justify-center sm:my-5  text-center sm:text-start container mx-auto items-center sm:items-start">
                 <div className="w-full max-w-6xl  text-gray-400 text-sm mb-5">
                   <Link to={"/"}>Home</Link> /{" "}
                   <span className="text-gray-200 hover:text-gray-400">
@@ -80,7 +80,7 @@ function ProductDetails() {
               <div className="w-[] gap-7    2xl:flex-row xl:flex-row lg:flex-row flex md:flex-col sm:flex-col mobile:flex-col  justify-center items-center 2xl:h-[600px] xl:h-[600px] lg:h-[600px] md:h-auto sm:h-auto mobile:h-auto  bg-fuchsia">
                 {/* Product Images Start */}
 
-                <div className="bg- flex 2xl:flex-row xl:flex-row lg:flex-row lg:flex xl:flex md:flex 2xl:flex md:flex-row sm:hidden mobile:hidden  gap-6 2xl:w-[50%] xl:w-[50%] lg:w-[50%]  md:w-[100%] md:justify-center md:items-center h-auto">
+                <div className="bg-  2xl:flex-row xl:flex-row lg:flex-row md:flex hidden  gap-6 2xl:w-[50%] xl:w-[50%] lg:w-[50%]  md:w-[100%] md:justify-center md:items-center h-auto">
                   {product?.images.length === 1 ? null : (
                     <div className="bg-red-  w-[170px] h-[600px] flex-col flex gap-3 justify-start items-center ">
                       {product?.images.map((image, i) => {
@@ -118,7 +118,7 @@ function ProductDetails() {
 
                 {/* COMPLETE DETAILS Start */}
 
-                <div className=" 2xl:flex xl:flex lg:flex md:flex  sm:hidden mobile:hidden flex-col    gap-6 pl-3 w-[500px]  h-[600px] ">
+                <div className=" md:flex hidden flex-col    gap-6 pl-3 w-[500px]  h-[600px] ">
                   <div>
                     <h1
                       className={`${
@@ -289,7 +289,7 @@ function ProductDetails() {
               <div className="flex justify-center items-center  flex-col">
                 {/* Small Screen Product Images Start */}
 
-                <div className="bg- flex flex-col 2xl:hidden xl:hidden  lg:hidden md:hidden sm:flex mobile:flex  gap-6 2xl:w-[50%] xl:w-[50%] lg:w-[50%]  md:w-[100%] md:justify-center md:items-center h-auto">
+                <div className="bg- flex flex-col md:hidden  gap-6 2xl:w-[50%] xl:w-[50%] lg:w-[50%]  md:w-[100%] md:justify-center md:items-center h-auto">
                   {product?.images.length === 1 ? null : (
                     <div className="bg-red-    flex-row flex gap-7 justify-center items-center ">
                       {product?.images.map((image, i) => {
@@ -298,7 +298,7 @@ function ProductDetails() {
                             key={i}
                             className={`${
                               darkMode ? "darkTheme" : ""
-                            } w-[80px] h-[80px] shadow-2xl cursor-pointer bg-[#F5F5F5]`}
+                            } sm:w-[80px] sm:h-[80px] w-[50px] h-[50px] shadow-2xl cursor-pointer bg-[#F5F5F5]`}
                             src={image}
                             alt=""
                             onMouseOver={() => setSelectImg(image)}
@@ -310,13 +310,13 @@ function ProductDetails() {
                   <div
                     className={`${
                       darkMode ? "darkTheme" : ""
-                    } flex justify-center  shadow-2xl  items-center bg-[#F5F5F5] w-[300px] h-[300px]`}
+                    } flex justify-center  shadow-2xl  items-center bg-[#F5F5F5] sm:w-[300px] w-auto h-auto sm:h-[300px]`}
                   >
                     {selectImg ? (
                       <img src={selectImg} alt="" />
                     ) : (
                       <img
-                        className="w-[px] h-[315px] "
+                        className="sm:w-[300px] w-[200px] h[250px] sm:h-[315px] "
                         src={product?.images[0]}
                         alt=""
                       />
@@ -327,12 +327,12 @@ function ProductDetails() {
 
                 {/* Small Screen  COMPLETE DETAILS Start */}
 
-                <div className=" 2xl:hidden xl:hidden  my-10 flex-wrap lg:hidden md:hidden justify-items-center items-center  sm:flex mobile:flex flex-col    gap-6 pl-3 w-[500px]  h-[600px] ">
+                <div className=" md:hidden justify-items-center items-center   flex flex-col    gap-6 pl-3 w-[500px]  h-auto ">
                   <div>
                     <h1
                       className={`${
                         darkMode ? "text-white" : ""
-                      } font-semibold text-xl text-black `}
+                      } sm:font-semibold sm:text-xl text-md text-wrap font-medium text-black `}
                     >
                       {product?.title}
                     </h1>
@@ -350,12 +350,12 @@ function ProductDetails() {
                         />
                       }
                     </span>
-                    <span className="font-normal text-xs text-gray-400">
+                    <span className="font-normal sm:text-xs  text-[10px] text-gray-400">
                       {" "}
                       ({product?.reviews.length} {}Reviews)
                     </span>
                     <span className="text-gray-400">|</span>
-                    <span className=" font-normal text-xs text-[#00FF66]">
+                    <span className=" font-normal sm:text-xs  text-[10px] text-[#00FF66]">
                       {" "}
                       Stock: {product?.stock}
                     </span>
@@ -363,7 +363,7 @@ function ProductDetails() {
                   <div
                     className={`${
                       darkMode ? "text-white" : ""
-                    } price font-normal text-xl`}
+                    } price font-normal text-sm sm:text-xl`}
                   >
                     ${discountPrice * count}
                     {}
@@ -378,18 +378,18 @@ function ProductDetails() {
                       {product?.description}
                     </p>
                   </div>
-                  <div className="minus-plus-btn-buy-btn-heart    flex gap-5 items-center">
-                    <div className=" countbtn w-[159px]  flex  border-2 rounded">
+                  <div className="minus-plus-btn-buy-btn-heart    flex gap-3 items-center">
+                    <div className=" countbtn sm:w-[159px] w-[60px] sm:h-auto   flex  border-2 rounded">
                       <button
                         onClick={() => setCount(count < 2 ? 1 : count - 1)}
-                        className="w-10 h-11 bg-white  active:bg-slate-200 rounded  text-2xl"
+                        className="sm:w-10 w-6 h-7 sm:h-11 px-1 sm:px-0 bg-white  active:bg-slate-200 rounded  text-2xl"
                       >
                         -
                       </button>
                       <div
                         className={`${
                           darkMode ? "text-white" : ""
-                        } w-20 h-11  border-x-2 flex justify-center items-center `}
+                        } sm:w-20 w-16 h-7 sm:h-11 px-1 sm:px-0  border-x-2 flex justify-center items-center `}
                       >
                         {" "}
                         {count}
@@ -402,63 +402,63 @@ function ProductDetails() {
                               : product?.minimumOrderQuantity
                           )
                         }
-                        className="w-10 h-11 bg-myTheme active:bg-red-800 text-white rounded  text-2xl"
+                        className="sm:w-10 w-6 h-7 px-1 sm:px-0 sm:h-11 bg-myTheme active:bg-red-800 text-white rounded  text-2xl"
                       >
                         +
                       </button>
                     </div>
                     <div>
-                      <button className="w-[150px] h-11 bg-myTheme text-white rounded active:bg-red-800 ">
+                      <button className="sm:w-[150px] w-[100px] h-[30px] sm:text-base text-[10px] sm:h-11 bg-myTheme text-white rounded active:bg-red-800 ">
                         Buy Now
                       </button>
                     </div>
-                    <button className="border-2 active:bg-myTheme active:text-white w-8 h-8 flex items-center justify-center rounded text-2xl">
+                    <button className="border-2 active:bg-myTheme active:text-white sm:w-8  w-5 h-5 sm:h-8 flex items-center justify-center rounded text-2xl">
                       <GoHeart className="" />
                     </button>
                   </div>
-                  <div className="delvery flex flex-col w-[300px] h-[180px]  justify-around  border-2 rounded">
-                    <div className="flex pl-3 gap-4 border-b-2 pb-4">
-                      <div className="w-10 h-10">
+                  <div className="delvery flex flex-col sm:w-[300px] w-[200px] sm:h-[180px]  justify-around  border-2 rounded">
+                    <div className="flex pl-3 justify-center items-center gap-4 py-2 border-b-2 pb-4">
+                      <div className="sm:w-10 sm:h-10 w-7 h-7  ">
                         <TbTruckDelivery
-                          className={`${darkMode ? "text-white" : ""} text-5xl`}
+                          className={`${darkMode ? "text-white" : ""} sm:text-5xl text-2xl`}
                         />
                       </div>
                       <div className="">
                         <h1
                           className={`${
                             darkMode ? "text-white" : ""
-                          } font-medium text-sm`}
+                          } font-medium  text-xs sm:text-sm`}
                         >
                           Shipping Information
                         </h1>
                         <p
                           className={`${
                             darkMode ? "text-white" : ""
-                          } font-normal text-xs`}
+                          } font-normal sm:text-xs text-[10px]`}
                         >
                           {product?.shippingInformation}
                         </p>
                       </div>
                     </div>
-                    <div className="flex pl-3 gap-4">
+                    <div className="flex pl-3 py-2 gap-4">
                       <div>
                         {/* <img className="w-8 h-8" src={IconReturn} alt="" /> */}
                         <GiReturnArrow
-                          className={`${darkMode ? "text-white" : ""} text-4xl`}
+                          className={`${darkMode ? "text-white" : ""} sm:text-4xl text-2xl`}
                         />
                       </div>
                       <div>
                         <h1
                           className={`${
                             darkMode ? "text-white" : ""
-                          }  font-medium text-sm`}
+                          }  font-medium text-xs sm:text-sm`}
                         >
                           Return Policy
                         </h1>
                         <p
                           className={`${
                             darkMode ? "text-white" : ""
-                          }  font-normal text-xs`}
+                          }  font-normal sm:text-xs text-[10px]` }
                         >
                           {product?.returnPolicy}
                         </p>
@@ -466,21 +466,21 @@ function ProductDetails() {
                     </div>
                   </div>
                   <div>
-                    <div className="flex justify-start items-center  pl-3 gap-4 rounded border-2 w-[300px] h-[] mb-2 p-1">
+                    <div className="flex justify-start items-center  pl-3 gap-2 rounded border-2 sm:w-[300px] w-[200px] h-[] mb-2 p-1">
                       <div
-                        className={`${darkMode ? "text-white" : ""}  w-10 h-10`}
+                        className={`${darkMode ? "text-white" : ""} flex justify-center items-center   w-10 h-10`}
                       >
                         {product?.warrantyInformation == "No warranty" ? (
-                          <TbShieldX className="text-3xl" />
+                          <TbShieldX className="sm:text-3xl text-2xl" />
                         ) : (
-                          <IoShieldCheckmark className="text-3xl" />
+                          <IoShieldCheckmark className="sm:text-3xl text-2xl" />
                         )}
                       </div>
                       <div className="">
                         <p
                           className={`${
                             darkMode ? "text-white" : ""
-                          }  font-medium text-sm`}
+                          }  font-medium sm:text-sm  text-xs`}
                         >
                           {product?.warrantyInformation}
                         </p>
