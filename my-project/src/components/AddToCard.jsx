@@ -39,7 +39,7 @@ export function AddToCard({
           <div
             className={`${
               darkMode ? "darkTheme" : ""
-            } img sm:w-[270px]  sm:h-[250px]  w-[120px] h-auto bg-[#F5F5F5] flex flex-col relative center `}
+            } img sm:w-[270px]  sm:h-[250px]  w-[120px] h-[150px] bg-[#F5F5F5] flex flex-col relative center `}
           >
             <button
               className={` sm:w-[55px] sm:h-[26px] sm:text-base w-[35px] h-[16px]  text-xs ${className} rounded text-white absolute  sm:left-3 sm:right-4 sm:bottom-1 sm:top-3 left-1 right-4 bottom-1 top-2 ;`}

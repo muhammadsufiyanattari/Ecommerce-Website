@@ -1,6 +1,7 @@
 import logo from "../assets/logo/logo.svg";
 import logomd from "../assets/logo/logomd.svg";
 import mdDarkLogo from "../assets/logo/mdDarkLogo.svg";
+import { FaBookReader } from "react-icons/fa";
 
 import logoDark from "../assets/logo/logoDrak.svg";
 import { MdOutlineMenu } from "react-icons/md";
@@ -16,27 +17,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleDarkMode } from "../store/darkModeSlice";
 import { IoSunny } from "react-icons/io5";
 import { IoMoon } from "react-icons/io5";
+import { RiContactsFill } from "react-icons/ri";
+import { FaHome } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { useNavigate } from "react-router";
 AOS.init({
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: "aos-init", // class applied after initialization
-  animatedClassName: "aos-animate", // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 400, // values from 0 to 3000, with step 50ms
-  easing: "ease", // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+
+  duration: 1000, // values from 0 to 3000, with step 50ms
+
 });
 
 // ../assets/logo/'
@@ -44,6 +34,12 @@ let Mylink = [
   { name: "Home", path: "/" },
   { name: "Contact", path: "/Contact" },
   { name: "About", path: "/About" },
+  // { name: "Login" },
+];
+let MylinkSm = [
+  { name: "Home", path: "/", icon: <FaHome /> },
+  { name: "Contact", path: "/Contact", icon: <RiContactsFill /> },
+  { name: "About", path: "/About", icon: <FaBookReader /> },
   // { name: "Login" },
 ];
 let logSing = true;
@@ -192,12 +188,24 @@ export default function MyNavbar() {
           {logSing === true ? (
             <>
               <li className="hover:text-myTheme  hidden sm:flex  2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
-                <CiHeart className={`${ darkMode?"bg-black text-white rounded-full font-extrabold text-2xl p-1":"text-black bg-transparent "} `} />
+                <CiHeart
+                  className={`${
+                    darkMode
+                      ? "bg-black text-white rounded-full font-extrabold text-2xl p-1"
+                      : "text-black bg-transparent "
+                  } `}
+                />
               </li>
               <li className="hover:text-myTheme hidden  sm:flex 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-sm hover:cursor-pointer">
                 <Link to={"/addCard"}>
                   {" "}
-                  <MdOutlineShoppingCart  className={`${ darkMode?"bg-black text-white text-2xl rounded-full font-bold p-1":"text-black bg-transparent "} `} />
+                  <MdOutlineShoppingCart
+                    className={`${
+                      darkMode
+                        ? "bg-black text-white text-2xl rounded-full font-bold p-1"
+                        : "text-black bg-transparent "
+                    } `}
+                  />
                 </Link>
               </li>
 
@@ -223,10 +231,12 @@ export default function MyNavbar() {
         {menu ? (
           <div
             data-aos="fade-right"
-            className={`${darkMode?"bg-black text-white":" bg-white text-black"} link top-[70px]  w-[100%] z-10   lg:hidden xl:hidden 2xl:hidden absolute`}
+            className={`${
+              darkMode ? "bg-transparent backdrop-blur-md text-white" : " bg-white  text-black"
+            } link top-[70px]  w-[100%] z-10    lg:hidden xl:hidden 2xl:hidden absolute`}
           >
             <ul className="flex pl-8 flex-col gap-5">
-              {Mylink.map((value, index) => {
+              {MylinkSm.map((value, index) => {
                 return (
                   <li className=" hover:cursor-pointer" key={index}>
                     <Link
@@ -237,12 +247,15 @@ export default function MyNavbar() {
                       to={value.path}
                     >
                       {" "}
-                      {value.name}
+                      <div className="flex gap-2 justify-start items-center">
+                        <div>{value.icon}</div>
+                        <div>{value.name}</div>
+                      </div>{" "}
+                       
                     </Link>
                   </li>
                 );
               })}
-            
 
               {logSing === true ? (
                 <>
@@ -255,17 +268,29 @@ export default function MyNavbar() {
                     </Link>
                   </li>
                   <div className="flex gap-2">
-                  <li className="hover:text-myTheme  flex sm:hidden    hover:cursor-pointer">
-                <CiHeart className={`${ darkMode?"bg-black text-white rounded-full font-extrabold text-3xl p-1":"text-black bg-transparent "} `} />
-              </li>
-              <li className="hover:text-myTheme flex  sm:hidden   hover:cursor-pointer">
-                <Link to={"/addCard"}>
-                  {" "}
-                  <MdOutlineShoppingCart  className={`${ darkMode?"bg-black text-white text-3xl rounded-full font-bold p-1":"text-black bg-transparent "} `} />
-                </Link>
-              </li>
+                    <li className="hover:text-myTheme  flex sm:hidden    hover:cursor-pointer">
+                      <CiHeart
+                        className={`${
+                          darkMode
+                            ? "bg-black text-white rounded-full font-extrabold text-3xl p-1"
+                            : "text-black bg-transparent "
+                        } `}
+                      />
+                    </li>
+                    <li className="hover:text-myTheme flex  sm:hidden   hover:cursor-pointer">
+                      <Link to={"/addCard"}>
+                        {" "}
+                        <MdOutlineShoppingCart
+                          className={`${
+                            darkMode
+                              ? "bg-black text-white text-3xl rounded-full font-bold p-1"
+                              : "text-black bg-transparent "
+                          } `}
+                        />
+                      </Link>
+                    </li>
                   </div>
-                  
+
                   {/* <li className="hover:text-myTheme text-2xl hover:cursor-pointer">
                   <CiHeart />
                 </li>
@@ -298,10 +323,8 @@ export default function MyNavbar() {
                   {/* <li className="hover:text-myTheme text-2xl hover:cursor-pointer">
                   <FaUserCircle />
                 </li> */}
-                
                 </>
               )}
-              
             </ul>
           </div>
         ) : null}
@@ -312,7 +335,15 @@ export default function MyNavbar() {
               setMenu(!menu);
             }}
           >
-            {menu ? <IoMdClose  className={`${darkMode?" text-white":"text-black"}`}/> : <MdOutlineMenu  className={`${darkMode?" text-white":"text-black"}`}/>}
+            {menu ? (
+              <IoMdClose
+                className={`${darkMode ? " text-white" : "text-black"}`}
+              />
+            ) : (
+              <MdOutlineMenu
+                className={`${darkMode ? " text-white" : "text-black"}`}
+              />
+            )}
           </button>
         </div>
       </nav>
