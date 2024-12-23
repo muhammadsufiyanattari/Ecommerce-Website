@@ -1,6 +1,4 @@
-import hero from "../assets/images/hero.png";
 import apple from "../assets/images/apple.png";
-import dot from "../assets/images/dot.png";
 import { FaArrowRight } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import AOS from "aos";
@@ -87,7 +85,7 @@ export default function Hero() {
                     <div>
                       <img
                         className=" 2xl:w-10 xl:w-10 lg:w-10 sm:w-6 md:w-6 mobile:w-4 2xl:h-12 xl:h-12 lg:h-12 md:h-7 sm:h-7 mobile:h-4"
-                        src={apple}
+                        src="https://i.imghippo.com/files/krqH4867t.png"
                         alt=""
                       />
                     </div>
@@ -118,7 +116,7 @@ export default function Hero() {
                 >
                   <img
                     className="2xl:w-[496px] xl:w-[496px] 2xl:h-[320px] xl:h-[320px] lg:w-[250px] md:w-[200px]  sm:w-[200px] mobile:w-[100px]  "
-                    src={hero}
+                    src="https://i.imghippo.com/files/Ttel8974XWM.png"
                     alt=""
                   />
                 </div>
@@ -129,7 +127,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="container mx-auto my-2   2xl:flex xl:hidden lg:flex md:flex sm:flex mobile:flex ">
-        <img className="mx- rounded-sm cursor-none darkTheme" src={heros} alt="" />
+        <img className="mx-auto  rounded-sm cursor-none darkTheme" src="https://i.imghippo.com/files/aqCB6876RQ.png" alt="" />
       </div>
     </>
   );

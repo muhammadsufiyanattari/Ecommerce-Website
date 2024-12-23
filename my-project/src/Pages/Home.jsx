@@ -13,13 +13,8 @@ import smartWatch from "../assets/category/smartWatch.png";
 import Spiker from "../components/Spiker";
 import Arrivel from "../components/Arrivel";
 import OurProduct from "../components/OurProduct";
-import cheak from "../assets/arrivel/cheak.png";
-import headphone1 from "../assets/arrivel/headphone.png";
-import Vector from "../assets/arrivel/Vector.png";
-import { Link } from "react-router-dom";
 import { IoMdArrowUp } from "react-icons/io";
 import { CardListSlider2 } from "../components/Slider2";
-import ProductDetails from "./ProductDetails";
 import { useSelector } from "react-redux";
 import CardTotal from "./CardTotal";
 import AOS from "aos";
@@ -125,7 +120,7 @@ function Home() {
             {" "}
             <div className="bg-black w-10 h-10 m-2 p-2 rounded-full">
               {" "}
-              <img src={Vector} alt="" />
+              <img src="https://i.imghippo.com/files/YcS7785oW.png" alt="" />
             </div>
           </div>
           <div data-aos="zoom-in-right" className="center flex-col">
@@ -157,7 +152,7 @@ function Home() {
             {" "}
             <div className="bg-black w-10 h-10 m-2 p-2 rounded-full">
               {" "}
-              <img src={headphone1} alt="" />
+              <img src="https://i.imghippo.com/files/xXrg4757YDE.png" alt="" />
             </div>
           </div>
           <div data-aos="zoom-in-right" className="center flex-col">
@@ -189,7 +184,7 @@ function Home() {
             {" "}
             <div className="bg-black w-10 h-10 m-2 p-2 rounded-full">
               {" "}
-              <img src={cheak} alt="" />
+              <img src="https://i.imghippo.com/files/tZFH3385.png" alt="" />
             </div>
           </div>
           <div data-aos="zoom-in-right" className="center flex-col">

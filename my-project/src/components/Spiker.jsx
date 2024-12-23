@@ -1,5 +1,4 @@
 import React from "react";
-import frameSpiker from "../assets/images/frameSpiker.png";
 import { useSelector } from "react-redux";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -146,7 +145,7 @@ function Spiker() {
               <img
                 className="object-cover object-center rounded animate-pulse"
                 alt="hero"
-                src={frameSpiker}
+                src="https://i.imghippo.com/files/HRA1991Aws.png"
               />
             </div>
           </div>

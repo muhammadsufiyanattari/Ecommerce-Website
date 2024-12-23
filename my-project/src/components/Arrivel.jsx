@@ -1,9 +1,3 @@
-// import React from "react";
-// import MyCountBox from "./MyCountBox";
-// import ps5 from "../assets/arrivel/ps5.png";
-// import guchi from "../assets/arrivel/guchi.png";
-// import amazone from "../assets/arrivel/amazone.png";
-// import anti from "../assets/arrivel/anti.png";
 
 // function Arrivel() {
 //   return (
@@ -123,10 +117,6 @@
 
 import React from "react";
 import MyCountBox from "./MyCountBox";
-import ps5 from "../assets/arrivel/ps5.png";
-import guchi from "../assets/arrivel/guchi.png";
-import amazone from "../assets/arrivel/amazone.png";
-import anti from "../assets/arrivel/anti.png";
 import { useSelector } from "react-redux";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -150,7 +140,7 @@ function Arrivel() {
               darkMode ? "darkTheme" : "bg-black"
             } flex items-end p-7 w-full lg:w-[50%]  `}
             style={{
-              backgroundImage: `url(${ps5})`,
+              backgroundImage: `url(https://i.imghippo.com/files/kX5390WIc.png)`,
               backgroundRepeat: "no-repeat",
               backgroundPosition: "bottom",
               backgroundSize: "cover",
@@ -202,7 +192,7 @@ function Arrivel() {
               <div className="w-full lg:w-[70%] flex items-end">
                 <img data-aos="fade-right"
                   className="w-full lg:w-[570px] h-auto lg:h-[250px]"
-                  src={anti}
+                  src="https://i.imghippo.com/files/eGA9042HPk.png"
                   alt=""
                 />
               </div>
@@ -213,7 +203,7 @@ function Arrivel() {
                   darkMode ? "darkTheme" : "bg-black"
                 }  w-full lg:w-[270px] h-[284px] flex justify-center items-end p-4 rounded`}
                 style={{
-                  backgroundImage: `url(${amazone})`,
+                  backgroundImage: `url(https://i.imghippo.com/files/RuU7989uM.png)`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center bottom",
                   backgroundSize: "cover",
@@ -242,7 +232,7 @@ function Arrivel() {
                   darkMode ? "darkTheme" : "bg-black"
                 }  w-full lg:w-[270px] h-[284px] flex justify-center items-end p-4 py-8 rounded`}
                 style={{
-                  backgroundImage: `url(${guchi})`,
+                  backgroundImage: `url(https://i.imghippo.com/files/Jlrz2781XRA.png)`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                   backgroundSize: "cover",
