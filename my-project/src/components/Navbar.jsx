@@ -88,16 +88,16 @@ export default function MyNavbar() {
         {/* searchbar */}
         <div className="  mobile:w-[200px]  md:w-[250px] center lg:w-[250px]  h-[38px] gap-6">
           <div
-            className={`  sm:w-[400px]  w-[243px] h-[38px] flex gap-2 center  rounded bg-[#F5F5F5] ${
+            className={`  sm:w-[400px]   w-[150px] h-[38px] flex gap-2 center   rounded bg-[#F5F5F5] ${
               darkMode ? "bg-black" : ""
             }`}
           >
             <form
               onSubmit={submitHandler}
-              className="search   h-6 flex justify-center "
+              className="search   h-6  w-[150px]  flex justify-center  "
             >
               <input
-                className={`outline-none    bg-[#F5F5F5] placeholder:font-normal md:text-base text-xs text-gray-300 ${
+                className={`outline-none   w-[120px]  bg-[#F5F5F5] placeholder:font-normal sm:text-sm  sm:w-[175px] text-[10px] text-gray-300 ${
                   darkMode ? "bg-black" : ""
                 } ${darkMode ? "placeholder:text-white" : ""}  ${
                   darkMode ? "text-white" : ""
@@ -108,11 +108,11 @@ export default function MyNavbar() {
                 id=" searchinp"
               />
               <div>
-                <button type="submit">
+                <button  type="submit">
                   <CiSearch
                     className={`${
                       darkMode ? "text-white" : ""
-                    } text-2xl cursor-pointer font-semibold`}
+                    } sm:text-2xl text-xl  cursor-pointer  font-semibold`}
                   />
                 </button>
               </div>
@@ -176,7 +176,7 @@ export default function MyNavbar() {
         </div>
         <div className="flex justify-center items-center list-none gap-2 mobile:text-xs sm:text-xs">
           {" "}
-          <li className="text-center">
+          <li className="text-center  flex">
             <button onClick={() => dispatch(toggleDarkMode())}>
               {darkMode ? (
                 <IoSunny className=" sm:text-lg text-xs text-white " />
@@ -209,15 +209,15 @@ export default function MyNavbar() {
                 </Link>
               </li>
 
-              <li className="w-[30px] h-[30px] rounded-full overflow-hidden">
+              <li className="  overflow-hidden">
                 <Link to="/profile">
-                  <img src={mypic} alt="" />
+                  <img className="sm:w-[30px] sm:h-[30px] w-5 h-5  rounded-full" src={mypic} alt="" />
                 </Link>
               </li>
             </>
           ) : (
             <>
-              <li className="text-myTheme text-2xl hover:cursor-pointer">
+              <li className="text-myTheme sm:text-2xl text-xl hover:cursor-pointer">
                 <Link to={"/profile"}>
                   <FaUserCircle />
                 </Link>
@@ -267,27 +267,34 @@ export default function MyNavbar() {
                       SignUp
                     </Link>
                   </li>
-                  <div className="flex gap-2">
-                    <li className="hover:text-myTheme  flex sm:hidden    hover:cursor-pointer">
+                  <div className="flex gap-2 flex-col">
+                    <li className="hover:text-myTheme  flex items-center gap-2 sm:hidden    hover:cursor-pointer">
                       <CiHeart
                         className={`${
                           darkMode
-                            ? "bg-black text-white rounded-full font-extrabold text-3xl p-1"
+                            ? " text-white rounded-full font-bold text-xl "
                             : "text-black bg-transparent "
                         } `}
                       />
+                      Like
                     </li>
-                    <li className="hover:text-myTheme flex  sm:hidden   hover:cursor-pointer">
+                    <li className="hover:text-myTheme flex items-center gap-2  sm:hidden   hover:cursor-pointer">
                       <Link to={"/addCard"}>
                         {" "}
+                        <div className="flex gap-2">
+                        <div>
                         <MdOutlineShoppingCart
                           className={`${
                             darkMode
-                              ? "bg-black text-white text-3xl rounded-full font-bold p-1"
+                              ? " text-white text-xl rounded-full font-bold "
                               : "text-black bg-transparent "
                           } `}
                         />
+                        </div>
+                        <div> Add Cart</div>
+                        </div>
                       </Link>
+                     
                     </li>
                   </div>
 
@@ -329,7 +336,7 @@ export default function MyNavbar() {
           </div>
         ) : null}
 
-        <div className="menu center sm:flex md:flex mobile:flex lg:hidden xl:hidden 2xl:hidden">
+        <div className="menu center  sm:flex md:flex mobile:flex lg:hidden xl:hidden 2xl:hidden">
           <button
             onClick={() => {
               setMenu(!menu);

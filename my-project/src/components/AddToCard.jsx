@@ -80,12 +80,12 @@ export function AddToCard({
                 darkMode
                   ? "active:bg-myTheme bg-black transition-all duration-300 text-white  "
                   : "2xl:bg-white xl:bg-white lg:bg-white md:bg-white group-hover:bg-black"
-              } sm:bg-black mobile:bg-black  h text-white text-xs sm:text-lg w-[100%] flex transition-all duration-500  items-end justify-center p-2 rounded-b`}
+              } sm:bg-black mobile:bg-black   h text-white text-xs sm:text-lg w-[100%] flex transition-all duration-500  items-end justify-center p-2 rounded-b`}
             >
               Add To Card
             </Link>
           </div>
-          <div className="myp bg-lime- sm:w-[201px] sm:h-[84px] w-[120px]  h-auto pl-1 gap- ">
+          <div className="myp sm:bg-white sm:w-auto sm:h-auto w-[120px]  h-auto pl-1 gap- ">
             <h2
               className={`${
                 darkMode

@@ -1,9 +1,5 @@
 import React from "react";
-import about1 from "../assets/about/about1.jpg";
-import ab from "../assets/about/ab.jpg";
-import cd from "../assets/about/cd.jpg";
-import fe from "../assets/about/fe.jpg";
-import gh from "../assets/about/gh.jpg";
+
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 function About() {
@@ -37,7 +33,7 @@ function About() {
           <div class="w-full lg:w-8/12">
             <img
               class="w-full h-full rounded "
-              src={about1}
+              src="https://i.imghippo.com/files/yZHB5999zo.jpg"
               alt="A group of People"
             />
           </div>
@@ -68,12 +64,12 @@ function About() {
               <div class="p-4 pb-6 flex justify-center flex-col items-center">
                 <img
                   class="md:block hidden rounded"
-                  src={ab}
+                  src="https://i.imghippo.com/files/hnsa1413NRA.jpg"
                   alt="Alexa featured Image"
                 />
                 <img
                   class="md:hidden block rounded"
-                  src={ab}
+                  src="https://i.imghippo.com/files/hnsa1413NRA.jpg"
                   alt="Alexa featured Image"
                 />
                 <p class="font-medium text-xl leading-5 text-black dark:text-white mt-4"></p>
@@ -81,12 +77,12 @@ function About() {
               <div class="p-4 pb-6 flex justify-center flex-col items-center">
                 <img
                   class="md:block hidden rounded"
-                  src={cd}
+                  src={"https://i.imghippo.com/files/AIxs1130rp.jpg"}
                   alt="Olivia featured Image"
                 />
                 <img
                   class="md:hidden block rounded"
-                  src={cd}
+                  src={"https://i.imghippo.com/files/AIxs1130rp.jpg"}
                   alt="Olivia featured Image"
                 />
                 <p class="font-medium text-xl leading-5 text-black dark:text-white mt-4"></p>
@@ -94,12 +90,12 @@ function About() {
               <div class="p-4 pb-6 flex justify-center flex-col items-center">
                 <img
                   class="md:block hidden rounded"
-                  src={fe}
+                  src="https://i.imghippo.com/files/mdMb1209VQs.jpg"
                   alt="Liam featued Image"
                 />
                 <img
                   class="md:hidden block rounded"
-                  src={fe}
+                  src="https://i.imghippo.com/files/mdMb1209VQs.jpg"
                   alt="Liam featued Image"
                 />
                 <p class="font-medium text-xl leading-5 text-black dark:text-white mt-4"></p>
@@ -107,12 +103,12 @@ function About() {
               <div class="p-4 pb-6 flex justify-center flex-col items-center">
                 <img
                   class="md:block hidden rounded"
-                  src={gh}
+                  src="https://i.imghippo.com/files/WyxW1255Vvg.jpg"
                   alt="Elijah featured image"
                 />
                 <img
                   class="md:hidden block rounded"
-                  src={gh}
+                  src="https://i.imghippo.com/files/WyxW1255Vvg.jpg"
                   alt="Elijah featured image"
                 />
                 <p class="font-medium text-xl leading-5 text-black dark:text-white mt-4"></p>
