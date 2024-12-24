@@ -42,7 +42,7 @@ let MylinkSm = [
   { name: "About", path: "/About", icon: <FaBookReader /> },
   // { name: "Login" },
 ];
-let logSing = true;
+let logSing = false;
 
 export default function MyNavbar() {
   const [menu, setMenu] = useState(false);

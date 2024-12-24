@@ -130,7 +130,7 @@ function Arrivel() {
 
   return (
     <>
-      <div className="ml-5 my-8">
+      <div className="ml-5 my-8 container mx-auto">
         <MyCountBox name={"New Arrival Products"} days={"Featured"} />
       </div>
       <div className=" hidden justify-center lg:flex  items-center  my-10">
@@ -263,9 +263,9 @@ function Arrivel() {
 
 
 
-
+<div className="flex flex-col gap-4">
       <div className="relative flex  justify-center lg:hidden container mx-auto">
-        <div ><img src="https://i.imghippo.com/files/kX5390WIc.png" alt="" /></div>
+        <div ><img data-aos="fade-left" src="https://i.imghippo.com/files/kX5390WIc.png" alt="" /></div>
         <div data-aos="fade-right" className="text-white absolute md:left-48 sm:left-24 left-5  top-48 sm:top-[350px] flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1 p-4">
               <div >
                 <h2 className="font-semibold 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-xs">
@@ -289,7 +289,7 @@ function Arrivel() {
       <div
               className={`${
                 darkMode ? "darkTheme" : "bg-[#0D0D0D]"
-              }  w-[500px]  h-auto  flex rounded container flex-grow mx-auto`}
+              }  w-[500px]  h-auto  flex rounded container lg:hidden flex-grow mx-auto`}
             >
               <div className="w-full lg:w-[70%] text-white flex justify-center items-end p-3">
                 <div data-aos="fade-left" className="flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1">
@@ -321,24 +321,50 @@ function Arrivel() {
       </div>
       {/* spiker */}
       <div className="relative flex bg-black w-[500px]   justify-center lg:hidden container mx-auto">
-        <div ><img className="w-[300px]"   src="https://i.imghippo.com/files/RuU7989uM.png" alt="" /></div>
-        <div data-aos="fade-right" className="text-white absolute md:left-56 md:top-80 sm:left-56 left-11  top-28 sm:top-24 flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1 p-4">
+        <div ><img data-aos="fade-left" className="w-[300px]"   src="https://i.imghippo.com/files/RuU7989uM.png" alt="" /></div>
+        <div data-aos="fade-right" className="text-white absolute md:left-12 md:top-40 sm:left-5 left-6  top-48 sm:top-36 flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1 p-4">
               <div >
-                <h2 className="font-semibold 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-xs">
+                <h2 className="font-semibold  sm:text-2xl mobile:text-md">
                 Speakers
                 </h2>
               </div>
               <div>
-                <p className="w-[242px] h-[42px] 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs mobile:text-[10px]">
+                <p className="w-[242px] h-[42px]  sm:text-lg mobile:text-sm">
                 Amazon wireless speakers
                 </p>
               </div>
               <div>
-                <span className="font-medium 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs mobile:text-[10px] hover:text-myTheme cursor-pointer hover:underline">
+                <span className="font-medium  sm:text-lg mobile:text-sm hover:text-myTheme cursor-pointer hover:underline">
                   Shop Now
                 </span>
               </div>
             </div>
+      </div>
+
+
+
+
+       {/* guhi */}
+       <div className="relative flex bg-black w-[500px]   justify-center lg:hidden container mx-auto">
+        <div ><img data-aos="fade-left" className="w-[300px]"   src="https://i.imghippo.com/files/Jlrz2781XRA.png" alt="" /></div>
+        <div data-aos="fade-right" className="text-white absolute md:left-12 md:top-40 sm:left-5 left-6  top-48 sm:top-36 flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1 p-4">
+              <div >
+                <h2 className="font-semibold  sm:text-2xl mobile:text-md">
+                Perfume
+                </h2>
+              </div>
+              <div>
+                <p className="w-[242px] h-[42px]  sm:text-lg mobile:text-sm">
+                GUCCI INTENSE OUD EDP
+                </p>
+              </div>
+              <div>
+                <span className="font-medium  sm:text-lg mobile:text-sm hover:text-myTheme cursor-pointer hover:underline">
+                  Shop Now
+                </span>
+              </div>
+            </div>
+      </div>
       </div>
     </>
   );
