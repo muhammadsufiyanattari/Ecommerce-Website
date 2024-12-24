@@ -133,7 +133,7 @@ function Arrivel() {
       <div className="ml-5 my-8">
         <MyCountBox name={"New Arrival Products"} days={"Featured"} />
       </div>
-      <div className="flex justify-center items-center  my-10">
+      <div className=" hidden justify-center lg:flex  items-center  my-10">
         <div className="w-full max-w-[1170px] h-auto lg:h-[600px] flex flex-col lg:flex-row  gap-4 lg:gap-[30px] p-4">
           <div
             className={`${
@@ -259,6 +259,86 @@ function Arrivel() {
             </div>
           </div>
         </div>
+      </div>
+
+
+
+
+      <div className="relative flex  justify-center lg:hidden container mx-auto">
+        <div ><img src="https://i.imghippo.com/files/kX5390WIc.png" alt="" /></div>
+        <div data-aos="fade-right" className="text-white absolute md:left-48 sm:left-24 left-5  top-48 sm:top-[350px] flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1 p-4">
+              <div >
+                <h2 className="font-semibold 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-xs">
+                  PlayStation 5
+                </h2>
+              </div>
+              <div>
+                <p className="w-[242px] h-[42px] 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs mobile:text-[10px]">
+                  Black and White version of the PS5 coming out on sale.
+                </p>
+              </div>
+              <div>
+                <span className="font-medium 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs mobile:text-[10px] hover:text-myTheme cursor-pointer hover:underline">
+                  Shop Now
+                </span>
+              </div>
+            </div>
+      </div>
+
+      {/* unti */}
+      <div
+              className={`${
+                darkMode ? "darkTheme" : "bg-[#0D0D0D]"
+              }  w-[500px]  h-auto  flex rounded container flex-grow mx-auto`}
+            >
+              <div className="w-full lg:w-[70%] text-white flex justify-center items-end p-3">
+                <div data-aos="fade-left" className="flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1">
+                  <div>
+                    <h2 className="font-semibold 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-xs ">
+                      Women’s Collections
+                    </h2>
+                  </div>
+                  <div>
+                    <p className="font-normal 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs mobile:text-[10px]">
+                      Featured woman collections that give you another vibe.
+                    </p>
+                  </div>
+                  <div>
+                    <span className="font-medium 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs mobile:text-[10px] hover:text-myTheme cursor-pointer hover:underline">
+                      Shop Now
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full lg:w-[70%] flex items-end">
+                <img data-aos="fade-right"
+                  className="w-full lg:w-[570px] backdrop: h-auto lg:h-[250px]"
+                  src="https://i.imghippo.com/files/eGA9042HPk.png"
+                  alt=""
+                />
+              </div>
+            
+      </div>
+      {/* spiker */}
+      <div className="relative flex bg-black w-[500px]   justify-center lg:hidden container mx-auto">
+        <div ><img className="w-[300px]"   src="https://i.imghippo.com/files/RuU7989uM.png" alt="" /></div>
+        <div data-aos="fade-right" className="text-white absolute md:left-56 md:top-80 sm:left-56 left-11  top-28 sm:top-24 flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1 p-4">
+              <div >
+                <h2 className="font-semibold 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-xs">
+                Speakers
+                </h2>
+              </div>
+              <div>
+                <p className="w-[242px] h-[42px] 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs mobile:text-[10px]">
+                Amazon wireless speakers
+                </p>
+              </div>
+              <div>
+                <span className="font-medium 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs mobile:text-[10px] hover:text-myTheme cursor-pointer hover:underline">
+                  Shop Now
+                </span>
+              </div>
+            </div>
       </div>
     </>
   );

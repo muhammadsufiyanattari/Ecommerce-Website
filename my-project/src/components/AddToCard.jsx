@@ -85,7 +85,7 @@ export function AddToCard({
               Add To Card
             </Link>
           </div>
-          <div className="myp sm:bg-white sm:w-auto sm:h-auto w-[120px]  h-auto pl-1 gap- ">
+          <div className={`${darkMode?"bg-transparent":"bg-white"} myp  sm:w-auto sm:h-auto w-[120px]  h-auto pl-1 gap- `}>
             <h2
               className={`${
                 darkMode
@@ -99,16 +99,33 @@ export function AddToCard({
               <ins className="no-underline"> {newPrice}</ins> {"  "}
               <s className="text-slate-400 "> {delPrice}</s>
             </p>
-            <div className="star-img   bg-amber- ">
+            <div className="star-img sm:block  hidden  bg-amber- ">
               <span className="">
                 {
                   <ReactStars
                     count={5}
                     value={rating ? rating : 3}
                     // onChange={ratingChanged}
-                    size={24}
+                    size={24 }
                     edit={false}
                     color2={"#ffd700"}
+                  // className={`sm:${size="24px"} ${size="12px"}`}  
+                  />
+                }
+              </span>
+              <span>{}</span>
+            </div>
+            <div className="star-img sm:hidden block    bg-amber- ">
+              <span className="">
+                {
+                  <ReactStars
+                    count={5}
+                    value={rating ? rating : 3}
+                    // onChange={ratingChanged}
+                    size={"12px"}
+                    edit={false}
+                    color2={"#ffd700"}
+                  // className={`sm:${size="24px"} ${size="12px"}`}  
                   />
                 }
               </span>

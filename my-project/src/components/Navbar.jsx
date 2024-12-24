@@ -209,7 +209,7 @@ export default function MyNavbar() {
                 </Link>
               </li>
 
-              <li className="  overflow-hidden">
+              <li className="  overflow-hidden sm:flex hidden">
                 <Link to="/profile">
                   <img className="sm:w-[30px] sm:h-[30px] w-5 h-5  rounded-full" src={mypic} alt="" />
                 </Link>
@@ -247,7 +247,7 @@ export default function MyNavbar() {
                       to={value.path}
                     >
                       {" "}
-                      <div className="flex gap-2 justify-start items-center">
+                      <div className="flex gap-2 justify-start hover:text-myTheme items-center">
                         <div>{value.icon}</div>
                         <div>{value.name}</div>
                       </div>{" "}
@@ -259,15 +259,15 @@ export default function MyNavbar() {
 
               {logSing === true ? (
                 <>
-                  <li className=" hover:cursor-pointer">
+                  {/* <li className=" hover:cursor-pointer">
                     <Link
                       className="link-underline link-underline-black link-underline:hover"
                       to={"/SiginUp"}
                     >
                       SignUp
                     </Link>
-                  </li>
-                  <div className="flex gap-2 flex-col">
+                  </li> */}
+                  <div className="flex gap-4 flex-col">
                     <li className="hover:text-myTheme  flex items-center gap-2 sm:hidden    hover:cursor-pointer">
                       <CiHeart
                         className={`${
@@ -296,7 +296,7 @@ export default function MyNavbar() {
                       </Link>
                      
                     </li>
-                  </div>
+                  
 
                   {/* <li className="hover:text-myTheme text-2xl hover:cursor-pointer">
                   <CiHeart />
@@ -305,9 +305,11 @@ export default function MyNavbar() {
                   <MdOutlineShoppingCart />
                 </li> */}
 
-                  {/* <li className="w-[30px] h-[35px] rounded-full overflow-hidden">
-                  <img src={mypic} alt="" />
-                </li> */}
+                  <li className=" overflow-hidden flex gap-2 justify-start">
+                  <img className="w-[30px] h-[30px] rounded-full  flex justify-center items-center " src={mypic} alt="" />
+                  <div>Sufiyan</div>
+                </li>
+                </div>
                 </>
               ) : (
                 <>
