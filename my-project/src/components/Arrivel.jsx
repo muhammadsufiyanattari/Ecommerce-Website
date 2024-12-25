@@ -263,10 +263,10 @@ function Arrivel() {
 
 
 
-<div className="flex flex-col gap-4">
-      <div className="relative flex  justify-center lg:hidden container mx-auto">
+<div className="flex flex-col gap-4 ">
+      <div className="relative flex bg-black w-[500px]  justify-center lg:hidden container mx-auto">
         <div ><img data-aos="fade-left" src="https://i.imghippo.com/files/kX5390WIc.png" alt="" /></div>
-        <div data-aos="fade-right" className="text-white absolute md:left-48 sm:left-24 left-5  top-48 sm:top-[350px] flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1 p-4">
+        <div data-aos="fade-right" className="text-white absolute md:left-10 sm:left-11 left-5  top-48 sm:top-[350px] flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1 p-4">
               <div >
                 <h2 className="font-semibold 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-xs">
                   PlayStation 5
@@ -294,12 +294,12 @@ function Arrivel() {
               <div className="w-full lg:w-[70%] text-white flex justify-center items-end p-3">
                 <div data-aos="fade-left" className="flex flex-col 2xl:gap-[16px] xl:gap-[16px] lg:gap[16px] md:gap-3 sm:gap-1 mobile:gap-1">
                   <div>
-                    <h2 className="font-semibold 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm mobile:text-xs ">
+                    <h2 className="font-semibold sm:text-xl mobile:text-xs ">
                       Women’s Collections
                     </h2>
                   </div>
                   <div>
-                    <p className="font-normal 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs mobile:text-[10px]">
+                    <p className="font-normal sm:text-sm mobile:text-[8px]">
                       Featured woman collections that give you another vibe.
                     </p>
                   </div>
