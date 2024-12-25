@@ -4,66 +4,62 @@
 }
 * {
   font-family: myfont;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 .center {
   @apply flex justify-center items-center;
 }
 .link-underline {
   border-bottom-width: 0;
-  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
   background-size: 0 3px;
   background-position: 0 100%;
   background-repeat: no-repeat;
-  transition: background-size .5s ease-in-out;
+  transition: background-size 0.5s ease-in-out;
 }
 
 .link-underline-black {
-  background-image: linear-gradient(transparent, transparent), linear-gradient(rgb(21, 20, 21), rgb(27, 25, 26))
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(rgb(21, 20, 21), rgb(27, 25, 26));
 }
 
 .link-underline:hover {
   background-size: 100% 3px;
-  background-position: 0 100%
+  background-position: 0 100%;
 }
-
 
 .link-dark-underline {
   border-bottom-width: 0;
-  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
   background-size: 0 3px;
   background-position: 0 100%;
   background-repeat: no-repeat;
-  transition: background-size .5s ease-in-out;
+  transition: background-size 0.5s ease-in-out;
 }
 
 .link-dark-underline-black {
-  background-image: linear-gradient(transparent, transparent), linear-gradient(rgb(244, 242, 242), rgb(244, 242, 242))
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(rgb(244, 242, 242), rgb(244, 242, 242));
 }
 
 .link-dark-underline:hover {
   background-size: 100% 3px;
-  background-position: 0 100%
+  background-position: 0 100%;
 }
-/* .darkTheme {
+/* .bg-neutral-900 {
 background: rgb(205,19,29);
 background: linear-gradient(90deg, rgba(105,20,7,1) 0%, rgba(20,20,20,1) 50%);
 
 } */
-.darkTheme {
-  background: rgb(205, 19, 29); /* Fallback background color */
-  background: linear-gradient(90deg, rgba(105, 20, 7, 1) 0%, rgba(20, 20, 20, 1) 50%);
-  transition: background 1000ms ease; /* Smooth transition for background changes */
+.darkTeme {
+  @apply bg-neutral-900
 }
 
-.pageDark{
-
-background: rgb(16,16,16);
-background: linear-gradient(90deg, rgb(10, 10,10) 44%, rgb(10, 10, 10) 100%);
-transition: background 1000ms ease; /* Smooth transition for background changes */
-
+.pageDark {
+  @apply bg-neutral-800
 }
-
 
 @tailwind base;
 @tailwind components;

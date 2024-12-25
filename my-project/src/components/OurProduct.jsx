@@ -135,9 +135,7 @@ function OurProduct() {
   return (
     <>
       {isLoading ? (
-        <div className="font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none">
-          {/* <img src={loadingImg} alt="Loading..." /> */}
-           <div className="font-extrabold flex-wrap justify-center items-center flex gap-2 text-4xl">
+           <div className="font-extrabold flex-wrap justify-center items-center flex gap-2 text-4xl my-14">
                                         <SekeletonCart/>
                                         <SekeletonCart/>
                                         <SekeletonCart/>
@@ -148,7 +146,6 @@ function OurProduct() {
                                         <SekeletonCart/>
           
                         </div>
-        </div>
       ) : (
         <>
           {" "}

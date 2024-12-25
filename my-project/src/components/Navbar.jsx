@@ -63,8 +63,8 @@ export default function MyNavbar() {
     <>
       <nav
         className={` flex   items-center  justify-evenly p-6  border-b-2 border-gray-100  transition-colors duration-500 relative ${
-          darkMode ? "darkTheme" : ""
-        } bg-white `}
+          darkMode ? "bg-neutral-900" : ""
+        } bg- `}
       >
         {/* logo */}
         <div className="imglogo center ">

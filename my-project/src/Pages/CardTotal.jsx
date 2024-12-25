@@ -12,7 +12,7 @@ function CardTotal() {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   return (
-    <div className={`${darkMode ? "pageDark" : ""}`}>
+    <div className={`${darkMode ? "bg-neutral-800" : ""}`}>
       <div className={` center flex flex-col items-center my-10 px-4`}>
         {/* Breadcrumb */}
         <div className={` w-full max-w-6xl text-gray-400 text-sm mb-5`}>
@@ -27,7 +27,7 @@ function CardTotal() {
           {/* Table Header */}
           <div
             className={`${
-              darkMode ? "darkTheme text-white" : "text-black"
+              darkMode ? "bg-neutral-900 text-white" : "text-black"
             } hidden z-10  md:grid grid-cols-4 gap-4 bg-slate-100 p-4 rounded text-center md:text-left font-semibold `}
           >
             <div>Product</div>
@@ -41,7 +41,7 @@ function CardTotal() {
             {/* First Product Row */}
             <div
               className={`${
-                darkMode ? "darkTheme text-white" : ""
+                darkMode ? "bg-neutral-900 text-white" : ""
               } flex  mobile:items-center flex-col md:grid grid-cols-4 gap-4 bg-slate-100 p-4 rounded`}
             >
               <div
@@ -67,7 +67,7 @@ function CardTotal() {
               </div>
               <div className="text-center flex items-center">
                 <input
-                value={1}
+                  value={1}
                   type="number"
                   name=""
                   id=""
@@ -94,7 +94,7 @@ function CardTotal() {
             {/* Second Product Row */}
             <div
               className={`${
-                darkMode ? " darkTheme" : ""
+                darkMode ? " bg-neutral-900" : ""
               } flex flex-col mobile:items-center md:grid grid-cols-4 gap-4 bg-slate-100 p-4 rounded`}
             >
               <div className="flex items-center md:gap-2 gap-4 sm:justify-center mobile:justify-center">
@@ -116,9 +116,8 @@ function CardTotal() {
               </div>
               <div className="text-center flex items-center ">
                 <input
-                value={1}
+                  value={1}
                   type="number"
-
                   name=""
                   id=""
                   className="border text-black border-gray-300 rounded w-20 p-2"

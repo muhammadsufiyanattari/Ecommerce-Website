@@ -18,8 +18,8 @@ function Contact() {
   return (
     <section
       className={`${
-        darkMode ? "pageDark text-white" : ""
-      } text-black body-font relative `}
+        darkMode ? "bg-neutral-800 text-white" : ""
+      } text-black body-font relative transition-colors duration-500 `}
     >
       <div className="container px-5 py-24 mx-auto flex  sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2     overflow-hidden sm:mr-10 p-10 flex flex-col items-center justify-start  relative">
@@ -61,7 +61,7 @@ function Contact() {
               name="userName"
               className={`${
                 darkMode
-                  ? "text-white bg-black border-myTheme"
+                  ? "text-white bg-black border-gray-300 "
                   : "text-black bg-white"
               } w-full   border border-gray-300 rounded focus:border-black text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
             />
@@ -81,7 +81,7 @@ function Contact() {
               name="email"
               className={`${
                 darkMode
-                  ? "text-white bg-black border-myTheme"
+                  ? "text-white bg-black border-gray-300 "
                   : "text-black bg-white"
               } w-full rounded  border border-gray-300 focus:border-black   text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
             />
@@ -100,7 +100,7 @@ function Contact() {
               name="message"
               className={`${
                 darkMode
-                  ? "text-white bg-black border-myTheme"
+                  ? "text-white bg-black border-gray-300 "
                   : "text-black bg-white"
               } w-full rounded  border border-gray-300   h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out`}
               defaultValue={""}

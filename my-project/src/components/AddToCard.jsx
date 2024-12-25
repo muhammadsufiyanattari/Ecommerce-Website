@@ -7,9 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 AOS.init({
- 
   duration: 1000, // values from 0 to 3000, with step 50ms
-
 });
 export function AddToCard({
   discount,
@@ -33,12 +31,12 @@ export function AddToCard({
         <div
           data-aos="flip-left"
           className={`${
-            darkMode ? "darkTheme" : ""
+            darkMode ? "bg-neutral-900" : ""
           } main group bg-red- drop-shadow-lg shadow-black  w-[150px] h-[  sm:w-[270px] sm:h-[370px] my-4 rounded mobile:m-auto transition-all duration-300 `}
         >
           <div
             className={`${
-              darkMode ? "darkTheme" : ""
+              darkMode ? "bg-neutral-900" : ""
             } img sm:w-[270px]  sm:h-[250px]  w-[150px] h-[150px] bg-[#F5F5F5] flex flex-col relative center `}
           >
             <button
@@ -85,7 +83,11 @@ export function AddToCard({
               Add To Card
             </Link>
           </div>
-          <div className={`${darkMode?"bg-transparent":"bg-white"} myp  sm:w-auto sm:h-auto w-[150px]  h-auto pl-1 gap-0 `}>
+          <div
+            className={`${
+              darkMode ? "bg-transparent" : "bg-white"
+            } myp  sm:w-auto sm:h-auto w-[150px]  h-auto pl-1 gap-0 `}
+          >
             <h2
               className={`${
                 darkMode
@@ -106,10 +108,10 @@ export function AddToCard({
                     count={5}
                     value={rating ? rating : 3}
                     // onChange={ratingChanged}
-                    size={24 }
+                    size={24}
                     edit={false}
                     color2={"#ffd700"}
-                  // className={`sm:${size="24px"} ${size="12px"}`}  
+                    // className={`sm:${size="24px"} ${size="12px"}`}
                   />
                 }
               </span>
@@ -125,7 +127,7 @@ export function AddToCard({
                     size={"12px"}
                     edit={false}
                     color2={"#ffd700"}
-                  // className={`sm:${size="24px"} ${size="12px"}`}  
+                    // className={`sm:${size="24px"} ${size="12px"}`}
                   />
                 }
               </span>

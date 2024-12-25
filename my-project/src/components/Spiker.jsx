@@ -15,7 +15,7 @@ function Spiker() {
       <div className="center my-6  ">
         {/* <div
           className={`${
-            darkMode ? "darkTheme" : ""
+            darkMode ? "bg-neutral-900" : ""
           }  mx-[10px] 2xl:w-[1170px] 2xl:h-[500px] xl:w-[1170px] xl:h-[500px] lg:w-[1170px] lg:h-[500px]  md:w-auto md:h-auto   sm:w-[300px] sm:h-[auto] mobile:w-[300px] mobile:h-auto bg-black center rounded my-12 gap-7`}
         >
           <div data-aos="zoom-in-right" className="w-[50%]  ">
@@ -93,45 +93,69 @@ function Spiker() {
             </div>
           </div>
         </div> */}
-        <section className={`${ darkMode ? "darkTheme" : "darkTheme" }  text-gray-600   rounded-3xl  body-font flex justify-center items-center`}>
+        <section
+          className={`${
+            darkMode ? "bg-neutral-900" : "bg-black"
+          }  text-gray-600   rounded-3xl  body-font flex justify-center items-center`}
+        >
           <div className="container  mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-            <div data-aos="zoom-in-right" className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <div  className={`${darkMode ? "text-black" : ""} font-semibold m-2 text-[#00FF66]`}
-            >Categories</div>
+            <div
+              data-aos="zoom-in-right"
+              className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+            >
+              <div
+                className={`${
+                  darkMode ? "text-" : ""
+                } font-semibold m-2 text-[#00FF66]`}
+              >
+                Categories
+              </div>
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-white">
                 {/* Before they sold out */}
-                Enhance Your 
+                Enhance Your
                 <br className="hidden lg:inline-block" />
                 {/* readymade gluten */}
                 Music Experience
               </h1>
-             <div className="flex gap-4 ">
-              <div className={`${ darkMode ? "bg-black text-white" : "bg-white text-black" } w-14 h-14  p-2  rounded-full`}>
-                <div className="flex-col justify-center items-center text-[10px]  text-center">
-                  23{" "}
-                  <div>Hours</div>
+              <div className="flex gap-4 ">
+                <div
+                  className={`${
+                    darkMode ? "bg-black text-white" : "bg-white text-black"
+                  } w-14 h-14  p-2  rounded-full`}
+                >
+                  <div className="flex-col justify-center items-center text-[10px]  text-center">
+                    23 <div>Hours</div>
+                  </div>
+                </div>
+                <div
+                  className={`${
+                    darkMode ? "bg-black text-white" : "bg-white text-black"
+                  } w-14 h-14  p-2  rounded-full`}
+                >
+                  <div className="flex-col justify-center items-center text-[10px]  text-center">
+                    05 <div>Days</div>
+                  </div>
+                </div>
+                <div
+                  className={`${
+                    darkMode ? "bg-black text-white" : "bg-white text-black"
+                  } w-14 h-14  p-2  rounded-full`}
+                >
+                  <div className="flex-col justify-center items-center text-[10px]  text-center">
+                    59 <div>Minutes</div>
+                  </div>
+                </div>
+                <div
+                  className={`${
+                    darkMode ? "bg-black text-white" : "bg-white text-black"
+                  } w-14 h-14  p-2  rounded-full`}
+                >
+                  <div className="flex-col justify-center items-center text-[10px] text-center">
+                    35 <div>Secands</div>
+                  </div>
                 </div>
               </div>
-              <div className={`${ darkMode ? "bg-black text-white" : "bg-white text-black" } w-14 h-14  p-2  rounded-full`}>
-                <div className="flex-col justify-center items-center text-[10px]  text-center">
-                  05{" "}
-                  <div>Days</div>
-                </div>
-              </div>
-              <div className={`${ darkMode ? "bg-black text-white" : "bg-white text-black" } w-14 h-14  p-2  rounded-full`}>
-                <div className="flex-col justify-center items-center text-[10px]  text-center">
-                  59{" "}
-                  <div>Minutes</div>
-                </div>
-              </div>
-              <div className={`${ darkMode ? "bg-black text-white" : "bg-white text-black" } w-14 h-14  p-2  rounded-full`}>
-                <div className="flex-col justify-center items-center text-[10px] text-center">
-                  35{" "}
-                  <div>Secands</div>
-                </div>
-              </div>
-              </div>
-              
+
               <div className="flex justify-center my-5">
                 <button className="inline-flex text-white bg-[#00FF66] border-0 py-4 px-10 focus:outline-none hover:bg-[#299253] active:bg-[#144a29] rounded text-sm">
                   Button
@@ -141,7 +165,10 @@ function Spiker() {
         </button> */}
               </div>
             </div>
-            <div data-aos="zoom-in-left" className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <div
+              data-aos="zoom-in-left"
+              className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+            >
               <img
                 className="object-cover object-center rounded animate-pulse"
                 alt="hero"

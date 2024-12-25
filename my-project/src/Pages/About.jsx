@@ -7,7 +7,7 @@ function About() {
 
   return (
     // <div>About</div>
-    <div className={`${darkMode ? "pageDark" : ""}`}>
+    <div className={`${darkMode ? "bg-neutral-800" : ""} transition-colors duration-500 `}>
       <div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
         <div class="flex flex-col lg:flex-row justify-between gap-8">
           <div class="w-full lg:w-5/12 flex flex-col justify-center">
@@ -46,17 +46,17 @@ function About() {
                 darkMode ? "text-white" : "text-black"
               } text-3xl lg:text-4xl font-bold leading-9 text-black dark:text-white pb-4 `}
             >
-           Our Journey
+              Our Journey
             </h1>
             <p
               class={`${
                 darkMode ? "text-white" : "text-black"
               } font-normal text-base leading-6 text-black dark:text-white`}
             >
-               Since our inception in Year of 2024, we
-              have served thousands of happy customers, building a reputation
-              for quality and trust. As we continue to grow, our commitment to
-              excellence remains unwavering.
+              Since our inception in Year of 2024, we have served thousands of
+              happy customers, building a reputation for quality and trust. As
+              we continue to grow, our commitment to excellence remains
+              unwavering.
             </p>
           </div>
           <div class="w-full lg:w-8/12 lg:pt-8">

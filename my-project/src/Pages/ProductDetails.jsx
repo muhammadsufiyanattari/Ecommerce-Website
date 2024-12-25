@@ -38,7 +38,7 @@ function ProductDetails() {
       {isLoading ? (
         <div
           className={`${darkMode ? "text-white" : ""} ${
-            darkMode ? "pageDark" : ""
+            darkMode ? "bg-neutral-800" : ""
           } font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none`}
         >
           <img src={loadingImg} alt="Loading..." />
@@ -48,7 +48,7 @@ function ProductDetails() {
           {error ? (
             <div
               className={`${darkMode ? "text-white" : ""} ${
-                darkMode ? "pageDark" : ""
+                darkMode ? "bg-neutral-800" : ""
               } font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none`}
             >
               {error.response?.data?.message}
@@ -56,7 +56,7 @@ function ProductDetails() {
           ) : (
             <div
               className={`${
-                darkMode ? "pageDark" : ""
+                darkMode ? "bg-neutral-800" : ""
               } main    flex flex-col justify-center  `}
             >
               <div className="flex justify-center sm:my-5  text-center sm:text-start container mx-auto items-center sm:items-start">
@@ -88,7 +88,7 @@ function ProductDetails() {
                           <img
                             key={i}
                             className={` ${
-                              darkMode ? "darkTheme" : ""
+                              darkMode ? "bg-neutral-900" : ""
                             } w-[121px] h-[114px] shadow-2xl cursor-pointer bg-[#F5F5F5]`}
                             src={image}
                             alt=""
@@ -100,7 +100,7 @@ function ProductDetails() {
                   )}
                   <div
                     className={`${
-                      darkMode ? "darkTheme" : ""
+                      darkMode ? "bg-neutral-900" : ""
                     } flex justify-center  shadow-2xl  items-center bg-[#F5F5F5] w-[500px] h-[600px]`}
                   >
                     {selectImg ? (
@@ -297,7 +297,7 @@ function ProductDetails() {
                           <img
                             key={i}
                             className={`${
-                              darkMode ? "darkTheme" : ""
+                              darkMode ? "bg-neutral-900" : ""
                             } sm:w-[80px] sm:h-[80px] w-[50px] h-[50px] shadow-2xl cursor-pointer bg-[#F5F5F5]`}
                             src={image}
                             alt=""
@@ -309,7 +309,7 @@ function ProductDetails() {
                   )}
                   <div
                     className={`${
-                      darkMode ? "darkTheme" : ""
+                      darkMode ? "bg-neutral-900" : ""
                     } flex justify-center  shadow-2xl  items-center bg-[#F5F5F5] sm:w-[300px] w-auto h-auto sm:h-[300px]`}
                   >
                     {selectImg ? (
@@ -420,7 +420,9 @@ function ProductDetails() {
                     <div className="flex pl-3 justify-center items-center gap-4 py-2 border-b-2 pb-4">
                       <div className="sm:w-10 sm:h-10 w-7 h-7  ">
                         <TbTruckDelivery
-                          className={`${darkMode ? "text-white" : ""} sm:text-5xl text-2xl`}
+                          className={`${
+                            darkMode ? "text-white" : ""
+                          } sm:text-5xl text-2xl`}
                         />
                       </div>
                       <div className="">
@@ -444,7 +446,9 @@ function ProductDetails() {
                       <div>
                         {/* <img className="w-8 h-8" src={IconReturn} alt="" /> */}
                         <GiReturnArrow
-                          className={`${darkMode ? "text-white" : ""} sm:text-4xl text-2xl`}
+                          className={`${
+                            darkMode ? "text-white" : ""
+                          } sm:text-4xl text-2xl`}
                         />
                       </div>
                       <div>
@@ -458,7 +462,7 @@ function ProductDetails() {
                         <p
                           className={`${
                             darkMode ? "text-white" : ""
-                          }  font-normal sm:text-xs text-[10px]` }
+                          }  font-normal sm:text-xs text-[10px]`}
                         >
                           {product?.returnPolicy}
                         </p>
@@ -468,7 +472,9 @@ function ProductDetails() {
                   <div>
                     <div className="flex justify-start items-center  pl-3 gap-2 rounded border-2 sm:w-[300px] w-[200px] h-[] mb-2 p-1">
                       <div
-                        className={`${darkMode ? "text-white" : ""} flex justify-center items-center   w-10 h-10`}
+                        className={`${
+                          darkMode ? "text-white" : ""
+                        } flex justify-center items-center   w-10 h-10`}
                       >
                         {product?.warrantyInformation == "No warranty" ? (
                           <TbShieldX className="sm:text-3xl text-2xl" />

@@ -19,11 +19,11 @@ function Search() {
 
   return (
     // <div className='h-[100vh]'>Search {searchParams.get("qurey") }{JSON.stringify(data)}</div>
-    <div className={`${darkMode ? "pageDark" : ""}`}>
+    <div className={`${darkMode ? "bg-neutral-800" : ""}`}>
       {isLoading ? (
         <div
           className={`${
-            darkMode ? "pageDark" : ""
+            darkMode ? "bg-neutral-800" : ""
           } font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none`}
         >
           <img src={loadingImg} alt="Loading..." />
@@ -31,7 +31,7 @@ function Search() {
       ) : null}
       <div
         className={`${
-          darkMode ? "pageDark" : ""
+          darkMode ? "bg-neutral-800" : ""
         } mx-auto max-w-7xl sm:px-6 lg:px-8 `}
       ></div>
       <div

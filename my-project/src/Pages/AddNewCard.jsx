@@ -52,10 +52,10 @@ function AddNewCard() {
   };
   return (
     // <div>AddNewCard</div>
-    <div className={`${darkMode ? "pageDark" : "bg-white"}`}>
+    <div className={`${darkMode ? "bg-neutral-800" : "bg-white"}`}>
       <section
         className={`${
-          darkMode ? "pageDark" : "bg-white"
+          darkMode ? "bg-neutral-800" : "bg-white"
         } max-w-4xl p-6 mx-auto  rounded-md shadow-2xl my-7 mt-20`}
       >
         <h1

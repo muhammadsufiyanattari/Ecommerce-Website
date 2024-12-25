@@ -11,12 +11,12 @@ export default function MyFooter(second) {
     <>
       <footer
         className={`${
-          darkMode ? "pageDark" : ""
+          darkMode ? "bg-neutral-900" : ""
         } body-font bg-black text-white  m-0`}
       >
         <div
           className={` ${
-            darkMode ? "pageDark" : ""
+            darkMode ? "bg-neutral-900" : ""
           } container px-5 py-24 mx-auto bg-black  mb-0`}
         >
           <div className="flex flex-wrap md:text-center xl:text-left 2xl:text-left lg:text-left text-center -mb-10 -mx-4 justify-center  gap-5 ">

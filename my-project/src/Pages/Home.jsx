@@ -33,7 +33,7 @@ function Home() {
     <div
       id="mainhome"
       className={` ${
-        darkMode ? "pageDark" : ""
+        darkMode ? "bg-neutral-800" : ""
       } transition-colors duration-500  flex flex-col justify-center `}
     >
       {/* Hero */}

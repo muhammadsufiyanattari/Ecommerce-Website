@@ -2,27 +2,13 @@ import apple from "../assets/images/apple.png";
 import { FaArrowRight } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import AOS from "aos";
-import heros from "../assets/images/heros.png"
+import heros from "../assets/images/heros.png";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 AOS.init({
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: "aos-init", // class applied after initialization
-  animatedClassName: "aos-animate", // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+ 
+  duration: 1000, // values from 0 to 3000, with step 50ms
 
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 400, // values from 0 to 3000, with step 50ms
-  easing: "ease", // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
 
 let heroLink = [
@@ -42,7 +28,9 @@ export default function Hero() {
 
   return (
     <>
-      <div className={` flex justify-center items-center  2xl:hidden xl:flex lg:hidden md:hidden sm:hidden mobile:hidden`}>
+      <div
+        className={`  flex justify-center items-center  2xl:hidden xl:flex lg:hidden md:hidden sm:hidden mobile:hidden`}
+      >
         <div
           id="heroMain"
           className=" w-[100%] h-[500px] 2xl:flex-row xl:flex-row lg:flex-col md:flex-col sm:flex-col mobile:flex-col flex mb-7 md:h-auto sm:h-auto mobile:h-auto  sm:mb-7 "
@@ -69,9 +57,11 @@ export default function Hero() {
           </div>
           <div className=" mx-2 2xl:w-[70%]  xl:w-[70%] lg:w-[100%] md:w-[100%] sm:w-[100%] 2xl:h-[500px] xl:h-[500px] lg:h-[100px] center">
             <div
-              className={` ${darkMode?"darkTheme":"darkTheme"}${
-                darkMode ? "text-white" : ""
-              }   w-[892px] py-6 rounded  gap-4 2xl:w-[892px] 2xl:h-[344px] xl:w-[892px] xl:h-[344px] lg:w-[892px]  md:w-auto sm:w-auto px-3 mobile:my-4 mobile:w-auto `}
+              className={` ${
+                darkMode ? "bg-neutral-900 text-white" : "bg-black"
+              }
+               
+                 w-[892px] py-6 rounded  gap-4 2xl:w-[892px] 2xl:h-[344px] xl:w-[892px] xl:h-[344px] lg:w-[892px]  md:w-auto sm:w-auto px-3 mobile:my-4 mobile:w-auto `}
             >
               <div className="flex justify-center it  ">
                 <div
@@ -122,12 +112,15 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-       
           </div>
         </div>
       </div>
       <div className="container mx-auto my-2   2xl:flex xl:hidden lg:flex md:flex sm:flex mobile:flex ">
-        <img className="mx-auto  rounded-sm cursor-none darkTheme" src="https://i.imghippo.com/files/aqCB6876RQ.png" alt="" />
+        <img
+          className="mx-auto  rounded-sm cursor-none bg-neutral-950"
+          src="https://i.imghippo.com/files/aqCB6876RQ.png"
+          alt=""
+        />
       </div>
     </>
   );

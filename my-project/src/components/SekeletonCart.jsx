@@ -44,10 +44,10 @@ export function SekeletonCart({
       className={`   main group bg-red- drop-shadow-lg shadow-black  w-[150px] h-[  sm:w-[270px] sm:h-[370px] my-4 rounded mobile:m-auto transition-all duration-300 flex flex-col gap-1 flex-wrap`}
     >
       <div
-        className={` img sm:w-[270px]  sm:h-[250px]  w-[150px] h-[150px] rounded bg-slate-200 animate-pulse flex flex-col relative center `}
+        className={` img sm:w-[270px]  sm:h-[250px]  w-[150px] h-[150px] rounded bg-slate-100 animate-pulse duration-75 flex flex-col relative center `}
       >
         <button
-          className={` sm:w-[55px] sm:h-[26px] sm:text-base w-[35px] h-[16px]  bg-slate-200 animate-pulse  text-xs  rounded text-white absolute  sm:left-3 sm:right-4 sm:bottom-1 sm:top-3 left-1 right-4 bottom-1 top-2 ;`}
+          className={` sm:w-[55px] sm:h-[26px] sm:text-base w-[35px] h-[16px]  bg-slate-100 animate-pulse  text-xs  rounded text-white absolute  sm:left-3 sm:right-4 sm:bottom-1 sm:top-3 left-1 right-4 bottom-1 top-2 ;`}
         >
        
         </button>

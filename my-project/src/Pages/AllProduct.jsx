@@ -106,7 +106,8 @@ let AddToCardlist2 = [
     newPrice: "$370",
     starRank: "(99)",
     image: laptop,
-  }, {
+  },
+  {
     discount: "-35%",
     className: "bg-myTheme",
     productName: "AK-900 Wired Keyboard",
@@ -260,11 +261,11 @@ function AllProduct() {
   return (
     <>
       {/* // <div>AllProduct</div> */}
-      <div className={`${darkMode ? "pageDark" : ""}`}>
+      <div className={`${darkMode ? "bg-neutral-800" : ""}`}>
         {/* {isLoading ? (
           <div
             className={`${
-              darkMode ? "pageDark" : ""
+              darkMode ? "bg-neutral-800" : ""
             } font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none`}
           >
             <img src={loadingImg} alt="Loading..." />
@@ -272,13 +273,13 @@ function AllProduct() {
         ) : null} */}
         <div
           className={`${
-            darkMode ? "pageDark" : ""
+            darkMode ? "bg-neutral-800" : ""
           } mx-auto max-w-7xl sm:px-6 lg:px-8 `}
         >
           <div
             className={`${
-              darkMode ? "pageDark" : ""
-            } relative isolate overflow-hidden bg-white px-6 py-20 text-center sm:px-16 sm:shadow-sm`}
+              darkMode ? "bg-neutral-800" : "bg-white"
+            } relative isolate overflow-hidden  px-6 py-20 text-center sm:px-16 sm:shadow-sm`}
           >
             <p
               className={`${
@@ -289,7 +290,7 @@ function AllProduct() {
             </p>
             <form onSubmit={() => {}}>
               <label
-                className="mx-auto mt-8 relative bg-white min-w-sm max-w-2xl flex flex-col md:flex-row items-center justify-center border py-2 px-2 rounded gap-2 shadow-2xl focus-within:border-gray-300"
+                className={`mx-auto mt-8 relative bg-white min-w-sm max-w-2xl flex flex-col md:flex-row items-center justify-center border py-2 px-2 rounded gap-2 shadow-2xl focus-within:border-gray-300`}
                 htmlFor="search-bar"
               >
                 <input
@@ -328,12 +329,9 @@ function AllProduct() {
             {isLoading ? (
               <div className="font-extrabold  flex justify-center items-center flex-wrap gap-2">
                 {/* Loading... */}
-                {
-                  AddToCardlist2.map(()=>{
-             return <SekeletonCart/>
-                  })
-                }
-                
+                {AddToCardlist2.map(() => {
+                  return <SekeletonCart />;
+                })}
               </div>
             ) : null}
 
@@ -418,7 +416,6 @@ function AllProduct() {
           })}
         </div>
       </div> */}
-      
       </div>
     </>
   );
