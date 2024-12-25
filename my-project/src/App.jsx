@@ -21,7 +21,7 @@ import Search from "./Pages/Search";
 
 function App() {
   const [count, setCount] = useState(0);
-  let logSing = true;
+  let logSing = false;
   return (
     <>
       <div className="w-[100%]  2xl:center flex flex-col justify-center overflow-hidden   ">

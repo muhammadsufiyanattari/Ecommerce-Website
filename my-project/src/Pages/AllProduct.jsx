@@ -21,6 +21,7 @@ import { Navigate } from "react-router-dom";
 import useProducts from "../hooks/useProducts";
 import loadingImg from "../assets/loading/loading.gif";
 import { useSelector } from "react-redux";
+import { SekeletonCart } from "../components/SekeletonCart";
 
 // let AddToCardlist = [
 //   {
@@ -60,44 +61,115 @@ import { useSelector } from "react-redux";
 //     image: shose,
 //   },
 // ];
-// let AddToCardlist2 = [
-//   {
-//     discount: "-40%",
-//     className: "bg-myTheme",
-//     productName: "HAVIT HV-G92 Gamepad",
-//     delPrice: "$160",
-//     newPrice: "$120",
-//     starRank: "(88)",
-//     image: camera,
-//   },
-//   {
-//     discount: "-35%",
-//     className: "bg-myTheme",
-//     productName: "AK-900 Wired Keyboard",
-//     delPrice: "$400",
-//     newPrice: "$370",
-//     starRank: "(99)",
-//     image: laptop,
-//   },
-//   {
-//     discount: "-30%",
-//     className: "bg-myTheme",
-//     productName: "IPS LCD Gaming Monitor",
-//     delPrice: "$400",
-//     newPrice: "$350",
-//     starRank: "(77)",
-//     image: game2,
-//   },
-//   {
-//     discount: "-25%",
-//     className: "bg-myTheme",
-//     productName: "S-Series Comfort Chair",
-//     delPrice: "$400",
-//     newPrice: "$375",
-//     starRank: "(99)",
-//     image: chair,
-//   },
-// ];
+let AddToCardlist2 = [
+  {
+    discount: "-40%",
+    className: "bg-myTheme",
+    productName: "HAVIT HV-G92 Gamepad",
+    delPrice: "$160",
+    newPrice: "$120",
+    starRank: "(88)",
+    image: camera,
+  },
+  {
+    discount: "-35%",
+    className: "bg-myTheme",
+    productName: "AK-900 Wired Keyboard",
+    delPrice: "$400",
+    newPrice: "$370",
+    starRank: "(99)",
+    image: laptop,
+  },
+  {
+    discount: "-30%",
+    className: "bg-myTheme",
+    productName: "IPS LCD Gaming Monitor",
+    delPrice: "$400",
+    newPrice: "$350",
+    starRank: "(77)",
+    image: game2,
+  },
+  {
+    discount: "-35%",
+    className: "bg-myTheme",
+    productName: "AK-900 Wired Keyboard",
+    delPrice: "$400",
+    newPrice: "$370",
+    starRank: "(99)",
+    image: laptop,
+  },
+  {
+    discount: "-35%",
+    className: "bg-myTheme",
+    productName: "AK-900 Wired Keyboard",
+    delPrice: "$400",
+    newPrice: "$370",
+    starRank: "(99)",
+    image: laptop,
+  }, {
+    discount: "-35%",
+    className: "bg-myTheme",
+    productName: "AK-900 Wired Keyboard",
+    delPrice: "$400",
+    newPrice: "$370",
+    starRank: "(99)",
+    image: laptop,
+  },
+  {
+    discount: "-35%",
+    className: "bg-myTheme",
+    productName: "AK-900 Wired Keyboard",
+    delPrice: "$400",
+    newPrice: "$370",
+    starRank: "(99)",
+    image: laptop,
+  },
+  {
+    discount: "-35%",
+    className: "bg-myTheme",
+    productName: "AK-900 Wired Keyboard",
+    delPrice: "$400",
+    newPrice: "$370",
+    starRank: "(99)",
+    image: laptop,
+  },
+  {
+    discount: "-35%",
+    className: "bg-myTheme",
+    productName: "AK-900 Wired Keyboard",
+    delPrice: "$400",
+    newPrice: "$370",
+    starRank: "(99)",
+    image: laptop,
+  },
+  {
+    discount: "-35%",
+    className: "bg-myTheme",
+    productName: "AK-900 Wired Keyboard",
+    delPrice: "$400",
+    newPrice: "$370",
+    starRank: "(99)",
+    image: laptop,
+  },
+  {
+    discount: "-35%",
+    className: "bg-myTheme",
+    productName: "AK-900 Wired Keyboard",
+    delPrice: "$400",
+    newPrice: "$370",
+    starRank: "(99)",
+    image: laptop,
+  },
+  {
+    discount: "-25%",
+    className: "bg-myTheme",
+    productName: "S-Series Comfort Chair",
+    delPrice: "$400",
+    newPrice: "$375",
+    starRank: "(99)",
+    image: chair,
+  },
+];
 
 // let AddToCardlist3 = [
 //   {
@@ -189,7 +261,7 @@ function AllProduct() {
     <>
       {/* // <div>AllProduct</div> */}
       <div className={`${darkMode ? "pageDark" : ""}`}>
-        {isLoading ? (
+        {/* {isLoading ? (
           <div
             className={`${
               darkMode ? "pageDark" : ""
@@ -197,7 +269,7 @@ function AllProduct() {
           >
             <img src={loadingImg} alt="Loading..." />
           </div>
-        ) : null}
+        ) : null} */}
         <div
           className={`${
             darkMode ? "pageDark" : ""
@@ -254,8 +326,14 @@ function AllProduct() {
         >
           <div className=" flex sm:flex-col  w-[1170px]  flex-wrap mobile:justify-center mobile:items-center sm:justify-center sm:items-center flex-row mobile:flex-row lg:justify-center md:justify-center md:flex-row 2xl:flex-row xl:flex-row lg:flex-row lg:gap-4 gap-[30px]">
             {isLoading ? (
-              <div className="font-extrabold text-4xl h-[100vh]">
-                Loading...
+              <div className="font-extrabold  flex justify-center items-center flex-wrap gap-2">
+                {/* Loading... */}
+                {
+                  AddToCardlist2.map(()=>{
+             return <SekeletonCart/>
+                  })
+                }
+                
               </div>
             ) : null}
 
@@ -340,6 +418,7 @@ function AllProduct() {
           })}
         </div>
       </div> */}
+      
       </div>
     </>
   );

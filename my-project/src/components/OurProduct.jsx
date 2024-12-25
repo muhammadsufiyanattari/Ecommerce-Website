@@ -15,6 +15,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { FiEye } from "react-icons/fi";
 import axios from "axios";
 import loadingImg from "../assets/loading/loading.gif";
+import { SekeletonCart } from "./SekeletonCart";
 
 // let AddToCardlist = [
 //   {
@@ -135,7 +136,18 @@ function OurProduct() {
     <>
       {isLoading ? (
         <div className="font-extrabold text-3xl h-[100vh] flex justify-center items-center cursor-none">
-          <img src={loadingImg} alt="Loading..." />
+          {/* <img src={loadingImg} alt="Loading..." /> */}
+           <div className="font-extrabold flex-wrap justify-center items-center flex gap-2 text-4xl">
+                                        <SekeletonCart/>
+                                        <SekeletonCart/>
+                                        <SekeletonCart/>
+                                        <SekeletonCart/>
+                                        <SekeletonCart/>
+                                        <SekeletonCart/>
+                                        <SekeletonCart/>
+                                        <SekeletonCart/>
+          
+                        </div>
         </div>
       ) : (
         <>

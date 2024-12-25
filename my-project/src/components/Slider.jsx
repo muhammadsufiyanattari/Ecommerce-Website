@@ -156,6 +156,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import useProducts from "../hooks/useProducts";
+import { SekeletonCart } from "./SekeletonCart";
 
 export default () => {
   const { products, error, isLoading } = useProducts("limit=8&skip=150");
@@ -252,8 +253,12 @@ export default () => {
         >
           <div className="flex justify-center items-center   ">
             {isLoading ? (
-              <div className="font-extrabold h-[300px] text-4xl">
-                <img src={loadingImg} alt="Loading..." />
+              <div className="font-extrabold flex-wrap justify-center items-center flex gap-2 text-4xl">
+                              <SekeletonCart/>
+                              <SekeletonCart/>
+                              <SekeletonCart/>
+                              <SekeletonCart/>
+
               </div>
             ) : null}
             {error}

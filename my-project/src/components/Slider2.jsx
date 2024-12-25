@@ -160,6 +160,7 @@ import { AddToCard } from "./AddToCard";
 import axios from "axios";
 import useProducts from "../hooks/useProducts";
 import loadingImg from "../assets/loading/loading.gif";
+import { SekeletonCart } from "./SekeletonCart";
 
 export function CardListSlider2() {
   const { products, error, isLoading } = useProducts("limit=8&skip=180");
@@ -230,9 +231,13 @@ export function CardListSlider2() {
         >
           <div className="flex justify-center items-center ">
             {isLoading ? (
-              <div className="font-extrabold h-[300px] text-4xl">
-                <img src={loadingImg} alt="Loading..." />
-              </div>
+              <div className="font-extrabold flex-wrap justify-center items-center flex gap-2 text-4xl">
+                                           <SekeletonCart/>
+                                           <SekeletonCart/>
+                                           <SekeletonCart/>
+                                           <SekeletonCart/>
+             
+                           </div>
             ) : null}
             {error}
             {products?.map((value, index) => {

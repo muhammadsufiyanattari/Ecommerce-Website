@@ -19,6 +19,7 @@ import { useSelector } from "react-redux";
 import CardTotal from "./CardTotal";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { SekeletonCart } from "../components/SekeletonCart";
 // ..
 AOS.init({
  
@@ -101,6 +102,7 @@ function Home() {
         <MyCountBox name="Best Selling Products" days="This Month" />
         <CardListSlider2 />
       </div>
+      
       {/* Spiker-Session */}
       <Spiker />
       {/* Arrival-Session  */}
