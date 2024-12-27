@@ -92,24 +92,24 @@ function Categary({ category }) {
               spaceBetween: 50,
             },
             600: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            500: {
-              slidesPerView: 3,
+              slidesPerView: 1,
               spaceBetween: 40,
             },
-            350: {
+            500: {
               slidesPerView: 2,
-              spaceBetween: 0,
+              spaceBetween: 50,
+            },
+            350: {
+              slidesPerView: 1,
+              spaceBetween: 50,
             },
             320: {
               slidesPerView: 1,
-              spaceBetween: 0,
+              spaceBetween: 50,
             },
             300: {
-              slidesPerView: 1,
-              spaceBetween: 0,
+              slidesPerView: 6,
+              spaceBetween: 50,
             },
           }}
           // navigation
