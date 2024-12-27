@@ -254,12 +254,10 @@ export default () => {
           <div className="flex justify-center items-center   ">
             {isLoading ? (
               <div className="font-extrabold flex-wrap justify-center items-center flex gap-10 text-4xl">
-                              <SekeletonCart/>
-                              <SekeletonCart/>
-                              <SekeletonCart/>
-                              <SekeletonCart/>
-                              
-
+                <SekeletonCart />
+                <SekeletonCart />
+                <SekeletonCart />
+                <SekeletonCart />
               </div>
             ) : null}
             {error}
