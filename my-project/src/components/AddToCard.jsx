@@ -91,9 +91,9 @@ export function AddToCard({
             <h2
               className={`${
                 darkMode
-                  ? "text-white group-hover:text-gray-200  "
-                  : "group-hover:text-myTheme"
-              } w-auto h-[30px] sm:text-sm font-medium transition-all duration-300   overflow-hidden text-[10px] bg-yellow`}
+                  ? "text-white   "
+                  : ""
+              } w-auto h-[30px] sm:text-sm sm:my-1 my-1 group-hover:text-myTheme font-medium transition-all duration-300   overflow-hidden text-[10px] bg-yellow`}
             >
               {productName}
             </h2>
@@ -124,7 +124,7 @@ export function AddToCard({
                     count={5}
                     value={rating ? rating : 3}
                     // onChange={ratingChanged}
-                    size={"12px"}
+                    // size={"12px"}
                     edit={false}
                     color2={"#ffd700"}
                     // className={`sm:${size="24px"} ${size="12px"}`}

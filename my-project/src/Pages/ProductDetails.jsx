@@ -379,7 +379,7 @@ function ProductDetails() {
                     </p>
                   </div>
                   <div className="minus-plus-btn-buy-btn-heart    flex gap-3 items-center">
-                    <div className=" countbtn sm:w-[159px] w-[60px] sm:h-auto   flex  border-2 rounded">
+                    <div className=" countbtn sm:w-[159px] w-[70px] sm:h-auto   flex  border-2 rounded">
                       <button
                         onClick={() => setCount(count < 2 ? 1 : count - 1)}
                         className="sm:w-10 w-6 h-7 sm:h-11 px-1 sm:px-0 bg-white  active:bg-slate-200 rounded  text-2xl"
@@ -412,7 +412,7 @@ function ProductDetails() {
                         Buy Now
                       </button>
                     </div>
-                    <button className="border-2 active:bg-myTheme active:text-white sm:w-8  w-5 h-5 sm:h-8 flex items-center justify-center rounded text-2xl">
+                    <button className={`${darkMode?"text-white":""} border-2 active:bg-myTheme active:text-white sm:w-8  w-5 h-5 sm:h-8 flex items-center justify-center rounded text-2xl`}>
                       <GoHeart className="" />
                     </button>
                   </div>

@@ -329,8 +329,8 @@ function AllProduct() {
             {isLoading ? (
               <div className="font-extrabold  flex justify-center items-center flex-wrap gap-2">
                 {/* Loading... */}
-                {AddToCardlist2.map(() => {
-                  return <SekeletonCart />;
+                {AddToCardlist2.map((_,index) => {
+                  return <SekeletonCart key={index}/>;
                 })}
               </div>
             ) : null}

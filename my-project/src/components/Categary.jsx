@@ -108,7 +108,7 @@ function Categary({ category }) {
               spaceBetween: 50,
             },
             300: {
-              slidesPerView: 6,
+              slidesPerView: 1,
               spaceBetween: 50,
             },
           }}
