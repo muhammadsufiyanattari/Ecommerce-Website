@@ -88,12 +88,13 @@ export function AddToCard({
               darkMode ? "bg-transparent" : "bg-white"
             } myp  sm:w-auto sm:h-auto w-[150px]  h-auto pl-1 gap-0 `}
           >
-            <h2
+            <h2 
+            title={productName}
               className={`${
                 darkMode
                   ? "text-white   "
                   : ""
-              } w-auto h-[30px] sm:text-sm sm:my-1 my-1 group-hover:text-myTheme font-medium transition-all duration-300   overflow-hidden text-[10px] bg-yellow`}
+              } w-auto h-[30px] sm:text-sm sm:py-1 py-1  group-hover:text-myTheme font-medium transition-all duration-300   overflow-hidden text-[10px] bg-yellow`}
             >
               {productName}
             </h2>
